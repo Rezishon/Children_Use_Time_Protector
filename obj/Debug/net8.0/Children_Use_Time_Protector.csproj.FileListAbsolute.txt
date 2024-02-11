@@ -1,0 +1,14 @@
+S:\Projects\Children_Use_Time_Protector\bin\Debug\net8.0\Children_Use_Time_Protector.exe
+S:\Projects\Children_Use_Time_Protector\bin\Debug\net8.0\Children_Use_Time_Protector.deps.json
+S:\Projects\Children_Use_Time_Protector\bin\Debug\net8.0\Children_Use_Time_Protector.runtimeconfig.json
+S:\Projects\Children_Use_Time_Protector\bin\Debug\net8.0\Children_Use_Time_Protector.dll
+S:\Projects\Children_Use_Time_Protector\bin\Debug\net8.0\Children_Use_Time_Protector.pdb
+S:\Projects\Children_Use_Time_Protector\obj\Debug\net8.0\Children_Use_Time_Protector.GeneratedMSBuildEditorConfig.editorconfig
+S:\Projects\Children_Use_Time_Protector\obj\Debug\net8.0\Children_Use_Time_Protector.AssemblyInfoInputs.cache
+S:\Projects\Children_Use_Time_Protector\obj\Debug\net8.0\Children_Use_Time_Protector.AssemblyInfo.cs
+S:\Projects\Children_Use_Time_Protector\obj\Debug\net8.0\Children_Use_Time_Protector.csproj.CoreCompileInputs.cache
+S:\Projects\Children_Use_Time_Protector\obj\Debug\net8.0\Children_Use_Time_Protector.dll
+S:\Projects\Children_Use_Time_Protector\obj\Debug\net8.0\refint\Children_Use_Time_Protector.dll
+S:\Projects\Children_Use_Time_Protector\obj\Debug\net8.0\Children_Use_Time_Protector.pdb
+S:\Projects\Children_Use_Time_Protector\obj\Debug\net8.0\Children_Use_Time_Protector.genruntimeconfig.cache
+S:\Projects\Children_Use_Time_Protector\obj\Debug\net8.0\ref\Children_Use_Time_Protector.dll
