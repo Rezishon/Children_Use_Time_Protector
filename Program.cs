@@ -9,6 +9,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        using var mysha256 = SHA256.Create();
+        byte[] messageBytes = Encoding.UTF8.GetBytes("reza");
+        byte[] hashValue = SHA256.HashData(messageBytes);
+        var result = BitConverter.ToString(hashValue).Replace("-", string.Empty);
+        // Hashing hashing = new Hashing("reza");
+        Console.WriteLine(result);
     }
 }
