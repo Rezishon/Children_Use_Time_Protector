@@ -8,5 +8,8 @@ using System.Xml;
 
 namespace Children_Use_Time_Protector.Repository
 {
-    
+    public class Hashing
+    {
+        
+    }
 }
