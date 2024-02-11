@@ -5,11 +5,8 @@ using System.Threading.Tasks;
 
 namespace Children_Use_Time_Protector.Repository
 {
-    public class FileTools
+    public class FileTools(Parameters)
     {
-       public FileTools(Parameters)
-       {
         
-       } 
     }
 }
