@@ -14,6 +14,7 @@ class Program
             x.Service<CUTP>(s =>
             {
                 s.ConstructUsing(cutp => new CUTP());
+                s.WhenStarted(ctup => ctup.Start());
             });
         });
     }
