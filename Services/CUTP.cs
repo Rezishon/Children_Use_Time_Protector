@@ -13,6 +13,12 @@ namespace Services
         public CUTP()
         {
             _timer = new Timer(1000) { AutoReset = true };
+            _timer.Elapsed += Timer_Elapsed;
+        }
+
+        private void Timer_Elapsed(object? sender, System.Timers.ElapsedEventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }
