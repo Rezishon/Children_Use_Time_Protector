@@ -19,6 +19,8 @@ class Program
             });
 
             x.RunAsLocalSystem();
+
+            x.SetServiceName("ChildrenUseTimeProtector");
         });
     }
 }
