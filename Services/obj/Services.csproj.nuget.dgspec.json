@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "s:\\Projects\\Children_Use_Time_Protector\\Services\\Services.csproj": {}
+    "S:\\Projects\\Children_Use_Time_Protector\\Services\\Services.csproj": {}
   },
   "projects": {
-    "s:\\Projects\\Children_Use_Time_Protector\\Services\\Services.csproj": {
+    "S:\\Projects\\Children_Use_Time_Protector\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "s:\\Projects\\Children_Use_Time_Protector\\Services\\Services.csproj",
+        "projectUniqueName": "S:\\Projects\\Children_Use_Time_Protector\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "s:\\Projects\\Children_Use_Time_Protector\\Services\\Services.csproj",
+        "projectPath": "S:\\Projects\\Children_Use_Time_Protector\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\Reza\\.nuget\\packages\\",
-        "outputPath": "s:\\Projects\\Children_Use_Time_Protector\\Services\\obj\\",
+        "outputPath": "S:\\Projects\\Children_Use_Time_Protector\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -25,6 +25,8 @@
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
