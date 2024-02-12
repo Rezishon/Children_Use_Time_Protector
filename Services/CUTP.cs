@@ -26,5 +26,10 @@ namespace Services
         {
             _timer.Start();
         }
+
+        public void Stop()
+        {
+            _timer.Stop();
+        }
     }
 }
