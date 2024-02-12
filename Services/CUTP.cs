@@ -18,7 +18,8 @@ namespace Services
 
         private void Timer_Elapsed(object? sender, System.Timers.ElapsedEventArgs e)
         {
-            throw new NotImplementedException();
+            string[] lines = new string[] { DateTime.Now.ToString() };
+            File.AppendAllLines(@"./Files/CUTP.txt",lines);
         }
     }
 }
