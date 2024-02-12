@@ -15,6 +15,7 @@ class Program
             {
                 s.ConstructUsing(cutp => new CUTP());
                 s.WhenStarted(ctup => ctup.Start());
+                s.WhenStopped(ctup => ctup.Stop());
             });
         });
     }
