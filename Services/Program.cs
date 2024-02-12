@@ -26,5 +26,8 @@ class Program
                 "This service is CUTP's service which controls the computer using time for children"
             );
         });
+
+        int exitCodeValue = (int)Convert.ChangeType(exitCode, exitCode.GetTypeCode());
+        Environment.ExitCode = exitCodeValue;
     }
 }
