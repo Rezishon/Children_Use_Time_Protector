@@ -9,9 +9,12 @@ class Program
         // Look at Topshelf documents on their website for more details
         // https://topshelf.readthedocs.io/en/latest/index.html
 
-        var exitCode = HostFactory.Run(x => 
+        var exitCode = HostFactory.Run(x =>
         {
-            
+            x.Service<CUTP>(s => 
+            { 
+                
+            });
         });
     }
 }
