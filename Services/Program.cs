@@ -21,7 +21,10 @@ class Program
             x.RunAsLocalSystem();
 
             x.SetServiceName("ChildrenUseTimeProtector");
-            x.SetDisplayName("Children Use Time Protector")
+            x.SetDisplayName("Children Use Time Protector");
+            x.SetDescription(
+                "This service is CUTP's service which controls the computer using time for children"
+            );
         });
     }
 }
