@@ -21,5 +21,10 @@ namespace Services
             string[] lines = new string[] { DateTime.Now.ToString() };
             File.AppendAllLines(@"./Files/CUTP.txt",lines);
         }
+
+        public void Start()
+        {
+            _timer.Start();
+        }
     }
 }
