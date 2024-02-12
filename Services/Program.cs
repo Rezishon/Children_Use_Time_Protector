@@ -17,6 +17,8 @@ class Program
                 s.WhenStarted(ctup => ctup.Start());
                 s.WhenStopped(ctup => ctup.Stop());
             });
+
+            x.RunAsLocalSystem();
         });
     }
 }
