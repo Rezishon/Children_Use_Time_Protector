@@ -11,9 +11,9 @@ class Program
 
         var exitCode = HostFactory.Run(x =>
         {
-            x.Service<CUTP>(s => 
-            { 
-                
+            x.Service<CUTP>(s =>
+            {
+                s.ConstructUsing(cutp => new CUTP());
             });
         });
     }
