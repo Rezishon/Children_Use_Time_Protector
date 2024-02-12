@@ -1,0 +1,3 @@
+Topshelf by Chris Patterson, Dru Sellers, Travis Smith
+v4.3.0+build.251.sha.509556a
+Topshelf is an open source project for hosting services without friction. By referencing Topshelf, your console application *becomes* a service
