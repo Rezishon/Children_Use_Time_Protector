@@ -19,7 +19,7 @@ namespace Services
         private void Timer_Elapsed(object? sender, System.Timers.ElapsedEventArgs e)
         {
             string[] lines = new string[] { DateTime.Now.ToString() };
-            File.AppendAllLines(@"./Files/CUTP.txt",lines);
+            File.AppendAllLines(@"./Files/CUTP.txt", lines);
         }
 
         public void Start()
