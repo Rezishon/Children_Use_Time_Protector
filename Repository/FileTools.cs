@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ConfigHandling
 {
-    public class FileTools(string Path = "./DataBase.cutp")
+    public static class ConfigFile
     {
         private readonly string path = Path;
 
