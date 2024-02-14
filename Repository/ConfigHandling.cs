@@ -33,15 +33,15 @@ namespace ConfigHandling
         {
             Exist_Of_Database_File();
 
-            string[] linesOfText = await File.ReadAllLinesAsync(path);
+            string[] linesOfText = await File.ReadAllLinesAsync(ConfigFile.ConfigFilePath);
             return int.Parse(linesOfText[0].Trim()) == 0;
         }
 
         public async void Exist_Of_Database_File()
         {
-            if (!File.Exists(path))
+            if (!File.Exists(ConfigFile.ConfigFilePath))
             {
-                await File.WriteAllTextAsync(path, "0");
+                await File.WriteAllTextAsync(ConfigFile.ConfigFilePath, "0");
                 // ask for root password
             }
         }
