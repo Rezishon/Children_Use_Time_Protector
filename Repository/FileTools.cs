@@ -26,6 +26,9 @@ namespace ConfigHandling
             }
         }
     }
+
+    public static class RootPart
+    {
         public async Task<bool> ReadAppStatus()
         {
             Exist_Of_Database_File();
