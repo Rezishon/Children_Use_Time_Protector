@@ -38,5 +38,10 @@ namespace CommandHandling
         {
             CommandRunner("Shutdown");
         }
+
+        public static void TurnOnService()
+        {
+            CommandRunner("TurnOnService");
+        }
     }
 }
