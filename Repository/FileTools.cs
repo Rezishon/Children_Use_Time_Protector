@@ -16,6 +16,11 @@ namespace ConfigHandling
         {
             ConfigFilePath = "./Config.cutp";
         }
+
+        public static void ConfigFileBuilder()
+        {
+        }
+    }
         public async Task<bool> ReadAppStatus()
         {
             Exist_Of_Database_File();
