@@ -6,7 +6,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Children_Use_Time_Protector.Repository
+namespace ConfigHandling
 {
     public class FileTools(string Path = "./DataBase.cutp")
     {
