@@ -19,6 +19,8 @@ namespace ConfigHandling
 
         public static void ConfigFileBuilder()
         {
+                string RootPart =
+                    $"{Hashing.Hash.ToSha256("0")};{NullString};{NullString};{NullString};{NullString};";
         }
     }
         public async Task<bool> ReadAppStatus()
