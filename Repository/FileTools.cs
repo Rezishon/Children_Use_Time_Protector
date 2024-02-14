@@ -10,8 +10,12 @@ namespace ConfigHandling
 {
     public static class ConfigFile
     {
-        private readonly string path = Path;
+        public static string ConfigFilePath { get; set; }
 
+        static ConfigFile()
+        {
+            ConfigFilePath = "./Config.cutp";
+        }
         public async Task<bool> ReadAppStatus()
         {
             Exist_Of_Database_File();
