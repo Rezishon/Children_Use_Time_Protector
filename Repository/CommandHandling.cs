@@ -13,6 +13,8 @@ namespace CommandHandling
 
         private static void CommandRunner(string CommandNameString)
         {
+            try
+            {
                 var processInfo = new ProcessStartInfo
                 {
                     Verb = "runas", // Run as administrator
@@ -25,6 +27,11 @@ namespace CommandHandling
                 };
 
                 _ = Process.Start(processInfo);
+            }
+            catch (System.Exception e)
+            {
+                System.Console.WriteLine(e);
+            }
         }
     }
 }
