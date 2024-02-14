@@ -13,3 +13,4 @@ S:\Projects\Children_Use_Time_Protector\obj\Debug\net8.0\Children_Use_Time_Prote
 S:\Projects\Children_Use_Time_Protector\obj\Debug\net8.0\Children_Use_Time_Protector.genruntimeconfig.cache
 S:\Projects\Children_Use_Time_Protector\obj\Debug\net8.0\ref\Children_Use_Time_Protector.dll
 S:\Projects\Children_Use_Time_Protector\obj\Debug\net8.0\Children_Use_Time_Protector.sourcelink.json
+S:\Projects\Children_Use_Time_Protector\obj\Debug\net8.0\Children_Use_Time_Protector.csproj.AssemblyReference.cache
