@@ -12,7 +12,7 @@ namespace Services
 
         public CUTP()
         {
-            _timer = new Timer(1000) { AutoReset = true };
+            _timer = new Timer(600000) { AutoReset = true };
             _timer.Elapsed += Timer_Elapsed;
         }
 
