@@ -8,7 +8,7 @@ using System.Xml;
 
 namespace Hashing
 {
-    public class Hashing
+    public static class Hash
     {
         public static string ToSha256(string messageString)
         {
