@@ -13,6 +13,16 @@ namespace CommandHandling
 
         private static void CommandRunner(string CommandNameString)
         {
+                var processInfo = new ProcessStartInfo
+                {
+                    Verb = "runas", // Run as administrator
+                    LoadUserProfile = true,
+                    FileName = "powershell.exe",
+                    Arguments = CommandsDic[CommandNameString],
+                    RedirectStandardOutput = false,
+                    UseShellExecute = true,
+                    CreateNoWindow = true
+                };
         }
     }
 }
