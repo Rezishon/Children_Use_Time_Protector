@@ -11,6 +11,7 @@ namespace ConfigHandling
     public static class ConfigFile
     {
         public static string ConfigFilePath { get; set; }
+        private static readonly string NullString = "*";
 
         static ConfigFile()
         {
