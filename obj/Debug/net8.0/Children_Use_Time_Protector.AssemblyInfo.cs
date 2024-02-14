@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Children_Use_Time_Protector")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a575db97f6fde6d3e7c3eeb1b57c137393435ec8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea4356639e263968c135deee3a9e8b74aba63d7e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Children_Use_Time_Protector")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Children_Use_Time_Protector")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
