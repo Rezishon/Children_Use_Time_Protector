@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
 
-namespace Children_Use_Time_Protector.Repository
+namespace Hashing
 {
     public class Hashing
     {
