@@ -33,5 +33,10 @@ namespace CommandHandling
                 System.Console.WriteLine(e);
             }
         }
+
+        public static void Shutdown()
+        {
+            CommandRunner("Shutdown");
+        }
     }
 }
