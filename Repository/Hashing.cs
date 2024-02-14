@@ -1,19 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
 
-namespace Children_Use_Time_Protector.Repository
+namespace Hashing
 {
-    public class Hashing
+    public static class Hash
     {
-        public static string ToSha256(string messageString)
+        public static string ToSha256(string String)
         {
             using var mysha256 = SHA256.Create();
-            byte[] messageBytes = Encoding.UTF8.GetBytes(messageString);
+            byte[] messageBytes = Encoding.UTF8.GetBytes(String);
             byte[] hashValue = SHA256.HashData(messageBytes);
             return BitConverter.ToString(hashValue).Replace("-", string.Empty);
         }

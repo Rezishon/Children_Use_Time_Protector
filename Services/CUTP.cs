@@ -1,10 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Timer = System.Timers.Timer;
 
-namespace Services
+namespace LogHandling
 {
     public class CUTP
     {
@@ -12,14 +8,14 @@ namespace Services
 
         public CUTP()
         {
-            _timer = new Timer(1000) { AutoReset = true };
+            _timer = new Timer(600000) { AutoReset = true };
             _timer.Elapsed += Timer_Elapsed;
         }
 
         private void Timer_Elapsed(object? sender, System.Timers.ElapsedEventArgs e)
         {
-            string[] lines = new string[] { DateTime.Now.ToString() };
-            File.AppendAllLines(@"./Files/CUTP.txt", lines);
+            string[] lines = new string[] { LogFile.LogContent };
+            File.AppendAllLines(LogFile.LogFilePath, lines);
         }
 
         public void Start()

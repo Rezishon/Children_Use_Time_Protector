@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["CUTP"]
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "csharpier.csharpier-vscode"
 }
