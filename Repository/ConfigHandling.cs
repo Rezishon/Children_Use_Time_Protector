@@ -2,13 +2,8 @@ namespace ConfigHandling
 {
     public static class ConfigFile
     {
-        public static string ConfigFilePath { get; set; }
-        private static readonly string NullString = "*";
-
-        static ConfigFile()
-        {
-            ConfigFilePath = "./Config.cutp";
-        }
+        public static string ConfigFilePath { get; } = "./Config.cutp";
+        private static string NullString { get; } = "*";
 
         public static void ConfigFileBuilder()
         {
