@@ -92,5 +92,10 @@ namespace ConfigHandling
         {
             return ConfigFileParted[ConfigPartsNumbers["EndTimeOfDay"]];
         }
+
+        public static int AllowedDuration()
+        {
+            return int.Parse(ConfigFileParted[ConfigPartsNumbers["AllowedDuration"]]);
+        }
     }
 }
