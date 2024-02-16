@@ -24,6 +24,8 @@ namespace CommandHandling
                     UseShellExecute = true,
                     CreateNoWindow = true
                 };
+
+                Process.Start(processInfo);
         }
     }
 }
