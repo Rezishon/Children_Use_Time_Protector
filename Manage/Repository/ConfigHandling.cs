@@ -55,4 +55,8 @@ namespace ConfigHandling
     //         }
     //     }
     // }
+
+    public static class ServicePart
+    {
+    }
 }
