@@ -17,6 +17,8 @@ namespace ConfigHandling
         {
                 string RootPart =
                     $"{Hashing.Hash.ToSha256("0")};{NullString};{NullString};{NullString};{NullString};";
+                string ServicePart =
+                    $"{Hashing.Hash.ToSha256("0")};{NullString};{NullString};{NullString};{NullString};{NullString};{NullString};{NullString};{NullString};";
         }
     }
 }
