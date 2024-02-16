@@ -11,5 +11,6 @@ namespace ConfigHandling
         };
         public static string ConfigFilePath { get; } =
             @"..\..\..\..\Manage\bin\Debug\net8.0\Config.cutp";
+        private static string NullString { get; } = "*";
     }
 }
