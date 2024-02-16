@@ -97,5 +97,10 @@ namespace ConfigHandling
         {
             return int.Parse(ConfigFileParted[ConfigPartsNumbers["AllowedDuration"]]);
         }
+
+        public static int TempAllowedDuration()
+        {
+            return int.Parse(ConfigFileParted[ConfigPartsNumbers["TempAllowedDuration"]]);
+        }
     }
 }
