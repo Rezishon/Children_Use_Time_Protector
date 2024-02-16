@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "Services/1.0.0": {
         "dependencies": {
+          "Children_Use_Time_Protector": "1.0.0",
           "Topshelf": "4.3.0"
         },
         "runtime": {
@@ -221,6 +222,14 @@
             "fileVersion": "4.3.0.0"
           }
         }
+      },
+      "Children_Use_Time_Protector/1.0.0": {
+        "dependencies": {
+          "Topshelf": "4.3.0"
+        },
+        "runtime": {
+          "Children_Use_Time_Protector.dll": {}
+        }
       }
     }
   },
@@ -397,6 +406,11 @@
       "sha512": "sha512-z+jcfvIg3uewe9lBkWpXslxEafqPusV7T4B/Y2TiBdixnfbfFG19YgnnsZMlP5kG9zzPsx6VceYUNzfxVEQjcA==",
       "path": "topshelf.serviceinstaller/4.3.0",
       "hashPath": "topshelf.serviceinstaller.4.3.0.nupkg.sha512"
+    },
+    "Children_Use_Time_Protector/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

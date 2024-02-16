@@ -16,10 +16,15 @@ S:\Projects\Children_Use_Time_Protector\Services\obj\Debug\net8.0\Services.Gener
 S:\Projects\Children_Use_Time_Protector\Services\obj\Debug\net8.0\Services.AssemblyInfoInputs.cache
 S:\Projects\Children_Use_Time_Protector\Services\obj\Debug\net8.0\Services.AssemblyInfo.cs
 S:\Projects\Children_Use_Time_Protector\Services\obj\Debug\net8.0\Services.csproj.CoreCompileInputs.cache
-S:\Projects\Children_Use_Time_Protector\Services\obj\Debug\net8.0\Services.sourcelink.json
 S:\Projects\Children_Use_Time_Protector\Services\obj\Debug\net8.0\Services.csproj.CopyComplete
 S:\Projects\Children_Use_Time_Protector\Services\obj\Debug\net8.0\Services.dll
 S:\Projects\Children_Use_Time_Protector\Services\obj\Debug\net8.0\refint\Services.dll
 S:\Projects\Children_Use_Time_Protector\Services\obj\Debug\net8.0\Services.pdb
 S:\Projects\Children_Use_Time_Protector\Services\obj\Debug\net8.0\Services.genruntimeconfig.cache
 S:\Projects\Children_Use_Time_Protector\Services\obj\Debug\net8.0\ref\Services.dll
+S:\Projects\Children_Use_Time_Protector\Services\bin\Debug\net8.0\Children_Use_Time_Protector.deps.json
+S:\Projects\Children_Use_Time_Protector\Services\bin\Debug\net8.0\Children_Use_Time_Protector.runtimeconfig.json
+S:\Projects\Children_Use_Time_Protector\Services\bin\Debug\net8.0\Children_Use_Time_Protector.exe
+S:\Projects\Children_Use_Time_Protector\Services\bin\Debug\net8.0\Children_Use_Time_Protector.dll
+S:\Projects\Children_Use_Time_Protector\Services\bin\Debug\net8.0\Children_Use_Time_Protector.pdb
+S:\Projects\Children_Use_Time_Protector\Services\obj\Debug\net8.0\Services.sourcelink.json
