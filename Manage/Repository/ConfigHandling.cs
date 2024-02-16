@@ -15,12 +15,19 @@ namespace ConfigHandling
 
         public static void ConfigFileBuilder()
         {
+            try
+            {
                 string RootPart =
                     $"{Hashing.Hash.ToSha256("0")};{NullString};{NullString};{NullString};{NullString};";
                 string ServicePart =
                     $"{Hashing.Hash.ToSha256("0")};{NullString};{NullString};{NullString};{NullString};{NullString};{NullString};{NullString};{NullString};";
 
                 File.WriteAllText(ConfigFilePath, $"{RootPart}\n{ServicePart}");
+            }
+            catch (System.Exception e)
+            {
+                System.Console.WriteLine(e);
+            }
         }
     }
 }
