@@ -87,5 +87,10 @@ namespace ConfigHandling
         {
             return ConfigFileParted[ConfigPartsNumbers["StartTimeOfDay"]];
         }
+
+        public static string EndTimeOfDay()
+        {
+            return ConfigFileParted[ConfigPartsNumbers["EndTimeOfDay"]];
+        }
     }
 }
