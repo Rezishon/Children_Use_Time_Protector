@@ -11,5 +11,9 @@ namespace CommandHandling
             { "TurnOnService", @"rojects\Children_Use_Time_Protector\Services\bin\Debug\net8.0\Services.exe install start" },
             { "TurnOffService", @"..\Services\bin\Debug\net8.0\Services.exe uninstall" }
         };
+
+        private static void CommandRunner(string CommandNameString)
+        {
+        }
     }
 }
