@@ -74,5 +74,13 @@ namespace ConfigHandling
             { "AllowedDuration", 6 },
             { "TempAllowedDuration", 8 }
         };
+
+        public static bool Status()
+        {
+            if (Hashing.Hash.ToSha256("1") == ConfigFileParted[ConfigPartsNumbers["Status"]])
+                return true;
+            else
+                return false;
+        }
     }
 }
