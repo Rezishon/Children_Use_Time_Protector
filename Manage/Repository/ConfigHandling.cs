@@ -9,5 +9,7 @@ namespace ConfigHandling
             { "Root", 0 },
             { "Service", 1 }
         };
+        public static string ConfigFilePath { get; } =
+            @"..\..\..\..\Manage\bin\Debug\net8.0\Config.cutp";
     }
 }
