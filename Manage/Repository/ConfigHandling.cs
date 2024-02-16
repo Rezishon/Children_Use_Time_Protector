@@ -58,5 +58,13 @@ namespace ConfigHandling
 
     public static class ServicePart
     {
+        public static string[] ConfigFileParted { get; } =
+            Regex
+                .Replace(
+                    ConfigFile.ConfigFileReader()[ConfigFile.ConfigLinesNumber["Service"]],
+                    @"(^{)|(}$)",
+                    ""
+                )
+                .Split(';');
     }
 }
