@@ -29,5 +29,10 @@ namespace ConfigHandling
                 System.Console.WriteLine(e);
             }
         }
+
+        public static string[] ConfigFileReader()
+        {
+            return File.ReadAllLines(ConfigFilePath);
+        }
     }
 }
