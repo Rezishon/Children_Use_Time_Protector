@@ -82,5 +82,10 @@ namespace ConfigHandling
             else
                 return false;
         }
+
+        public static string StartTimeOfDay()
+        {
+            return ConfigFileParted[ConfigPartsNumbers["StartTimeOfDay"]];
+        }
     }
 }
