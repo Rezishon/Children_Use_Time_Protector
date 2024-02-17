@@ -14,7 +14,7 @@ namespace Services
 
         private void Timer_Elapsed(object? sender, System.Timers.ElapsedEventArgs e)
         {
-            string[] lines = new string[] { LogFile.LogContent };
+            string[] lines = new string[] { DateTime.Now.ToString("") };
             File.AppendAllLines(LogFile.LogFilePath, lines);
         }
 
