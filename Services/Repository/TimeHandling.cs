@@ -8,6 +8,11 @@ namespace TimeHandling
             var AllowedDurationTime =
                 ConfigHandling.ServicePart.AllowedDuration()
                 + ConfigHandling.ServicePart.TempAllowedDuration();
+
+            if (UsedDurationTime >= AllowedDurationTime)
+            {
+                return false;
+            }
         }
     }
 }
