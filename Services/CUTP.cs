@@ -21,6 +21,10 @@ namespace Services
                 System.Console.WriteLine("Time has ended");
                 Stop();
             }
+            else if (TimeHandling.Time.Allowed() == null)
+            {
+                System.Console.WriteLine("10 minute remained");
+            }
         }
 
         public void Start()
