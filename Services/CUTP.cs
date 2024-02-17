@@ -25,6 +25,10 @@ namespace Services
             {
                 System.Console.WriteLine("10 minute remained");
             }
+            else
+            {
+                System.Console.WriteLine("Still has time");
+            }
         }
 
         public void Start()
