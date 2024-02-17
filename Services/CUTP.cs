@@ -1,6 +1,8 @@
+using System.Text.RegularExpressions;
+using LogHandling;
 using Timer = System.Timers.Timer;
 
-namespace LogHandling
+namespace Services
 {
     public class CUTP
     {
@@ -8,18 +10,38 @@ namespace LogHandling
 
         public CUTP()
         {
-            _timer = new Timer(600000) { AutoReset = true };
+            _timer = new Timer(2000) { AutoReset = true };
             _timer.Elapsed += Timer_Elapsed;
         }
 
         private void Timer_Elapsed(object? sender, System.Timers.ElapsedEventArgs e)
         {
-            string[] lines = new string[] { LogFile.LogContent };
+            string[] lines = new string[] { DateTime.Now.ToString("") };
             File.AppendAllLines(LogFile.LogFilePath, lines);
+            if (TimeHandling.Time.Allowed() == false)
+            {
+                System.Console.WriteLine("Time has ended");
+                Stop();
+            }
+            else if (TimeHandling.Time.Allowed() == null)
+            {
+                System.Console.WriteLine("10 minute remained");
+            }
+            else
+            {
+                System.Console.WriteLine("Still has time");
+            }
         }
 
         public void Start()
         {
+            if (
+                LogFile.LogReader().Length > 0
+                && !Regex.IsMatch(DateTime.Now.ToString("d"), LogFile.Date())
+            )
+            {
+                LogFile.LogCleaner();
+            }
             _timer.Start();
         }
 

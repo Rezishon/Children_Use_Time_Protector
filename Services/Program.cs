@@ -1,6 +1,6 @@
 ﻿using Topshelf;
 
-namespace LogHandling;
+namespace Services;
 
 class Program
 {
