@@ -17,6 +17,10 @@ namespace TimeHandling
             {
                 return null;
             }
+            else
+            {
+                return true;
+            }
         }
     }
 }
