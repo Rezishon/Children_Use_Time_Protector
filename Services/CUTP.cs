@@ -1,6 +1,6 @@
 using Timer = System.Timers.Timer;
 
-namespace LogHandling
+namespace Services
 {
     public class CUTP
     {
