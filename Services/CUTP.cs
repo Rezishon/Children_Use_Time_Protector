@@ -16,6 +16,11 @@ namespace Services
         {
             string[] lines = new string[] { DateTime.Now.ToString("") };
             File.AppendAllLines(LogFile.LogFilePath, lines);
+            if (TimeHandling.Time.Allowed() == false)
+            {
+                System.Console.WriteLine("Time has ended");
+                Stop();
+            }
         }
 
         public void Start()
