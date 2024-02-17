@@ -13,5 +13,11 @@ namespace LogHandling
         {
             File.WriteAllText(LogFilePath, "");
         }
+
+        public static string? Date()
+        {
+            // This method should consider different allowed day time
+            return Regex.Match(LogReader()[0], @"^(\d*/*)*(?=\s)").ToString();
+        }
     }
 }
