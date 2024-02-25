@@ -1731,10 +1731,16 @@
         "topshelf.serviceinstaller.4.3.0.nupkg.sha512",
         "topshelf.serviceinstaller.nuspec"
       ]
+    },
+    "Children_Use_Time_Protector/1.0.0": {
+      "type": "project",
+      "path": "../Manage/Children_Use_Time_Protector.csproj",
+      "msbuildProject": "../Manage/Children_Use_Time_Protector.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
+      "Children_Use_Time_Protector >= 1.0.0",
       "Topshelf >= 4.3.0"
     ]
   },
@@ -1746,12 +1752,9 @@
     "version": "1.0.0",
     "restore": {
       "projectUniqueName": "S:\\Projects\\Children_Use_Time_Protector\\Services\\Services.csproj",
-      "projectUniqueName": "S:\\Projects\\Children_Use_Time_Protector\\Services\\Services.csproj",
       "projectName": "Services",
       "projectPath": "S:\\Projects\\Children_Use_Time_Protector\\Services\\Services.csproj",
-      "projectPath": "S:\\Projects\\Children_Use_Time_Protector\\Services\\Services.csproj",
       "packagesPath": "C:\\Users\\Reza\\.nuget\\packages\\",
-      "outputPath": "S:\\Projects\\Children_Use_Time_Protector\\Services\\obj\\",
       "outputPath": "S:\\Projects\\Children_Use_Time_Protector\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
@@ -1773,7 +1776,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "S:\\Projects\\Children_Use_Time_Protector\\Manage\\Children_Use_Time_Protector.csproj": {
+              "projectPath": "S:\\Projects\\Children_Use_Time_Protector\\Manage\\Children_Use_Time_Protector.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
