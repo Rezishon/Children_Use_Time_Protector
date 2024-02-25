@@ -66,7 +66,10 @@ namespace ConfigHandling
                     ""
                 )
                 .Split(';');
-        private static Dictionary<string, int> ConfigPartsNumbers = new Dictionary<string, int>()
+        private static readonly Dictionary<string, int> ConfigPartsNumbers = new Dictionary<
+            string,
+            int
+        >()
         {
             { "Status", 0 },
             { "StartTimeOfDay", 2 },
