@@ -132,6 +132,21 @@ class Program
                                     "Repeat your [green]new[/] recovery password: "
                                 );
                                 AnsiConsole.MarkupLine(Hash.ToSha256(newRepeatedRecoveryPassword));
+                                if (
+                                    string.Equals(
+                                        Hash.ToSha256(newRecoveryPassword),
+                                        Hash.ToSha256(newRepeatedRecoveryPassword)
+                                    )
+                                )
+                                {
+                                    AnsiConsole.MarkupLine(
+                                        "Your new recovery password has been set"
+                                    );
+                                    AnsiConsole.MarkupLine("Press any key to exit");
+                                    Console.ReadKey();
+                                    flagRecoveryRoot = false;
+                                    Console.Clear();
+                                }
                             }
 
                             break;
