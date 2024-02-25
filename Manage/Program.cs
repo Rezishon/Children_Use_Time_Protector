@@ -119,6 +119,12 @@ class Program
 
                             break;
                         case 1:
+
+                            bool flagRecoveryRoot = true;
+                            while (flagRecoveryRoot)
+                            {
+                            }
+
                             break;
                         case 2:
                             break;
