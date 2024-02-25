@@ -13,5 +13,6 @@ class Program
             new TextPrompt<string>("Please insert the [bold red]ROOT[/] password: ")
                 .PromptStyle("green")
                 .Secret(null)
+                .ValidationErrorMessage("[red]That's not a valid password[/]")
     }
 }
