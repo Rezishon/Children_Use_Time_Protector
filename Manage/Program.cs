@@ -94,6 +94,19 @@ class Program
                                     "Repeat your [green]new[/] password: "
                                 );
                                 AnsiConsole.MarkupLine(Hash.ToSha256(newRepeatedPassword));
+                                if (
+                                    string.Equals(
+                                        Hash.ToSha256(newPassword),
+                                        Hash.ToSha256(newRepeatedPassword)
+                                    )
+                                )
+                                {
+                                    AnsiConsole.MarkupLine("Your new password has been set");
+                                    AnsiConsole.MarkupLine("Press any key to exit");
+                                    Console.ReadKey();
+                                    flagRoot = false;
+                                    Console.Clear();
+                                }
                             }
 
                             break;
