@@ -86,6 +86,12 @@ class Program
                             bool flagRoot = true;
                             while (flagRoot)
                             {
+                                var newPassword = AnsiConsole.Ask<string>(
+                                    "What's your [green]new[/] password? "
+                                );
+                                var newRepeatedPassword = AnsiConsole.Ask<string>(
+                                    "Repeat your [green]new[/] password: "
+                                );
                             }
 
                             break;
