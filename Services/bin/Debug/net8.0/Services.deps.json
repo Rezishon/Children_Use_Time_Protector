@@ -48,6 +48,39 @@
           "Microsoft.NETCore.Targets": "1.1.0"
         }
       },
+      "Spectre.Console/0.48.0": {
+        "dependencies": {
+          "System.Memory": "4.5.5"
+        },
+        "runtime": {
+          "lib/net8.0/Spectre.Console.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.48.0.0"
+          }
+        }
+      },
+      "Spectre.Console.Cli/0.48.0": {
+        "dependencies": {
+          "Spectre.Console": "0.48.0"
+        },
+        "runtime": {
+          "lib/net8.0/Spectre.Console.Cli.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.48.0.0"
+          }
+        },
+        "resources": {
+          "lib/net8.0/de/Spectre.Console.Cli.resources.dll": {
+            "locale": "de"
+          },
+          "lib/net8.0/fr/Spectre.Console.Cli.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/net8.0/sv/Spectre.Console.Cli.resources.dll": {
+            "locale": "sv"
+          }
+        }
+      },
       "System.Diagnostics.EventLog/4.7.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -85,6 +118,7 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
+      "System.Memory/4.5.5": {},
       "System.Reflection/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "3.1.0",
@@ -225,6 +259,8 @@
       },
       "Children_Use_Time_Protector/1.0.0": {
         "dependencies": {
+          "Spectre.Console": "0.48.0",
+          "Spectre.Console.Cli": "0.48.0",
           "Topshelf": "4.3.0"
         },
         "runtime": {
@@ -274,6 +310,20 @@
       "path": "runtime.native.system/4.3.0",
       "hashPath": "runtime.native.system.4.3.0.nupkg.sha512"
     },
+    "Spectre.Console/0.48.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4Mc1UT7Azgtyb8FyNwK5FZmoZbKuT5PmY7ZwaKUytjD5kGFMNBACpOZTwYtkuY377YkYtZYBeDDTJUwTW86QXw==",
+      "path": "spectre.console/0.48.0",
+      "hashPath": "spectre.console.0.48.0.nupkg.sha512"
+    },
+    "Spectre.Console.Cli/0.48.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HNoDxAOTODQ9h+4K5Cs2caW8kIicRKw5SS4vgEEkJtnTp7/4XR8OIGvCjVi09w3m+xn4lTlkS0ENy2ktGz4HRw==",
+      "path": "spectre.console.cli/0.48.0",
+      "hashPath": "spectre.console.cli.0.48.0.nupkg.sha512"
+    },
     "System.Diagnostics.EventLog/4.7.0": {
       "type": "package",
       "serviceable": true,
@@ -294,6 +344,13 @@
       "sha512": "sha512-3qjaHvxQPDpSOYICjUoTsmoq5u6QJAFRUITgeT/4gqkF1bajbSmb1kwSxEA8AHlofqgcKJcM8udgieRNhaJ5Cg==",
       "path": "system.io/4.3.0",
       "hashPath": "system.io.4.3.0.nupkg.sha512"
+    },
+    "System.Memory/4.5.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
+      "path": "system.memory/4.5.5",
+      "hashPath": "system.memory.4.5.5.nupkg.sha512"
     },
     "System.Reflection/4.3.0": {
       "type": "package",
