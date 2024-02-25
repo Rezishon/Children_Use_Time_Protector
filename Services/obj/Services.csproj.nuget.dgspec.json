@@ -4,14 +4,14 @@
     "s:\\Projects\\Children_Use_Time_Protector\\Services\\Services.csproj": {}
   },
   "projects": {
-    "S:\\Projects\\Children_Use_Time_Protector\\Manage\\Children_Use_Time_Protector.csproj": {
+    "S:\\Projects\\Children_Use_Time_Protector\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "S:\\Projects\\Children_Use_Time_Protector\\Manage\\Children_Use_Time_Protector.csproj",
-        "projectName": "Children_Use_Time_Protector",
-        "projectPath": "S:\\Projects\\Children_Use_Time_Protector\\Manage\\Children_Use_Time_Protector.csproj",
+        "projectUniqueName": "S:\\Projects\\Children_Use_Time_Protector\\Services\\Services.csproj",
+        "projectName": "Services",
+        "projectPath": "S:\\Projects\\Children_Use_Time_Protector\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\Reza\\.nuget\\packages\\",
-        "outputPath": "S:\\Projects\\Children_Use_Time_Protector\\Manage\\obj\\",
+        "outputPath": "S:\\Projects\\Children_Use_Time_Protector\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
