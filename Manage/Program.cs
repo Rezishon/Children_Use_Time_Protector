@@ -66,6 +66,19 @@ class Program
                             { "Change The root recovery password", 1 },
                             { "Main Menu", 2 }
                         };
+                    var chosenPartOnRootMenu = AnsiConsole.Prompt(
+                        new SelectionPrompt<string>()
+                            .Title("What part you want to change?")
+                            .PageSize(3)
+                            .HighlightStyle(Style.Parse("purple bold"))
+                            .AddChoices(
+                                [
+                                    "Change the root password",
+                                    "Change The root recovery password",
+                                    "Main Menu"
+                                ]
+                            )
+                    );
                     break;
                 case 1:
                     break;
