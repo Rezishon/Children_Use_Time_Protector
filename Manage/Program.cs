@@ -127,9 +127,11 @@ class Program
                                 var newRecoveryPassword = AnsiConsole.Ask<string>(
                                     "What's your [green]new[/] recovery password? "
                                 );
+                                AnsiConsole.MarkupLine(Hash.ToSha256(newRecoveryPassword));
                                 var newRepeatedRecoveryPassword = AnsiConsole.Ask<string>(
                                     "Repeat your [green]new[/] recovery password: "
                                 );
+                                AnsiConsole.MarkupLine(Hash.ToSha256(newRepeatedRecoveryPassword));
                             }
 
                             break;
