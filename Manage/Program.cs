@@ -41,6 +41,14 @@ class Program
 
         while (flag)
         {
+            Dictionary<string, int> MainMenuPartsDictionary =
+                new()
+                {
+                    { "Root", 0 },
+                    { "Service", 1 },
+                    { "Exit", 2 },
+                    { "Timing", 3 }
+                };
         }
     }
 }
