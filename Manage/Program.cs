@@ -82,6 +82,12 @@ class Program
                     switch (RootMenuPartsDictionary[chosenPartOnRootMenu])
                     {
                         case 0:
+
+                            bool flagRoot = true;
+                            while (flagRoot)
+                            {
+                            }
+
                             break;
                         case 1:
                             break;
