@@ -123,6 +123,13 @@ class Program
                             bool flagRecoveryRoot = true;
                             while (flagRecoveryRoot)
                             {
+                                AnsiConsole.MarkupLine("choosing a simple password recommended ");
+                                var newRecoveryPassword = AnsiConsole.Ask<string>(
+                                    "What's your [green]new[/] recovery password? "
+                                );
+                                var newRepeatedRecoveryPassword = AnsiConsole.Ask<string>(
+                                    "Repeat your [green]new[/] recovery password: "
+                                );
                             }
 
                             break;
