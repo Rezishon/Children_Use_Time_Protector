@@ -147,6 +147,14 @@ class Program
                                     flagRecoveryRoot = false;
                                     Console.Clear();
                                 }
+                                else
+                                {
+                                    AnsiConsole.MarkupLine(
+                                        "Recovery passwords aren't the same\nPress any key to Repeat"
+                                    );
+                                    Console.ReadKey();
+                                    Console.Clear();
+                                }
                             }
 
                             break;
