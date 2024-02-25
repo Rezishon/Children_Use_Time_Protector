@@ -17,5 +17,6 @@ class Program
                 .Validate(password =>
                 {
                 })
+        );
     }
 }
