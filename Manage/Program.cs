@@ -9,6 +9,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        int wrongPasswordCounter = 0;
         AnsiConsole.Prompt(
             new TextPrompt<string>("Please insert the [bold red]ROOT[/] password: ")
                 .PromptStyle("green")
@@ -22,6 +23,13 @@ class Program
                     }
                     else
                     {
+                        wrongPasswordCounter++;
+                        if (wrongPasswordCounter >= 3)
+                        {
+                            AnsiConsole.MarkupLine(
+                                "[gray italic]For exit insert[/] [bold gray]ctrl + c[/]"
+                            );
+                        }
                         return ValidationResult.Error("[bold red]Wrong password[/]");
                     }
                 })
