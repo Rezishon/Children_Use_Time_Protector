@@ -36,5 +36,11 @@ class Program
         );
 
         AnsiConsole.Clear();
+
+        bool flag = true;
+
+        while (flag)
+        {
+        }
     }
 }
