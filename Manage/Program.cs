@@ -107,6 +107,14 @@ class Program
                                     flagRoot = false;
                                     Console.Clear();
                                 }
+                                else
+                                {
+                                    AnsiConsole.MarkupLine(
+                                        "Passwords aren't the same\nPress any key to Repeat"
+                                    );
+                                    Console.ReadKey();
+                                    Console.Clear();
+                                }
                             }
 
                             break;
