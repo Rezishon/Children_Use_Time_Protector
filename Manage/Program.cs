@@ -59,6 +59,13 @@ class Program
             switch (MainMenuPartsDictionary[chosenPartOnMainMenu])
             {
                 case 0:
+                    Dictionary<string, int> RootMenuPartsDictionary =
+                        new()
+                        {
+                            { "Change the root password", 0 },
+                            { "Change The root recovery password", 1 },
+                            { "Main Menu", 2 }
+                        };
                     break;
                 case 1:
                     break;
