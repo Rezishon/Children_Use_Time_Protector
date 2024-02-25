@@ -9,5 +9,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        AnsiConsole.Prompt(
+            new TextPrompt<string>("Please insert the [bold red]ROOT[/] password: ")
     }
 }
