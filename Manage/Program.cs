@@ -20,6 +20,10 @@ class Program
                     {
                         return ValidationResult.Success();
                     }
+                    else
+                    {
+                        return ValidationResult.Error("[bold red]Wrong password[/]");
+                    }
                 })
         );
     }
