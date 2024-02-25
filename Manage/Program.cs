@@ -56,6 +56,9 @@ class Program
                     .HighlightStyle(Style.Parse("purple bold"))
                     .AddChoices(["Root", "Service", "Timing", "Exit"])
             );
+            switch (MainMenuPartsDictionary[chosenPartOnMainMenu])
+            {
+            }
         }
     }
 }
