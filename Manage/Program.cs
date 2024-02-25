@@ -89,9 +89,11 @@ class Program
                                 var newPassword = AnsiConsole.Ask<string>(
                                     "What's your [green]new[/] password? "
                                 );
+                                AnsiConsole.MarkupLine(Hash.ToSha256(newPassword));
                                 var newRepeatedPassword = AnsiConsole.Ask<string>(
                                     "Repeat your [green]new[/] password: "
                                 );
+                                AnsiConsole.MarkupLine(Hash.ToSha256(newRepeatedPassword));
                             }
 
                             break;
