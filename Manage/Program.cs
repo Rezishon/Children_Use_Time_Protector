@@ -12,5 +12,6 @@ class Program
         AnsiConsole.Prompt(
             new TextPrompt<string>("Please insert the [bold red]ROOT[/] password: ")
                 .PromptStyle("green")
+                .Secret(null)
     }
 }
