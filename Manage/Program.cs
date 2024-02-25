@@ -49,6 +49,13 @@ class Program
                     { "Exit", 2 },
                     { "Timing", 3 }
                 };
+            var chosenPartOnMainMenu = AnsiConsole.Prompt(
+                new SelectionPrompt<string>()
+                    .Title("What part you want to change?")
+                    .PageSize(5)
+                    .HighlightStyle(Style.Parse("purple bold"))
+                    .AddChoices(["Root", "Service", "Timing", "Exit"])
+            );
         }
     }
 }
