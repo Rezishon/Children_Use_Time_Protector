@@ -14,5 +14,8 @@ class Program
                 .PromptStyle("green")
                 .Secret(null)
                 .ValidationErrorMessage("[red]That's not a valid password[/]")
+                .Validate(password =>
+                {
+                })
     }
 }
