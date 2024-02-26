@@ -1,3 +1,6 @@
 
 Manage/obj/Debug/net8.0/Children_Use_Time_Protector.AssemblyInfoInputs.cache
 Manage/obj/Debug/net8.0/Children_Use_Time_Protector.AssemblyInfo.cs
+Services/obj/Services.csproj.nuget.dgspec.json
+Services/obj/project.nuget.cache
+Services/obj/project.assets.json
