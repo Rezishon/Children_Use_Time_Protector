@@ -105,5 +105,9 @@ namespace Manage.Repository
                 // }
             }
         }
+
+        public static void AllowedTimeOfDay()
+        {
+        }
     }
 }
