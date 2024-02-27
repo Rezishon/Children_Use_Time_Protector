@@ -7,6 +7,7 @@ namespace Manage.Repository
     {
         public static List<object> MenuPrompt(List<string> items)
         {
+            Dictionary<string, int> PartsDictionary = new Dictionary<string, int>();
         }
     }
 }
