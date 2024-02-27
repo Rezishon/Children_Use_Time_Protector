@@ -115,6 +115,11 @@ namespace Manage.Repository
                 var newTimeOfDay = AnsiConsole.Ask<string>(
                     $"What's your [green]new[/] [bold]Time Of Day[/]? "
                 );
+                AnsiConsole.MarkupLine($"Your new [bold]Time Of Day[/] has been set");
+                AnsiConsole.MarkupLine("Press any key to exit");
+                Console.ReadKey();
+                flag = false;
+                Console.Clear();
             }
         }
     }
