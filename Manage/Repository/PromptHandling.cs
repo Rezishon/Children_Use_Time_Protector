@@ -61,6 +61,9 @@ namespace Manage.Repository
                     flag = false;
                     Console.Clear();
                 }
+                else
+                {
+                }
             }
         }
     }
