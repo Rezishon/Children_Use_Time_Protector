@@ -63,6 +63,11 @@ namespace Manage.Repository
                 }
                 else
                 {
+                    AnsiConsole.MarkupLine(
+                        $"[bold]{passwordName}s[/] aren't the same\nPress any key to Repeat"
+                    );
+                    Console.ReadKey();
+                    Console.Clear();
                 }
             }
         }
