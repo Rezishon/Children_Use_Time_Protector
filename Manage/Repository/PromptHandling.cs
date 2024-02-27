@@ -83,6 +83,9 @@ namespace Manage.Repository
 
             while (flag)
             {
+                var newUsingTime = AnsiConsole.Ask<string>(
+                    $"What's your [green]new[/] [bold]{timeName}[/]? "
+                );
             }
         }
     }
