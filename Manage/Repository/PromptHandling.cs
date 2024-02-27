@@ -22,5 +22,13 @@ namespace Manage.Repository
             AnsiConsole.Clear();
             return [chosenPartMenu, PartsDictionary[chosenPartMenu]];
         }
+
+        public static void PasswordPrompt(
+            string passwordName,
+            bool IsNew = true,
+            bool NeedsHint = false
+        )
+        {
+        }
     }
 }
