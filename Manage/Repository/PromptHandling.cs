@@ -112,6 +112,9 @@ namespace Manage.Repository
 
             while (flag)
             {
+                var newTimeOfDay = AnsiConsole.Ask<string>(
+                    $"What's your [green]new[/] [bold]Time Of Day[/]? "
+                );
             }
         }
     }
