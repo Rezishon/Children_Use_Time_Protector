@@ -28,6 +28,7 @@ namespace Manage.Repository
             bool IsNew = true,
             bool NeedsHint = false
         )
+        // The IsNew should check the root status and then set the true|false
         {
             bool flag = true;
 
