@@ -45,6 +45,9 @@ namespace Manage.Repository
 
                 if (NeedsHint)
                 {
+                    var HintPassword = AnsiConsole.Ask<string>(
+                        $"What's your [purple bold]hint[/] message: "
+                    );
                 }
             }
         }
