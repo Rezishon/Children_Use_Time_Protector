@@ -18,6 +18,8 @@ namespace Manage.Repository
                     .HighlightStyle(Style.Parse("purple bold"))
                     .AddChoices(items)
             );
+
+            AnsiConsole.Clear();
         }
     }
 }
