@@ -36,10 +36,12 @@ namespace Manage.Repository
                 var Password = AnsiConsole.Ask<string>(
                     $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{passwordName}[/]? "
                 );
+                AnsiConsole.MarkupLine(Hash.ToSha256(Password));
 
                 var RepeatedPassword = AnsiConsole.Ask<string>(
                     $"Repeat your{(IsNew ? " [green]new[/]" : "")} [bold]{passwordName}[/]: "
                 );
+                AnsiConsole.MarkupLine(Hash.ToSha256(RepeatedPassword));
             }
         }
     }
