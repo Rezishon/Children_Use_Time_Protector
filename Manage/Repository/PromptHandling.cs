@@ -137,6 +137,12 @@ namespace Manage.Repository
 
         public static void UserValidation(string userName)
         {
+            AnsiConsole.Prompt(
+                new TextPrompt<string>($"Please insert the [bold red]{userName}[/] password: ")
+                    .PromptStyle("green")
+                    .Secret(null)
+                    .ValidationErrorMessage("[red]That's not a valid password[/]")
+            );
         }
     }
 }
