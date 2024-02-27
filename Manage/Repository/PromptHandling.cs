@@ -108,6 +108,11 @@ namespace Manage.Repository
 
         public static void AllowedTimeOfDay()
         {
+            bool flag = true;
+
+            while (flag)
+            {
+            }
         }
     }
 }
