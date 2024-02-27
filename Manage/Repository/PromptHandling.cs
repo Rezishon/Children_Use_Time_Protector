@@ -115,11 +115,23 @@ namespace Manage.Repository
                 var newTimeOfDay = AnsiConsole.Ask<string>(
                     $"What's your [green]new[/] [bold]Time Of Day[/]? "
                 );
+
+                // if (DoesInsertValueValid(newTimeOfDay))
+                // {
                 AnsiConsole.MarkupLine($"Your new [bold]Time Of Day[/] has been set");
                 AnsiConsole.MarkupLine("Press any key to exit");
                 Console.ReadKey();
                 flag = false;
                 Console.Clear();
+                // }
+                // else
+                // {
+                //     AnsiConsole.MarkupLine(
+                //         $"[bold]{timeOfDayName}s[/] aren't the same\nPress any key to Repeat"
+                //     );
+                //     Console.ReadKey();
+                //     Console.Clear();
+                // }
             }
         }
     }
