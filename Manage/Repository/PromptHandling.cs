@@ -50,6 +50,10 @@ namespace Manage.Repository
                     );
                     AnsiConsole.MarkupLine(HintPassword);
                 }
+
+                if (string.Equals(Hash.ToSha256(Password), Hash.ToSha256(RepeatedPassword)))
+                {
+                }
             }
         }
     }
