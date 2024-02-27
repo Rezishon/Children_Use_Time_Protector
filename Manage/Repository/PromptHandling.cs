@@ -33,6 +33,13 @@ namespace Manage.Repository
 
             while (flag)
             {
+                var Password = AnsiConsole.Ask<string>(
+                    $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{passwordName}[/]? "
+                );
+
+                var RepeatedPassword = AnsiConsole.Ask<string>(
+                    $"Repeat your{(IsNew ? " [green]new[/]" : "")} [bold]{passwordName}[/]: "
+                );
             }
         }
     }
