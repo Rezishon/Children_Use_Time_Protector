@@ -71,5 +71,10 @@ namespace Manage.Repository
                 }
             }
         }
+
+        public static void ReturnToMainMenu()
+        {
+            // An empty method for future use
+        }
     }
 }
