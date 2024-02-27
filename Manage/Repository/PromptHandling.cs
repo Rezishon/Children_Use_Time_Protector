@@ -76,5 +76,9 @@ namespace Manage.Repository
         {
             // An empty method for future use
         }
+
+        public static void AllowedUseTime(string timeName)
+        {
+        }
     }
 }
