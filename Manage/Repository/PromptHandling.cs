@@ -53,6 +53,9 @@ namespace Manage.Repository
 
                 if (string.Equals(Hash.ToSha256(Password), Hash.ToSha256(RepeatedPassword)))
                 {
+                    AnsiConsole.MarkupLine(
+                        $"Your{(IsNew ? " new" : "")} [bold]{passwordName}[/] has been set"
+                    );
                 }
             }
         }
