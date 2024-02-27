@@ -79,6 +79,11 @@ namespace Manage.Repository
 
         public static void AllowedUseTime(string timeName)
         {
+            bool flag = true;
+
+            while (flag)
+            {
+            }
         }
     }
 }
