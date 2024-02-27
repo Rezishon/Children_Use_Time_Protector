@@ -42,6 +42,10 @@ namespace Manage.Repository
                     $"Repeat your{(IsNew ? " [green]new[/]" : "")} [bold]{passwordName}[/]: "
                 );
                 AnsiConsole.MarkupLine(Hash.ToSha256(RepeatedPassword));
+
+                if (NeedsHint)
+                {
+                }
             }
         }
     }
