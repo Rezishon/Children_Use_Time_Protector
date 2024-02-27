@@ -162,6 +162,7 @@ namespace Manage.Repository
                         }
                     })
             );
+            AnsiConsole.Clear();
         }
     }
 }
