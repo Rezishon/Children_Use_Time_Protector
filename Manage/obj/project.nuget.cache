@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lHL0VTFBq0TVecVJ9f1X5hXRfxNrb7JMuTNVpcEwIEfHhKlxDygN2BfFBOiKU+8scaKXSVkbjKh8NLVKdokp6Q==",
+  "dgSpecHash": "wYZvSDIIC9BCg9/qb1t84O1fJu1gm5Mtr0f690R5W49vMrtS/CRZNbLPIy8AFtgOrakqutGnkGTqVEx5Xwrkfg==",
   "success": true,
   "projectFilePath": "S:\\Projects\\Children_Use_Time_Protector\\Manage\\Children_Use_Time_Protector.csproj",
   "expectedPackageFiles": [
@@ -9,9 +9,12 @@
     "C:\\Users\\Reza\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Reza\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Reza\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
+    "C:\\Users\\Reza\\.nuget\\packages\\spectre.console\\0.48.0\\spectre.console.0.48.0.nupkg.sha512",
+    "C:\\Users\\Reza\\.nuget\\packages\\spectre.console.cli\\0.48.0\\spectre.console.cli.0.48.0.nupkg.sha512",
     "C:\\Users\\Reza\\.nuget\\packages\\system.diagnostics.eventlog\\4.7.0\\system.diagnostics.eventlog.4.7.0.nupkg.sha512",
     "C:\\Users\\Reza\\.nuget\\packages\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",
     "C:\\Users\\Reza\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
+    "C:\\Users\\Reza\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
     "C:\\Users\\Reza\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
     "C:\\Users\\Reza\\.nuget\\packages\\system.reflection.extensions\\4.3.0\\system.reflection.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\Reza\\.nuget\\packages\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",
