@@ -134,5 +134,9 @@ namespace Manage.Repository
                 // }
             }
         }
+
+        public static void UserValidation(string userName)
+        {
+        }
     }
 }
