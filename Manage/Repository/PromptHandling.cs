@@ -20,6 +20,7 @@ namespace Manage.Repository
             );
 
             AnsiConsole.Clear();
+            return [chosenPartMenu, PartsDictionary[chosenPartMenu]];
         }
     }
 }
