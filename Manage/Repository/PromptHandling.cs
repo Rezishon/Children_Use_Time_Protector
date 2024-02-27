@@ -56,6 +56,10 @@ namespace Manage.Repository
                     AnsiConsole.MarkupLine(
                         $"Your{(IsNew ? " new" : "")} [bold]{passwordName}[/] has been set"
                     );
+                    AnsiConsole.MarkupLine("Press any key to exit");
+                    Console.ReadKey();
+                    flag = false;
+                    Console.Clear();
                 }
             }
         }
