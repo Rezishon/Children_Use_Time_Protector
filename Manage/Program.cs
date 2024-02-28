@@ -23,6 +23,17 @@ class Program
             switch (PromptHandler.MenuPrompt(["Root", "Service", "Exit"])[1])
             {
                 case 0:
+                    switch (
+                        PromptHandler.MenuPrompt(
+                            [
+                                "Change the root password",
+                                "Change The root recovery password",
+                                "Main menu"
+                            ]
+                        )[1]
+                    )
+                    {
+                    }
                     break;
                 case 1:
                 case 2:
