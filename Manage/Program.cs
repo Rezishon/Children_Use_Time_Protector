@@ -54,8 +54,11 @@ class Program
                             break;
                     }
                     break;
+
+                // Service menu
                 case 1:
                     switch (
+                        // Create service menu
                         PromptHandler.MenuPrompt(
                             [
                                 "Change service status",
@@ -67,24 +70,33 @@ class Program
                         )[1]
                     )
                     {
+                        // Change service status
                         case 0:
                             if (ServicePart.Status())
                                 Commands.TurnOffService();
                             else
                                 Commands.TurnOnService();
                             break;
+
+                        // Change allowed use time
                         case 1:
                             PromptHandler.AllowedUseTime("Allowed use time");
                             break;
+
+                        // Change temporary allowed use time
                         case 2:
                             AnsiConsole.MarkupLine(
                                 "This password use for reset all parts- use this only in emergency situation"
                             );
                             PromptHandler.AllowedUseTime("Temporary allowed use time");
                             break;
+
+                        // Change allowed time of day
                         case 3:
                             PromptHandler.AllowedTimeOfDay();
                             break;
+
+                        // Main menu
                         case 4:
                             PromptHandler.ReturnToMainMenu();
                             break;
