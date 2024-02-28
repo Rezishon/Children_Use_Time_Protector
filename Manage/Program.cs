@@ -103,6 +103,7 @@ class Program
                     }
                     break;
                 case 2:
+                    flag = false;
                     break;
             }
         }
