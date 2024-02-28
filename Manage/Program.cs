@@ -77,6 +77,10 @@ class Program
                             PromptHandler.AllowedUseTime("Allowed use time");
                             break;
                         case 2:
+                            AnsiConsole.MarkupLine(
+                                "This password use for reset all parts- use this only in emergency situation"
+                            );
+                            PromptHandler.AllowedUseTime("Temporary allowed use time");
                             break;
                         case 3:
                             break;
