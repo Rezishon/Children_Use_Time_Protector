@@ -22,6 +22,11 @@ class Program
             // Create main menu
             switch (PromptHandler.MenuPrompt(["Root", "Service", "Exit"])[1])
             {
+                case 0:
+                    break;
+                case 1:
+                case 2:
+                    break;
             }
         }
     }
