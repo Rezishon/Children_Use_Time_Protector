@@ -37,6 +37,10 @@ class Program
                             PromptHandler.PasswordPrompt("Password");
                             break;
                         case 1:
+                            AnsiConsole.MarkupLine(
+                                "Using memorable password recommended\nThis password should be use in emergency mood"
+                            );
+                            PromptHandler.PasswordPrompt("Recovery Password", true, true);
                             break;
                         case 2:
                             break;
