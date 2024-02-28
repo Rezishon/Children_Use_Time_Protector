@@ -102,8 +102,11 @@ class Program
                             break;
                     }
                     break;
+
+                // Exit
                 case 2:
                     flag = false;
+                    // Add exit message
                     break;
             }
         }
