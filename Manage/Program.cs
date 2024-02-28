@@ -12,5 +12,13 @@ class Program
     {
         // User validation
         PromptHandler.UserValidation("Root");
+
+        // Main menu loop flag
+        bool flag = true;
+
+        // Main menu loop
+        while (flag)
+        {
+        }
     }
 }
