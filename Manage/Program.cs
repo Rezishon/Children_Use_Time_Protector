@@ -68,6 +68,10 @@ class Program
                     )
                     {
                         case 0:
+                            if (ServicePart.Status())
+                                Commands.TurnOffService();
+                            else
+                                Commands.TurnOnService();
                             break;
                         case 1:
                             break;
