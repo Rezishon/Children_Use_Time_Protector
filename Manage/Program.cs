@@ -86,6 +86,7 @@ class Program
                             PromptHandler.AllowedTimeOfDay();
                             break;
                         case 4:
+                            PromptHandler.ReturnToMainMenu();
                             break;
                     }
                     break;
