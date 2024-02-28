@@ -34,6 +34,7 @@ class Program
                     )
                     {
                         case 0:
+                            PromptHandler.PasswordPrompt("Password");
                             break;
                         case 1:
                             break;
