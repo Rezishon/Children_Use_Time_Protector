@@ -19,6 +19,10 @@ class Program
         // Main menu loop
         while (flag)
         {
+            // Create main menu
+            switch (PromptHandler.MenuPrompt(["Root", "Service", "Exit"])[1])
+            {
+            }
         }
     }
 }
