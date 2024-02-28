@@ -55,6 +55,19 @@ class Program
                     }
                     break;
                 case 1:
+                    switch (
+                        PromptHandler.MenuPrompt(
+                            [
+                                "Change service status",
+                                "Change allowed use time",
+                                "Change temporary allowed use time",
+                                "Change allowed time of day",
+                                "Main menu"
+                            ]
+                        )[1]
+                    )
+                    {
+                    }
                 case 2:
                     break;
             }
