@@ -22,7 +22,9 @@ class Program
             // Create main menu
             switch (PromptHandler.MenuPrompt(["Root", "Service", "Exit"])[1])
             {
+                // Root menu
                 case 0:
+                    // Create root menu
                     switch (
                         PromptHandler.MenuPrompt(
                             [
@@ -33,15 +35,20 @@ class Program
                         )[1]
                     )
                     {
+                        // Change the root password
                         case 0:
                             PromptHandler.PasswordPrompt("Password");
                             break;
+
+                        // Change The root recovery password
                         case 1:
                             AnsiConsole.MarkupLine(
                                 "Using memorable password recommended\nThis password should be use in emergency mood"
                             );
                             PromptHandler.PasswordPrompt("Recovery Password", true, true);
                             break;
+
+                        // Main Menu
                         case 2:
                             PromptHandler.ReturnToMainMenu();
                             break;
