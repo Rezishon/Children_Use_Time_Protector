@@ -43,6 +43,7 @@ class Program
                             PromptHandler.PasswordPrompt("Recovery Password", true, true);
                             break;
                         case 2:
+                            PromptHandler.ReturnToMainMenu();
                             break;
                     }
                     break;
