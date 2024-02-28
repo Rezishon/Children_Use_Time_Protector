@@ -83,6 +83,7 @@ class Program
                             PromptHandler.AllowedUseTime("Temporary allowed use time");
                             break;
                         case 3:
+                            PromptHandler.AllowedTimeOfDay();
                             break;
                         case 4:
                             break;
