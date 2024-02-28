@@ -74,6 +74,7 @@ class Program
                                 Commands.TurnOnService();
                             break;
                         case 1:
+                            PromptHandler.AllowedUseTime("Allowed use time");
                             break;
                         case 2:
                             break;
