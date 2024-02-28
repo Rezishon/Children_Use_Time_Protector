@@ -1741,6 +1741,8 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "Children_Use_Time_Protector >= 1.0.0",
+      "Spectre.Console >= 0.48.0",
+      "Spectre.Console.Cli >= 0.48.0",
       "Topshelf >= 4.3.0"
     ]
   },
@@ -1793,6 +1795,14 @@
       "net8.0": {
         "targetAlias": "net8.0",
         "dependencies": {
+          "Spectre.Console": {
+            "target": "Package",
+            "version": "[0.48.0, )"
+          },
+          "Spectre.Console.Cli": {
+            "target": "Package",
+            "version": "[0.48.0, )"
+          },
           "Topshelf": {
             "target": "Package",
             "version": "[4.3.0, )"
@@ -1817,5 +1827,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file S:\\Projects\\Children_Use_Time_Protector\\Services\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

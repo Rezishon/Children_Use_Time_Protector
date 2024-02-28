@@ -1,6 +1,7 @@
 ﻿using CommandHandling;
 using ConfigHandling;
 using Hashing;
+using Manage.Repository;
 using Spectre.Console;
 
 namespace Children_Use_Time_Protector;
@@ -9,165 +10,103 @@ class Program
 {
     static void Main(string[] args)
     {
-        int wrongPasswordCounter = 0;
-        AnsiConsole.Prompt(
-            new TextPrompt<string>("Please insert the [bold red]ROOT[/] password: ")
-                .PromptStyle("green")
-                .Secret(null)
-                .ValidationErrorMessage("[red]That's not a valid password[/]")
-                .Validate(password =>
-                {
-                    if (string.Equals(Hash.ToSha256(password), Hash.ToSha256("test")))
-                    {
-                        return ValidationResult.Success();
-                    }
-                    else
-                    {
-                        wrongPasswordCounter++;
-                        if (wrongPasswordCounter >= 3)
-                        {
-                            AnsiConsole.MarkupLine(
-                                "[gray italic]For exit insert[/] [bold gray]ctrl + c[/]"
-                            );
-                        }
-                        return ValidationResult.Error("[bold red]Wrong password[/]");
-                    }
-                })
-        );
+        // User validation
+        PromptHandler.UserValidation("Root");
 
-        AnsiConsole.Clear();
-
+        // Main menu loop flag
         bool flag = true;
 
+        // Main menu loop
         while (flag)
         {
-            Dictionary<string, int> MainMenuPartsDictionary =
-                new()
-                {
-                    { "Root", 0 },
-                    { "Service", 1 },
-                    { "Exit", 2 },
-                    { "Timing", 3 }
-                };
-            var chosenPartOnMainMenu = AnsiConsole.Prompt(
-                new SelectionPrompt<string>()
-                    .Title("What part you want to change?")
-                    .PageSize(5)
-                    .HighlightStyle(Style.Parse("purple bold"))
-                    .AddChoices(["Root", "Service", "Timing", "Exit"])
-            );
-            switch (MainMenuPartsDictionary[chosenPartOnMainMenu])
+            // Create main menu
+            switch (PromptHandler.MenuPrompt(["Root", "Service", "Exit"])[1])
             {
+                // Root menu
                 case 0:
-                    Dictionary<string, int> RootMenuPartsDictionary =
-                        new()
-                        {
-                            { "Change the root password", 0 },
-                            { "Change The root recovery password", 1 },
-                            { "Main Menu", 2 }
-                        };
-                    var chosenPartOnRootMenu = AnsiConsole.Prompt(
-                        new SelectionPrompt<string>()
-                            .Title("What part you want to change?")
-                            .PageSize(3)
-                            .HighlightStyle(Style.Parse("purple bold"))
-                            .AddChoices(
-                                [
-                                    "Change the root password",
-                                    "Change The root recovery password",
-                                    "Main Menu"
-                                ]
-                            )
-                    );
-                    switch (RootMenuPartsDictionary[chosenPartOnRootMenu])
+                    // Create root menu
+                    switch (
+                        PromptHandler.MenuPrompt(
+                            [
+                                "Change the root password",
+                                "Change The root recovery password",
+                                "Main menu"
+                            ]
+                        )[1]
+                    )
                     {
+                        // Change the root password
                         case 0:
-
-                            bool flagRoot = true;
-                            while (flagRoot)
-                            {
-                                var newPassword = AnsiConsole.Ask<string>(
-                                    "What's your [green]new[/] password? "
-                                );
-                                AnsiConsole.MarkupLine(Hash.ToSha256(newPassword));
-                                var newRepeatedPassword = AnsiConsole.Ask<string>(
-                                    "Repeat your [green]new[/] password: "
-                                );
-                                AnsiConsole.MarkupLine(Hash.ToSha256(newRepeatedPassword));
-                                if (
-                                    string.Equals(
-                                        Hash.ToSha256(newPassword),
-                                        Hash.ToSha256(newRepeatedPassword)
-                                    )
-                                )
-                                {
-                                    AnsiConsole.MarkupLine("Your new password has been set");
-                                    AnsiConsole.MarkupLine("Press any key to exit");
-                                    Console.ReadKey();
-                                    flagRoot = false;
-                                    Console.Clear();
-                                }
-                                else
-                                {
-                                    AnsiConsole.MarkupLine(
-                                        "Passwords aren't the same\nPress any key to Repeat"
-                                    );
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                }
-                            }
-
+                            PromptHandler.PasswordPrompt("Password");
                             break;
+
+                        // Change The root recovery password
                         case 1:
-
-                            bool flagRecoveryRoot = true;
-                            while (flagRecoveryRoot)
-                            {
-                                AnsiConsole.MarkupLine("choosing a simple password recommended ");
-                                var newRecoveryPassword = AnsiConsole.Ask<string>(
-                                    "What's your [green]new[/] recovery password? "
-                                );
-                                AnsiConsole.MarkupLine(Hash.ToSha256(newRecoveryPassword));
-                                var newRepeatedRecoveryPassword = AnsiConsole.Ask<string>(
-                                    "Repeat your [green]new[/] recovery password: "
-                                );
-                                AnsiConsole.MarkupLine(Hash.ToSha256(newRepeatedRecoveryPassword));
-                                if (
-                                    string.Equals(
-                                        Hash.ToSha256(newRecoveryPassword),
-                                        Hash.ToSha256(newRepeatedRecoveryPassword)
-                                    )
-                                )
-                                {
-                                    AnsiConsole.MarkupLine(
-                                        "Your new recovery password has been set"
-                                    );
-                                    AnsiConsole.MarkupLine("Press any key to exit");
-                                    Console.ReadKey();
-                                    flagRecoveryRoot = false;
-                                    Console.Clear();
-                                }
-                                else
-                                {
-                                    AnsiConsole.MarkupLine(
-                                        "Recovery passwords aren't the same\nPress any key to Repeat"
-                                    );
-                                    Console.ReadKey();
-                                    Console.Clear();
-                                }
-                            }
-
+                            AnsiConsole.MarkupLine(
+                                "Using memorable password recommended\nThis password should be use in emergency mood"
+                            );
+                            PromptHandler.PasswordPrompt("Recovery Password", true, true);
                             break;
+
+                        // Main Menu
                         case 2:
-                            // return to main menu
+                            PromptHandler.ReturnToMainMenu();
                             break;
                     }
                     break;
+
+                // Service menu
                 case 1:
+                    switch (
+                        // Create service menu
+                        PromptHandler.MenuPrompt(
+                            [
+                                "Change service status",
+                                "Change allowed use time",
+                                "Change temporary allowed use time",
+                                "Change allowed time of day",
+                                "Main menu"
+                            ]
+                        )[1]
+                    )
+                    {
+                        // Change service status
+                        case 0:
+                            if (ServicePart.Status())
+                                Commands.TurnOffService();
+                            else
+                                Commands.TurnOnService();
+                            break;
+
+                        // Change allowed use time
+                        case 1:
+                            PromptHandler.AllowedUseTime("Allowed use time");
+                            break;
+
+                        // Change temporary allowed use time
+                        case 2:
+                            AnsiConsole.MarkupLine(
+                                "This password use for reset all parts- use this only in emergency situation"
+                            );
+                            PromptHandler.AllowedUseTime("Temporary allowed use time");
+                            break;
+
+                        // Change allowed time of day
+                        case 3:
+                            PromptHandler.AllowedTimeOfDay();
+                            break;
+
+                        // Main menu
+                        case 4:
+                            PromptHandler.ReturnToMainMenu();
+                            break;
+                    }
                     break;
+
+                // Exit
                 case 2:
-                    break;
-                case 3:
+                    flag = false;
+                    // Add exit message
                     break;
             }
         }

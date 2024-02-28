@@ -10,7 +10,7 @@ namespace CommandHandling
             // ..\..\..\..\..\Services\bin\Debug\net8.0\Services.exe
             {
                 "TurnOnService",
-                @"rojects\Children_Use_Time_Protector\Services\bin\Debug\net8.0\Services.exe install start"
+                @"..\Services\bin\Debug\net8.0\Services.exe install start"
             },
             { "TurnOffService", @"..\Services\bin\Debug\net8.0\Services.exe uninstall" }
         };

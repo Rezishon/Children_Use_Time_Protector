@@ -123,6 +123,14 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Spectre.Console": {
+              "target": "Package",
+              "version": "[0.48.0, )"
+            },
+            "Spectre.Console.Cli": {
+              "target": "Package",
+              "version": "[0.48.0, )"
+            },
             "Topshelf": {
               "target": "Package",
               "version": "[4.3.0, )"

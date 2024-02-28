@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oiVx7XAVlsiRxNKZqtq3tZCCXQ0E1Ze7Z9rrJX+t7LJSjtBe37kqHB0SFUCmkq86wocKApjIyluoL5WIkDqsDA==",
+  "dgSpecHash": "uduLvEN+/JDSNZjj7NEa+iCHNX8tWu2N9qJYsRGHMiszgrZO4mSS+IiqHCAkuhDls+2ERSvM6h+XXeM2vKfVog==",
   "success": true,
   "projectFilePath": "S:\\Projects\\Children_Use_Time_Protector\\Services\\Services.csproj",
   "expectedPackageFiles": [
@@ -32,5 +32,12 @@
     "C:\\Users\\Reza\\.nuget\\packages\\topshelf\\4.3.0\\topshelf.4.3.0.nupkg.sha512",
     "C:\\Users\\Reza\\.nuget\\packages\\topshelf.serviceinstaller\\4.3.0\\topshelf.serviceinstaller.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file S:\\Projects\\Children_Use_Time_Protector\\Services\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
