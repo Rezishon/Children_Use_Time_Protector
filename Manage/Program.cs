@@ -10,5 +10,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        // User validation
+        PromptHandler.UserValidation("Root");
     }
 }
