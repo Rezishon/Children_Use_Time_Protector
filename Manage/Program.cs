@@ -43,7 +43,7 @@ class Program
                         // Change The root recovery password
                         case 1:
                             AnsiConsole.MarkupLine(
-                                "Using memorable password recommended\nThis password should be use in emergency mood"
+                                "Using memorable password recommended\nThis password should be use in emergency situation because it resets all parts"
                             );
                             PromptHandler.PasswordPrompt("Recovery Password", true, true);
                             break;
@@ -80,19 +80,23 @@ class Program
 
                         // Change allowed use time
                         case 1:
+                            AnsiConsole.MarkupLine("Default using time is 120 minute");
                             PromptHandler.AllowedUseTime("Allowed use time");
                             break;
 
                         // Change temporary allowed use time
                         case 2:
                             AnsiConsole.MarkupLine(
-                                "This password use for reset all parts- use this only in emergency situation"
+                                "This time will added to the main allowed using duration"
                             );
                             PromptHandler.AllowedUseTime("Temporary allowed use time");
                             break;
 
                         // Change allowed time of day
                         case 3:
+                            AnsiConsole.MarkupLine(
+                                "Default allowed day time is from 06:00 to 23:59"
+                            );
                             PromptHandler.AllowedTimeOfDay();
                             break;
 

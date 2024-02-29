@@ -37,11 +37,31 @@ namespace Manage.Repository
                 var Password = AnsiConsole.Ask<string>(
                     $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{passwordName}[/]? "
                 );
+                if (Password.Length >= 20)
+                {
+                    Console.Clear();
+                    AnsiConsole.MarkupLine(
+                        "[bold red]Your input should be less than 20 characters[/]\nPress any key to Repeat"
+                    );
+                    Console.ReadKey();
+                    Console.Clear();
+                    continue;
+                }
                 AnsiConsole.MarkupLine(Hash.ToSha256(Password));
 
                 var RepeatedPassword = AnsiConsole.Ask<string>(
                     $"Repeat your{(IsNew ? " [green]new[/]" : "")} [bold]{passwordName}[/]: "
                 );
+                if (!string.Equals(Password, RepeatedPassword))
+                {
+                    Console.Clear();
+                    AnsiConsole.MarkupLine(
+                        $"[bold red]{passwordName}s aren't the same[/]\nPress any key to Repeat"
+                    );
+                    Console.ReadKey();
+                    Console.Clear();
+                    continue;
+                }
                 AnsiConsole.MarkupLine(Hash.ToSha256(RepeatedPassword));
 
                 if (NeedsHint)
@@ -52,24 +72,14 @@ namespace Manage.Repository
                     AnsiConsole.MarkupLine(HintPassword);
                 }
 
-                if (string.Equals(Hash.ToSha256(Password), Hash.ToSha256(RepeatedPassword)))
-                {
-                    AnsiConsole.MarkupLine(
-                        $"Your{(IsNew ? " new" : "")} [bold]{passwordName}[/] has been set"
-                    );
-                    AnsiConsole.MarkupLine("Press any key to exit");
-                    Console.ReadKey();
-                    flag = false;
-                    Console.Clear();
-                }
-                else
-                {
-                    AnsiConsole.MarkupLine(
-                        $"[bold]{passwordName}s[/] aren't the same\nPress any key to Repeat"
-                    );
-                    Console.ReadKey();
-                    Console.Clear();
-                }
+                Console.Clear();
+                AnsiConsole.MarkupLine(
+                    $"[green]Your{(IsNew ? " new" : "")} [bold]{passwordName}[/] has been set[/]"
+                );
+                AnsiConsole.MarkupLine("Press any key to exit");
+                Console.ReadKey();
+                flag = false;
+                Console.Clear();
             }
         }
 
