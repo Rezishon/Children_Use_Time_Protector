@@ -80,6 +80,7 @@ class Program
 
                         // Change allowed use time
                         case 1:
+                            AnsiConsole.MarkupLine("Default using time is 120 minute");
                             PromptHandler.AllowedUseTime("Allowed use time");
                             break;
 
@@ -93,6 +94,9 @@ class Program
 
                         // Change allowed time of day
                         case 3:
+                            AnsiConsole.MarkupLine(
+                                "Default allowed day time is from 06:00 to 23:59"
+                            );
                             PromptHandler.AllowedTimeOfDay();
                             break;
 
