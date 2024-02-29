@@ -43,7 +43,7 @@ class Program
                         // Change The root recovery password
                         case 1:
                             AnsiConsole.MarkupLine(
-                                "Using memorable password recommended\nThis password should be use in emergency mood"
+                                "Using memorable password recommended\nThis password should be use in emergency situation because it resets all parts"
                             );
                             PromptHandler.PasswordPrompt("Recovery Password", true, true);
                             break;
