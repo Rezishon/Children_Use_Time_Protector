@@ -37,6 +37,16 @@ namespace Manage.Repository
                 var Password = AnsiConsole.Ask<string>(
                     $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{passwordName}[/]? "
                 );
+                if (Password.Length >= 20)
+                {
+                    Console.Clear();
+                    AnsiConsole.MarkupLine(
+                        "[bold red]Your input should be less than 20 characters[/]\nPress any key to Repeat"
+                    );
+                    Console.ReadKey();
+                    Console.Clear();
+                    continue;
+                }
                 AnsiConsole.MarkupLine(Hash.ToSha256(Password));
 
                 var RepeatedPassword = AnsiConsole.Ask<string>(
