@@ -52,24 +52,6 @@ namespace Manage.Repository
                     AnsiConsole.MarkupLine(HintPassword);
                 }
 
-                if (string.Equals(Hash.ToSha256(Password), Hash.ToSha256(RepeatedPassword)))
-                {
-                    AnsiConsole.MarkupLine(
-                        $"Your{(IsNew ? " new" : "")} [bold]{passwordName}[/] has been set"
-                    );
-                    AnsiConsole.MarkupLine("Press any key to exit");
-                    Console.ReadKey();
-                    flag = false;
-                    Console.Clear();
-                }
-                else
-                {
-                    AnsiConsole.MarkupLine(
-                        $"[bold]{passwordName}s[/] aren't the same\nPress any key to Repeat"
-                    );
-                    Console.ReadKey();
-                    Console.Clear();
-                }
             }
         }
 
