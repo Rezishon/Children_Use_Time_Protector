@@ -52,6 +52,16 @@ namespace Manage.Repository
                 var RepeatedPassword = AnsiConsole.Ask<string>(
                     $"Repeat your{(IsNew ? " [green]new[/]" : "")} [bold]{passwordName}[/]: "
                 );
+                if (!string.Equals(Password, RepeatedPassword))
+                {
+                    Console.Clear();
+                    AnsiConsole.MarkupLine(
+                        $"[bold red]{passwordName}s aren't the same[/]\nPress any key to Repeat"
+                    );
+                    Console.ReadKey();
+                    Console.Clear();
+                    continue;
+                }
                 AnsiConsole.MarkupLine(Hash.ToSha256(RepeatedPassword));
 
                 if (NeedsHint)
