@@ -87,7 +87,7 @@ class Program
                         // Change temporary allowed use time
                         case 2:
                             AnsiConsole.MarkupLine(
-                                "This password use for reset all parts- use this only in emergency situation"
+                                "This time will added to the main allowed using duration"
                             );
                             PromptHandler.AllowedUseTime("Temporary allowed use time");
                             break;
