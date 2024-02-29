@@ -28,3 +28,8 @@ S:\Projects\Children_Use_Time_Protector\Services\bin\Debug\net8.0\Children_Use_T
 S:\Projects\Children_Use_Time_Protector\Services\bin\Debug\net8.0\Children_Use_Time_Protector.dll
 S:\Projects\Children_Use_Time_Protector\Services\bin\Debug\net8.0\Children_Use_Time_Protector.pdb
 S:\Projects\Children_Use_Time_Protector\Services\obj\Debug\net8.0\Services.sourcelink.json
+s:\Projects\Children_Use_Time_Protector\Services\bin\Debug\net8.0\Spectre.Console.dll
+s:\Projects\Children_Use_Time_Protector\Services\bin\Debug\net8.0\Spectre.Console.Cli.dll
+s:\Projects\Children_Use_Time_Protector\Services\bin\Debug\net8.0\de\Spectre.Console.Cli.resources.dll
+s:\Projects\Children_Use_Time_Protector\Services\bin\Debug\net8.0\fr\Spectre.Console.Cli.resources.dll
+s:\Projects\Children_Use_Time_Protector\Services\bin\Debug\net8.0\sv\Spectre.Console.Cli.resources.dll

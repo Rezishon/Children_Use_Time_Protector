@@ -11,6 +11,7 @@
     <PackageReference Include="Spectre.Console" Version="0.48.0" />
     <PackageReference Include="Spectre.Console.Cli" Version="0.48.0" />
     <PackageReference Include="Topshelf" Version="4.3.0+build.251.sha.509556a" />
+    <ProjectReference Include="S:\Projects\Children_Use_Time_Protector\Manage\Children_Use_Time_Protector.csproj" />
   </ItemGroup>
 
 </Project>

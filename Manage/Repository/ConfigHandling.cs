@@ -58,6 +58,7 @@ namespace ConfigHandling
 
     public static class ServicePart
     {
+        #region Reading Config file
         public static string[] ConfigFileParted { get; } =
             Regex
                 .Replace(
@@ -66,7 +67,13 @@ namespace ConfigHandling
                     ""
                 )
                 .Split(';');
-        private static Dictionary<string, int> ConfigPartsNumbers = new Dictionary<string, int>()
+        #endregion
+
+        #region Config file parts dictionary
+        private static readonly Dictionary<string, int> ConfigPartsNumbers = new Dictionary<
+            string,
+            int
+        >()
         {
             { "Status", 0 },
             { "StartTimeOfDay", 2 },
@@ -74,7 +81,9 @@ namespace ConfigHandling
             { "AllowedDuration", 6 },
             { "TempAllowedDuration", 8 }
         };
+        #endregion
 
+        #region Return config file parts
         public static bool Status()
         {
             if (Hashing.Hash.ToSha256("1") == ConfigFileParted[ConfigPartsNumbers["Status"]])
@@ -102,5 +111,6 @@ namespace ConfigHandling
         {
             return int.Parse(ConfigFileParted[ConfigPartsNumbers["TempAllowedDuration"]]);
         }
+        #endregion
     }
 }
