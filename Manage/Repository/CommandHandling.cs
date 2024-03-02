@@ -30,9 +30,9 @@ namespace CommandHandling
 
                 Process.Start(processInfo);
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
-                System.Console.WriteLine(e);
+                Console.WriteLine(e.Message);
             }
         }
 
