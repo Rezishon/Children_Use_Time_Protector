@@ -33,6 +33,11 @@ namespace CommandHandling
                     process.Start();
                     string output = process.StandardOutput.ReadToEnd();
                     process.WaitForExit();
+
+                    if (WantResult)
+                    {
+                        return output;
+                    }
             }
             catch (Exception e)
             {
