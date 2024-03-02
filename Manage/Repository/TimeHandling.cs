@@ -18,6 +18,9 @@ namespace TimeHandling
             {
                 System.Console.WriteLine(e.Message);
             }
+
+            if (UsedDurationTime >= AllowedDurationTime)
+                return false;
         }
     }
 }
