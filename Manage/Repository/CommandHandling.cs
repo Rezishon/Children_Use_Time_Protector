@@ -28,8 +28,11 @@ namespace CommandHandling
 
             try
             {
+                using (Process process = new Process { StartInfo = processInfo })
                 {
-                Process.Start(processInfo);
+                    process.Start();
+                    string output = process.StandardOutput.ReadToEnd();
+                    process.WaitForExit();
             }
             catch (Exception e)
             {
