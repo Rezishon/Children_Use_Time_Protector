@@ -8,11 +8,8 @@ namespace CommandHandling
         {
             { "Shutdown", "shutdown.exe /s /f" },
             // ..\..\..\..\..\Services\bin\Debug\net8.0\Services.exe
-            {
-                "TurnOnService",
-                @"..\Services\bin\Debug\net8.0\Services.exe install start"
-            },
-            { "TurnOffService", @"..\Services\bin\Debug\net8.0\Services.exe uninstall" }
+            { "TurnOnService", @"..\Services\bin\Debug\net8.0\Services.exe install start" },
+            { "TurnOffService", @"..\Services\bin\Debug\net8.0\Services.exe uninstall" },
         };
 
         private static void CommandRunner(string CommandNameString)
