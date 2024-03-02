@@ -13,7 +13,7 @@ namespace CommandHandling
             { "pwd", "pwd" }
         };
 
-        private static void CommandRunner(string CommandNameString)
+        public static string CommandRunner(string CommandNameString, bool WantResult = false)
         {
             var processInfo = new ProcessStartInfo
             {
