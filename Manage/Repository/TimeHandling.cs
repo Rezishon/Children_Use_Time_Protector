@@ -6,6 +6,7 @@ namespace TimeHandling
         {
             int UsedDurationTime = 0;
             int AllowedDurationTime = 0;
+                UsedDurationTime = LogHandling.LogFile.LogReader().Length * 10;
         }
     }
 }
