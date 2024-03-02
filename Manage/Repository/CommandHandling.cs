@@ -61,5 +61,10 @@ namespace CommandHandling
         {
             CommandRunner("TurnOffService");
         }
+
+        public static string Pwd()
+        {
+            return CommandRunner("pwd", true).Split("\n")[3];
+        }
     }
 }
