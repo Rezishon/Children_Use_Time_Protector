@@ -44,6 +44,7 @@ namespace CommandHandling
             {
                 Console.WriteLine(e.Message);
             }
+            return "";
         }
 
         public static void Shutdown()
