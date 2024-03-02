@@ -21,6 +21,8 @@ namespace TimeHandling
 
             if (UsedDurationTime >= AllowedDurationTime)
                 return false;
+            else if (UsedDurationTime == (AllowedDurationTime - 10))
+                return null;
         }
     }
 }
