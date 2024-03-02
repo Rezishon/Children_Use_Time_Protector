@@ -38,6 +38,7 @@ namespace CommandHandling
                     {
                         return output;
                     }
+                }
             }
             catch (Exception e)
             {
