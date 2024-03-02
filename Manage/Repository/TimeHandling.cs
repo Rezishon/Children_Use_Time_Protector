@@ -16,7 +16,7 @@ namespace TimeHandling
             }
             catch (Exception e)
             {
-                System.Console.WriteLine(e.Message);
+                Console.WriteLine(e.Message);
             }
 
             if (UsedDurationTime >= AllowedDurationTime)
