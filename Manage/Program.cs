@@ -1,4 +1,5 @@
-﻿using CommandHandling;
+﻿using System.Text.RegularExpressions;
+using CommandHandling;
 using ConfigHandling;
 using Hashing;
 using Manage.Repository;

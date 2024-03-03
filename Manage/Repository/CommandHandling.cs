@@ -8,34 +8,43 @@ namespace CommandHandling
         {
             { "Shutdown", "shutdown.exe /s /f" },
             // ..\..\..\..\..\Services\bin\Debug\net8.0\Services.exe
-            {
-                "TurnOnService",
-                @"..\Services\bin\Debug\net8.0\Services.exe install start"
-            },
-            { "TurnOffService", @"..\Services\bin\Debug\net8.0\Services.exe uninstall" }
+            { "TurnOnService", @"..\Services\bin\Debug\net8.0\Services.exe install start" },
+            { "TurnOffService", @"..\Services\bin\Debug\net8.0\Services.exe uninstall" },
+            { "pwd", "pwd" }
         };
 
-        private static void CommandRunner(string CommandNameString)
+        public static string CommandRunner(string CommandNameString, bool WantResult = false)
         {
+            var processInfo = new ProcessStartInfo
+            {
+                Verb = "runas", // Run as administrator
+                LoadUserProfile = true,
+                FileName = "powershell.exe",
+                Arguments = CommandsDic[CommandNameString],
+                RedirectStandardOutput = true,
+                UseShellExecute = false,
+                CreateNoWindow = true
+            };
+
             try
             {
-                var processInfo = new ProcessStartInfo
+                using (Process process = new Process { StartInfo = processInfo })
                 {
-                    Verb = "runas", // Run as administrator
-                    LoadUserProfile = true,
-                    FileName = "powershell.exe",
-                    Arguments = CommandsDic[CommandNameString],
-                    RedirectStandardOutput = false,
-                    UseShellExecute = true,
-                    CreateNoWindow = true
-                };
+                    process.Start();
+                    string output = process.StandardOutput.ReadToEnd();
+                    process.WaitForExit();
 
-                Process.Start(processInfo);
+                    if (WantResult)
+                    {
+                        return output;
+                    }
+                }
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
-                System.Console.WriteLine(e);
+                Console.WriteLine(e.Message);
             }
+            return "";
         }
 
         public static void Shutdown()
@@ -51,6 +60,11 @@ namespace CommandHandling
         public static void TurnOffService()
         {
             CommandRunner("TurnOffService");
+        }
+
+        public static string Pwd()
+        {
+            return CommandRunner("pwd", true).Split("\n")[3];
         }
     }
 }

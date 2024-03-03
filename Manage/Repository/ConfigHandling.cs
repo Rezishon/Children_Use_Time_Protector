@@ -1,16 +1,25 @@
 using System.Text.RegularExpressions;
+using CommandHandling;
 
 namespace ConfigHandling
 {
     public static class ConfigFile
     {
-        public static Dictionary<string, int> ConfigLinesNumber = new Dictionary<string, int>()
+        public static Dictionary<string, int> ConfigLinesNumberDictionary = new Dictionary<
+            string,
+            int
+        >()
         {
             { "Root", 0 },
             { "Service", 1 }
         };
+
         public static string ConfigFilePath { get; } =
-            @"..\Manage\bin\Debug\net8.0\Config.cutp";
+            Regex.Replace(
+                Commands.Pwd(),
+                @"\\Children_Use_Time_Protector\\(\w*\W*)*$",
+                @"\Children_Use_Time_Protector\Manage\bin\Debug\net8.0\Config.cutp"
+            );
         private static string NullString { get; } = "*";
 
         public static void ConfigFileBuilder()
@@ -24,9 +33,9 @@ namespace ConfigHandling
 
                 File.WriteAllText(ConfigFilePath, $"{RootPart}\n{ServicePart}");
             }
-            catch (System.Exception e)
+            catch (Exception e)
             {
-                System.Console.WriteLine(e);
+                Console.WriteLine(e);
             }
         }
 
@@ -62,7 +71,9 @@ namespace ConfigHandling
         public static string[] ConfigFileParted { get; } =
             Regex
                 .Replace(
-                    ConfigFile.ConfigFileReader()[ConfigFile.ConfigLinesNumber["Service"]],
+                    ConfigFile.ConfigFileReader()[
+                        ConfigFile.ConfigLinesNumberDictionary["Service"]
+                    ],
                     @"(^{)|(}$)",
                     ""
                 )
