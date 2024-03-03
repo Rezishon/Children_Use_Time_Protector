@@ -19,20 +19,9 @@ namespace Services
 
         private void Timer_Elapsed(object? sender, System.Timers.ElapsedEventArgs e)
         {
-            string[] lines = new string[] { DateTime.Now.ToString("") };
-            File.AppendAllLines(LogFile.LogFilePath, lines);
-            if (TimeHandling.Time.Allowed() == false)
             {
-                System.Console.WriteLine("Time has ended");
-                Stop();
             }
-            else if (TimeHandling.Time.Allowed() == null)
             {
-                System.Console.WriteLine("10 minute remained");
-            }
-            else
-            {
-                System.Console.WriteLine("Still has time");
             }
         }
 
