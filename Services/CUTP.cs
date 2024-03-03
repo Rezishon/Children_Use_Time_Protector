@@ -38,6 +38,10 @@ namespace Services
                 {
                     Console.WriteLine("10 minute remained");
                 }
+                else
+                {
+                    Console.WriteLine("Still has time");
+                }
             }
             catch (Exception E)
             {
