@@ -21,6 +21,13 @@ namespace Services
         {
             try
             {
+                string[] lines = new string[]
+                {
+                    SystemClock
+                        .Instance.GetCurrentInstant()
+                        .InZone(DateTimeZoneProviders.Tzdb.GetSystemDefault())
+                        .ToString()
+                };
             }
             catch (Exception E)
             {
