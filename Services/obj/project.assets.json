@@ -487,6 +487,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "NodaTime": "3.1.11",
           "Spectre.Console": "0.48.0",
           "Spectre.Console.Cli": "0.48.0",
           "Topshelf": "4.3.0"
