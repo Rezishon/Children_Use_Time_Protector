@@ -1,5 +1,8 @@
 using System.Text.RegularExpressions;
+using CommandHandling;
+using ConfigHandling;
 using LogHandling;
+using NodaTime;
 using Timer = System.Timers.Timer;
 
 namespace Services
@@ -16,28 +19,50 @@ namespace Services
 
         private void Timer_Elapsed(object? sender, System.Timers.ElapsedEventArgs e)
         {
-            string[] lines = new string[] { DateTime.Now.ToString("") };
-            File.AppendAllLines(LogFile.LogFilePath, lines);
-            if (TimeHandling.Time.Allowed() == false)
+            try
             {
-                System.Console.WriteLine("Time has ended");
-                Stop();
+                string[] lines = new string[]
+                {
+                    SystemClock
+                        .Instance.GetCurrentInstant()
+                        .InZone(DateTimeZoneProviders.Tzdb.GetSystemDefault())
+                        .ToString()
+                };
+                File.AppendAllLines(LogFile.LogFilePath, lines);
+                if (TimeHandling.Time.Allowed() == false)
+                {
+                    Console.WriteLine("Time has ended");
+                    Stop();
+                }
+                else if (TimeHandling.Time.Allowed() == null)
+                {
+                    Console.WriteLine("10 minute remained");
+                }
+                else
+                {
+                    Console.WriteLine("Still has time");
+                }
             }
-            else if (TimeHandling.Time.Allowed() == null)
+            catch (Exception E)
             {
-                System.Console.WriteLine("10 minute remained");
-            }
-            else
-            {
-                System.Console.WriteLine("Still has time");
+                Console.WriteLine(E.Message);
             }
         }
 
         public void Start()
         {
+            // Check user has time to start or not
             if (
                 LogFile.LogReader().Length > 0
-                && !Regex.IsMatch(DateTime.Now.ToString("d"), LogFile.Date())
+                && !Regex.IsMatch(
+                    LogFile.Date(
+                        SystemClock
+                            .Instance.GetCurrentInstant()
+                            .InZone(DateTimeZoneProviders.Tzdb.GetSystemDefault())
+                            .ToString()
+                    ),
+                    LogFile.Date()
+                )
             )
             {
                 LogFile.LogCleaner();
