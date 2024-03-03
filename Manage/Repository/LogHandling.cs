@@ -34,5 +34,7 @@ namespace LogHandling
                 return Regex.Match(inputDate, @"^\d{4}(-\d{2})+(?=T)").ToString();
             }
         }
+
+        // (?<=T)\d{2}:\d{2}:\d{2}(?=\s) time regex
     }
 }
