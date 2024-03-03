@@ -28,6 +28,7 @@ namespace Services
                         .InZone(DateTimeZoneProviders.Tzdb.GetSystemDefault())
                         .ToString()
                 };
+                File.AppendAllLines(LogFile.LogFilePath, lines);
             }
             catch (Exception E)
             {
