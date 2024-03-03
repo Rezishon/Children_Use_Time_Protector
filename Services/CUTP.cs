@@ -29,6 +29,11 @@ namespace Services
                         .ToString()
                 };
                 File.AppendAllLines(LogFile.LogFilePath, lines);
+                if (TimeHandling.Time.Allowed() == false)
+                {
+                    Console.WriteLine("Time has ended");
+                    Stop();
+                }
             }
             catch (Exception E)
             {
