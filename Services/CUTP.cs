@@ -51,6 +51,7 @@ namespace Services
 
         public void Start()
         {
+            // Check user has time to start or not
             if (
                 LogFile.LogReader().Length > 0
                 && !Regex.IsMatch(DateTime.Now.ToString("d"), LogFile.Date())
