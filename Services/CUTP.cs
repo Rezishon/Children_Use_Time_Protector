@@ -54,7 +54,15 @@ namespace Services
             // Check user has time to start or not
             if (
                 LogFile.LogReader().Length > 0
-                && !Regex.IsMatch(DateTime.Now.ToString("d"), LogFile.Date())
+                && !Regex.IsMatch(
+                    LogFile.Date(
+                        SystemClock
+                            .Instance.GetCurrentInstant()
+                            .InZone(DateTimeZoneProviders.Tzdb.GetSystemDefault())
+                            .ToString()
+                    ),
+                    LogFile.Date()
+                )
             )
             {
                 LogFile.LogCleaner();
