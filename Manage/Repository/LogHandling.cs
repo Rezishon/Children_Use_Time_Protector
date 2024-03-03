@@ -21,5 +21,18 @@ namespace LogHandling
         {
             File.WriteAllText(LogFilePath, "");
         }
+
+        public static string Date(string inputDate = "")
+        {
+            if (inputDate.Equals(""))
+            {
+                // This method should consider different allowed day time
+                return Regex.Match(LogReader()[0], @"^\d{4}(-\d{2})+(?=T)").ToString();
+            }
+            else
+            {
+                return Regex.Match(inputDate, @"^\d{4}(-\d{2})+(?=T)").ToString();
+            }
+        }
     }
 }
