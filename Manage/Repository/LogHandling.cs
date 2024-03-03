@@ -16,5 +16,10 @@ namespace LogHandling
         {
             return File.ReadAllLines(LogFilePath);
         }
+
+        public static void LogCleaner()
+        {
+            File.WriteAllText(LogFilePath, "");
+        }
     }
 }
