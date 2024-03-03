@@ -13,8 +13,13 @@ namespace ConfigHandling
             { "Root", 0 },
             { "Service", 1 }
         };
+
         public static string ConfigFilePath { get; } =
-            @"..\Manage\bin\Debug\net8.0\Config.cutp";
+            Regex.Replace(
+                Commands.Pwd(),
+                @"\\Children_Use_Time_Protector\\(\w*\W*)*$",
+                @"\Children_Use_Time_Protector\Manage\bin\Debug\net8.0\Config.cutp"
+            );
         private static string NullString { get; } = "*";
 
         public static void ConfigFileBuilder()
