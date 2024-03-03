@@ -19,9 +19,12 @@ namespace Services
 
         private void Timer_Elapsed(object? sender, System.Timers.ElapsedEventArgs e)
         {
+            try
             {
             }
+            catch (Exception E)
             {
+                Console.WriteLine(E.Message);
             }
         }
 
