@@ -31,8 +31,8 @@ namespace LogHandling
             string pattern = @"^\d{4}(-\d{2})+(?=T)"
         )
         {
-            if (inputDate.Equals(""))
             // By default return date of first line of log file
+            if (inputString == null)
             {
                 // This method should consider different allowed day time
                 return Regex.Match(LogReader()[0], @"^\d{4}(-\d{2})+(?=T)").ToString();
