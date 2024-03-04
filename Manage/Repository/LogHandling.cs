@@ -25,8 +25,11 @@ namespace LogHandling
             File.WriteAllText(LogFilePath, "");
         }
 
-        public static string Date(string inputDate = "")
         // Return date part of string
+        public static string Date(
+            string? inputString = null,
+            string pattern = @"^\d{4}(-\d{2})+(?=T)"
+        )
         {
             if (inputDate.Equals(""))
             // By default return date of first line of log file
