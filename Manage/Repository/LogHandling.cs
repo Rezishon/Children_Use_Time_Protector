@@ -35,12 +35,12 @@ namespace LogHandling
             if (inputString == null)
             {
                 // This method should consider different allowed day time
-                return Regex.Match(LogReader()[0], @"^\d{4}(-\d{2})+(?=T)").ToString();
+                return Regex.Match(LogReader()[0], pattern).ToString();
             }
             // Return date of income string in NodaTime library format
             else
             {
-                return Regex.Match(inputDate, @"^\d{4}(-\d{2})+(?=T)").ToString();
+                return Regex.Match(inputString, pattern).ToString();
             }
         }
 
