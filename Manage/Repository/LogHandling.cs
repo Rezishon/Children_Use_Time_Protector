@@ -3,7 +3,7 @@ using CommandHandling;
 
 namespace LogHandling
 {
-    public static class LogFile
+    public class LogFile
     {
         public static string LogFilePath { get; } =
             Regex.Replace(
