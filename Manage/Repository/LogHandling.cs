@@ -49,6 +49,6 @@ namespace LogHandling
         {
             return Date(inputTime, @"(?<=T)\d{2}:\d{2}:\d{2}(?=\s)");
         }
-        // (?<=T)\d{2}:\d{2}:\d{2}(?=\s) time regex
+        // (?<=T)\d{2}:\d{2}:\d{2}(?=\s) time regex 
     }
 }
