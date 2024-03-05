@@ -123,10 +123,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "NodaTime": {
-              "target": "Package",
-              "version": "[3.1.11, )"
-            },
             "Spectre.Console": {
               "target": "Package",
               "version": "[0.48.0, )"
