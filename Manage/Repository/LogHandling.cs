@@ -45,7 +45,7 @@ namespace LogHandling
         }
 
         // Return time part of string
-        public static string Time(string inputTime = null)
+        public static string Time(string? inputTime = null)
         {
             return Date(inputTime, @"(?<=T)\d{2}:\d{2}:\d{2}(?=\s)");
         }
