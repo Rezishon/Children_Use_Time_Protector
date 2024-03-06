@@ -6,6 +6,7 @@ namespace Manage.Repository
 {
     public class PromptHandler
     {
+        #region Menu prompt maker method
         /// <summary>
         /// Make menu prompt of Spectre.Console
         /// </summary>
@@ -28,8 +29,10 @@ namespace Manage.Repository
             AnsiConsole.Clear();
             return [chosenPartMenu, PartsDictionary[chosenPartMenu]];
         }
+        #endregion
 
         public static void PasswordPrompt(
+        #region Password changer prompt maker method
         /// <summary>
         /// Make prompt for changing/adding password
         /// </summary>
@@ -47,6 +50,7 @@ namespace Manage.Repository
 
             while (flag)
             {
+                #region Get & set password
                 var Password = AnsiConsole.Ask<string>(
                     $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{passwordName}[/]? "
                 );
@@ -61,7 +65,9 @@ namespace Manage.Repository
                     continue;
                 }
                 AnsiConsole.MarkupLine(Hash.ToSha256(Password));
+                #endregion
 
+                #region Get & set repeated password
                 var RepeatedPassword = AnsiConsole.Ask<string>(
                     $"Repeat your{(IsNew ? " [green]new[/]" : "")} [bold]{passwordName}[/]: "
                 );
@@ -76,7 +82,9 @@ namespace Manage.Repository
                     continue;
                 }
                 AnsiConsole.MarkupLine(Hash.ToSha256(RepeatedPassword));
+                #endregion
 
+                #region Get & set hint phrase
                 if (NeedsHint)
                 {
                     var HintPassword = AnsiConsole.Ask<string>(
@@ -84,8 +92,10 @@ namespace Manage.Repository
                     );
                     AnsiConsole.MarkupLine(HintPassword);
                 }
+                #endregion
 
                 Console.Clear();
+                #region End of loop
                 AnsiConsole.MarkupLine(
                     $"[green]Your{(IsNew ? " new" : "")} [bold]{passwordName}[/] has been set[/]"
                 );
@@ -93,9 +103,12 @@ namespace Manage.Repository
                 Console.ReadKey();
                 flag = false;
                 Console.Clear();
+                #endregion
             }
         }
+        #endregion
 
+        #region Return to main menu method
         /// <summary>
         /// Tasks for returning to main menu
         /// </summary>
@@ -103,8 +116,10 @@ namespace Manage.Repository
         {
             AnsiConsole.Clear();
         }
+        #endregion
 
         public static void AllowedUseTime(string timeName)
+        #region Allowed use time changer prompt maker method
         /// <summary>
         /// Make prompt for changing/adding allowed use time
         /// </summary>
@@ -118,6 +133,7 @@ namespace Manage.Repository
             {
                 var newUsingTime = AnsiConsole.Ask<string>(
                     $"What's your [green]new[/] [bold]{timeName}[/]? "
+                #region Get & set use time
                 );
 
                 // if (DoesInsertValueValid(newUsingTime))
@@ -125,6 +141,8 @@ namespace Manage.Repository
                 AnsiConsole.MarkupLine($"Your new [bold]{timeName}[/] has been set");
                 AnsiConsole.MarkupLine("Press any key to exit");
                 Console.ReadKey();
+                #endregion
+                #region End of loop
                 flag = false;
                 Console.Clear();
                 // }
@@ -136,10 +154,13 @@ namespace Manage.Repository
                 //     Console.ReadKey();
                 //     Console.Clear();
                 // }
+                #endregion
             }
         }
+        #endregion
 
         public static void AllowedTimeOfDay()
+        #region Allowed time of day changer prompt maker method
         /// <summary>
         /// Make prompt for changing/adding allowed time of day
         /// </summary>
@@ -152,13 +173,18 @@ namespace Manage.Repository
             {
                 var newTimeOfDay = AnsiConsole.Ask<string>(
                     $"What's your [green]new[/] [bold]Time Of Day[/]? "
+                #region Get & set start time of day
                 );
+                #endregion
 
                 // if (DoesInsertValueValid(newTimeOfDay))
                 // {
                 AnsiConsole.MarkupLine($"Your new [bold]Time Of Day[/] has been set");
                 AnsiConsole.MarkupLine("Press any key to exit");
                 Console.ReadKey();
+                #region Get & set end time of day
+                #endregion
+                #region End of loop
                 flag = false;
                 Console.Clear();
                 // }
@@ -170,8 +196,10 @@ namespace Manage.Repository
                 //     Console.ReadKey();
                 //     Console.Clear();
                 // }
+                #endregion
             }
         }
+        #endregion
 
         public static void UserValidation(string userName)
         /// <summary>
@@ -206,14 +234,19 @@ namespace Manage.Repository
             );
             AnsiConsole.Clear();
         }
+        #endregion
+        #region Repeat process method
         /// <summary>
         /// Jobs we do before repeat a loop
         /// </summary>
         /// <param name="message">An string which shown to the user</param>
         /// <remarks>After calling this method, use Continue to ignore rest of loop</remarks>
+        #endregion
+        #region Header message handler method
         /// <summary>
         /// Handle header messages in prompts
         /// </summary>
         /// <param name="message">Shown to user if it isn't null</param>
+        #endregion
     }
 }
