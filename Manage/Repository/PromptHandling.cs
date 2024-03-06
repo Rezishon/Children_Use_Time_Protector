@@ -41,6 +41,7 @@ namespace Manage.Repository
         /// <param name="NeedsHint">If password should have hint phrase it should be true</param>
         public static void PasswordChangerPrompt(
             string passwordName,
+            string? headerMessage = null,
             bool IsNew = true,
             bool NeedsHint = false
         )
