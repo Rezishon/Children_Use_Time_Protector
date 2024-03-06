@@ -1,3 +1,4 @@
+using System.Text.RegularExpressions;
 using Hashing;
 using Spectre.Console;
 
