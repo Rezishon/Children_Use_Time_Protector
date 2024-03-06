@@ -248,6 +248,15 @@ namespace Manage.Repository
         /// </summary>
         /// <param name="message">An string which shown to the user</param>
         /// <remarks>After calling this method, use Continue to ignore rest of loop</remarks>
+        private static void RepeatProcess(string? message = null)
+        {
+            // AnsiConsole.Clear();
+            if (message != null)
+                AnsiConsole.MarkupLine(message);
+
+            Console.ReadKey();
+            AnsiConsole.Clear();
+        }
         #endregion
         #region Header message handler method
         /// <summary>
