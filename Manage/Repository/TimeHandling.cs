@@ -2,6 +2,7 @@ namespace TimeHandling
 {
     public static class Time
     {
+        #region Allowed to use method
         /// <summary>
         /// User allowed to use or not.
         /// </summary>
@@ -11,9 +12,12 @@ namespace TimeHandling
         /// </returns>
         public static bool? Allowed()
         {
+            #region Initialization
             int UsedDurationTime = 0;
             int AllowedDurationTime = 0;
+            #endregion
 
+            #region Calculate variables
             try
             {
                 UsedDurationTime = LogHandling.LogFile.LogReader().Length * 10;
@@ -25,7 +29,9 @@ namespace TimeHandling
             {
                 Console.WriteLine(e.Message);
             }
+            #endregion
 
+            #region Condition handling
             if (UsedDurationTime >= AllowedDurationTime)
                 return false;
             else if (UsedDurationTime == (AllowedDurationTime - 10))
