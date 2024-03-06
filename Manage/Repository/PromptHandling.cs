@@ -248,6 +248,11 @@ namespace Manage.Repository
         /// Handle header messages in prompts
         /// </summary>
         /// <param name="message">Shown to user if it isn't null</param>
+        public static void HeaderMessageHandler(string? message)
+        {
+            if (message != null)
+                AnsiConsole.MarkupLine($"[gray italic]{message}[/]");
+        }
         #endregion
     }
 }
