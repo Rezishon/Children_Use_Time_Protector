@@ -31,7 +31,6 @@ namespace Manage.Repository
         }
         #endregion
 
-        public static void PasswordPrompt(
         #region Password changer prompt maker method
         /// <summary>
         /// Make prompt for changing/adding password
@@ -40,6 +39,7 @@ namespace Manage.Repository
         /// <param name="headerMessage">This message shown to the user at the first line</param>
         /// <param name="IsNew">If user status was 1 it should be true</param>
         /// <param name="NeedsHint">If password should have hint phrase it should be true</param>
+        public static void PasswordChangerPrompt(
             string passwordName,
             bool IsNew = true,
             bool NeedsHint = false
