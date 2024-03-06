@@ -6,6 +6,11 @@ namespace Manage.Repository
 {
     public class PromptHandler
     {
+        /// <summary>
+        /// Make menu prompt of Spectre.Console
+        /// </summary>
+        /// <param name="items">List of strings which are names or rows of menu</param>
+        /// <returns>List of object: [Menu row name, Menu row index]</returns>
         public static List<object> MenuPrompt(List<string> items)
         {
             Dictionary<string, int> PartsDictionary = new Dictionary<string, int>();
@@ -25,6 +30,13 @@ namespace Manage.Repository
         }
 
         public static void PasswordPrompt(
+        /// <summary>
+        /// Make prompt for changing/adding password
+        /// </summary>
+        /// <param name="passwordName">Name of password which could be repeated password, main password, end etc</param>
+        /// <param name="headerMessage">This message shown to the user at the first line</param>
+        /// <param name="IsNew">If user status was 1 it should be true</param>
+        /// <param name="NeedsHint">If password should have hint phrase it should be true</param>
             string passwordName,
             bool IsNew = true,
             bool NeedsHint = false
@@ -84,12 +96,21 @@ namespace Manage.Repository
             }
         }
 
+        /// <summary>
+        /// Tasks for returning to main menu
+        /// </summary>
         public static void ReturnToMainMenu()
         {
             AnsiConsole.Clear();
         }
 
         public static void AllowedUseTime(string timeName)
+        /// <summary>
+        /// Make prompt for changing/adding allowed use time
+        /// </summary>
+        /// <param name="timeName">Name of time which could be template time or other names</param>
+        /// <param name="headerMessage">This message shown to user at first line</param>
+        /// <param name="IsNew">If user status was 1 it should be true</param>
         {
             bool flag = true;
 
@@ -119,6 +140,11 @@ namespace Manage.Repository
         }
 
         public static void AllowedTimeOfDay()
+        /// <summary>
+        /// Make prompt for changing/adding allowed time of day
+        /// </summary>
+        /// <param name="headerMessage">This message shown to user at first line</param>
+        /// <param name="IsNew">If user status was 1 it should be true</param>
         {
             bool flag = true;
 
@@ -148,6 +174,10 @@ namespace Manage.Repository
         }
 
         public static void UserValidation(string userName)
+        /// <summary>
+        /// Make prompt for Validate the user
+        /// </summary>
+        /// <param name="userName">Name of the user which we want to validate</param>
         {
             int wrongPasswordCounter = 0;
             AnsiConsole.Prompt(
@@ -176,5 +206,14 @@ namespace Manage.Repository
             );
             AnsiConsole.Clear();
         }
+        /// <summary>
+        /// Jobs we do before repeat a loop
+        /// </summary>
+        /// <param name="message">An string which shown to the user</param>
+        /// <remarks>After calling this method, use Continue to ignore rest of loop</remarks>
+        /// <summary>
+        /// Handle header messages in prompts
+        /// </summary>
+        /// <param name="message">Shown to user if it isn't null</param>
     }
 }
