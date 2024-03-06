@@ -38,6 +38,8 @@ namespace TimeHandling
                 return null;
             else
                 return true;
+            #endregion
         }
+        #endregion
     }
 }
