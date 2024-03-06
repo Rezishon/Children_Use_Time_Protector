@@ -51,6 +51,8 @@ namespace Manage.Repository
 
             while (flag)
             {
+                HeaderMessageHandler(headerMessage);
+
                 #region Get & set password
                 var Password = AnsiConsole.Ask<string>(
                     $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{passwordName}[/]? "
@@ -134,6 +136,8 @@ namespace Manage.Repository
             {
                 var newUsingTime = AnsiConsole.Ask<string>(
                     $"What's your [green]new[/] [bold]{timeName}[/]? "
+                HeaderMessageHandler(headerMessage);
+
                 #region Get & set use time
                 );
 
@@ -174,6 +178,8 @@ namespace Manage.Repository
             {
                 var newTimeOfDay = AnsiConsole.Ask<string>(
                     $"What's your [green]new[/] [bold]Time Of Day[/]? "
+                HeaderMessageHandler(headerMessage);
+
                 #region Get & set start time of day
                 );
                 #endregion
