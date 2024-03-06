@@ -59,12 +59,9 @@ namespace Manage.Repository
                 );
                 if (Password.Length >= 20)
                 {
-                    Console.Clear();
-                    AnsiConsole.MarkupLine(
+                    RepeatProcess(
                         "[bold red]Your input should be less than 20 characters[/]\nPress any key to Repeat"
                     );
-                    Console.ReadKey();
-                    Console.Clear();
                     continue;
                 }
                 AnsiConsole.MarkupLine(Hash.ToSha256(Password));
@@ -76,12 +73,9 @@ namespace Manage.Repository
                 );
                 if (!string.Equals(Password, RepeatedPassword))
                 {
-                    Console.Clear();
-                    AnsiConsole.MarkupLine(
+                    RepeatProcess(
                         $"[bold red]{passwordName}s aren't the same[/]\nPress any key to Repeat"
                     );
-                    Console.ReadKey();
-                    Console.Clear();
                     continue;
                 }
                 AnsiConsole.MarkupLine(Hash.ToSha256(RepeatedPassword));
@@ -97,15 +91,13 @@ namespace Manage.Repository
                 }
                 #endregion
 
-                Console.Clear();
                 #region End of loop
                 AnsiConsole.MarkupLine(
                     $"[green]Your{(IsNew ? " new" : "")} [bold]{passwordName}[/] has been set[/]"
                 );
-                AnsiConsole.MarkupLine("Press any key to exit");
-                Console.ReadKey();
+
+                RepeatProcess("Press any key to exit");
                 flag = false;
-                Console.Clear();
                 #endregion
             }
         }
