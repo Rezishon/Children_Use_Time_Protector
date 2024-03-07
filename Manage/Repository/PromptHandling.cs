@@ -142,6 +142,10 @@ namespace Manage.Repository
                 Console.ReadKey();
                 if (usingTime is not >= 10 or not <= 1430 || usingTime % 10 != 0)
                 {
+                    RepeatProcess(
+                        $"[red][bold]{timeName}[/] is out of range. It must be a multiple of 10 & between [underline]10[/] and [underline]1430[/]\nPress any key to Repeat[/]"
+                    );
+                    continue;
                 }
                 #endregion
                 #region End of loop
