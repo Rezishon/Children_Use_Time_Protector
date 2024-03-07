@@ -122,6 +122,8 @@ namespace Manage.Repository
         /// <param name="IsNew">If user status was 1 it should be true</param>
         public static void AllowedUseTimeChangerPrompt(
             string timeName,
+            string? headerMessage = null,
+            bool IsNew = true
         )
         {
             bool flag = true;
@@ -165,6 +167,8 @@ namespace Manage.Repository
         /// <param name="headerMessage">This message shown to user at first line</param>
         /// <param name="IsNew">If user status was 1 it should be true</param>
         public static void AllowedTimeOfDayChangerPrompt(
+            string? headerMessage = null,
+            bool IsNew = true
         )
         {
             bool flag = true;
