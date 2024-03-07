@@ -178,6 +178,9 @@ namespace Manage.Repository
                 var startTimeOfDay = AnsiConsole.Ask<string>(
                     $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]Start Time Of Day[/]? "
                 );
+                if (!Regex.IsMatch(startTimeOfDay, @"\d{2}:\d{2}"))
+                {
+                }
                 #endregion
 
                 // if (DoesInsertValueValid(newTimeOfDay))
