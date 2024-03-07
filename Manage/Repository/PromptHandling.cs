@@ -137,11 +137,12 @@ namespace Manage.Repository
                     $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{timeName}[/]? "
                 );
 
-                // if (DoesInsertValueValid(newUsingTime))
-                // {
                 AnsiConsole.MarkupLine($"Your new [bold]{timeName}[/] has been set");
                 AnsiConsole.MarkupLine("Press any key to exit");
                 Console.ReadKey();
+                if (usingTime is not >= 10 or not <= 1430 || usingTime % 10 != 0)
+                {
+                }
                 #endregion
                 #region End of loop
                 flag = false;
