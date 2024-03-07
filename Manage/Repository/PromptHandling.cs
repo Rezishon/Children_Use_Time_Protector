@@ -185,6 +185,7 @@ namespace Manage.Repository
                     );
                     continue;
                 }
+                AnsiConsole.MarkupLine(startTimeOfDay);
                 #endregion
 
                 // if (DoesInsertValueValid(newTimeOfDay))
