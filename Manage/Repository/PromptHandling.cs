@@ -180,6 +180,10 @@ namespace Manage.Repository
                 );
                 if (!Regex.IsMatch(startTimeOfDay, @"\d{2}:\d{2}"))
                 {
+                    ExitProcess(
+                        "[red]Inserted time has wrong format. It must be like [[two digit number]][bold]:[/][[two digit number]][/]\nPress any key to repeat"
+                    );
+                    continue;
                 }
                 #endregion
 
