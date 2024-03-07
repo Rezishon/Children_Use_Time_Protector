@@ -188,26 +188,16 @@ namespace Manage.Repository
                 AnsiConsole.MarkupLine(startTimeOfDay);
                 #endregion
 
-                // if (DoesInsertValueValid(newTimeOfDay))
-                // {
-                AnsiConsole.MarkupLine($"Your new [bold]Time Of Day[/] has been set");
-                AnsiConsole.MarkupLine("Press any key to exit");
-                Console.ReadKey();
                 #region Get & set end time of day
                 #endregion
 
                 #region End of loop
+                AnsiConsole.MarkupLine(
+                    $"[green]Your{(IsNew ? " new" : "")} [bold]Allowed time of day[/] has been set[/]"
+                );
+
+                ExitProcess("Press any key to exit");
                 flag = false;
-                Console.Clear();
-                // }
-                // else
-                // {
-                //     AnsiConsole.MarkupLine(
-                //         $"[bold]{timeOfDayName}s[/] aren't the same\nPress any key to Repeat"
-                //     );
-                //     Console.ReadKey();
-                //     Console.Clear();
-                // }
                 #endregion
             }
         }
