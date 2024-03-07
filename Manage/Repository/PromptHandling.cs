@@ -192,6 +192,7 @@ namespace Manage.Repository
                 var endTimeOfDay = AnsiConsole.Ask<string>(
                     $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]End Time Of Day[/]? "
                 );
+                // end time should be after the start time in a day
                 #endregion
 
                 #region End of loop
