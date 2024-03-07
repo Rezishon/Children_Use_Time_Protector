@@ -3,11 +3,13 @@ using CommandHandling;
 
 namespace ConfigHandling
 {
+    #region Config file class
     /// <summary>
     /// Contains methods which are related to config file itself
     /// </summary>
     public static class ConfigFile
     {
+        #region Config file parts dictionary
         /// <summary>
         /// In this dictionary line number of each part with its name stores
         /// </summary>
@@ -19,7 +21,9 @@ namespace ConfigHandling
             { "Root", 0 },
             { "Service", 1 }
         };
+        #endregion
 
+        #region Config file path
         /// <summary>
         /// Config file path comes from application path with some customization
         /// </summary>
@@ -29,8 +33,10 @@ namespace ConfigHandling
                 @"\\Children_Use_Time_Protector\\(\w*\W*)*$",
                 @"\Children_Use_Time_Protector\Manage\bin\Debug\net8.0\Config.cutp"
             );
+        #endregion
         private static string NullString { get; } = "*";
 
+        #region Config file builder method
         /// <summary>
         /// Make raw config file
         /// </summary>
@@ -51,7 +57,9 @@ namespace ConfigHandling
                 Console.WriteLine(e);
             }
         }
+        #endregion
 
+        #region Config file reader method
         /// <summary>
         /// Read all config file content
         /// </summary>
@@ -63,10 +71,18 @@ namespace ConfigHandling
         {
             return File.ReadAllLines(ConfigFilePath);
         }
+        #endregion
     }
+    #endregion
+    #region Root part of config file class
+        #region Reading Config file
+        #endregion
+        #region Config file parts dictionary
         /// <summary>
         /// Main parts of root part in config file with their index
         /// </summary>
+        #endregion
+        #region Status reader method
         /// <summary>
         /// Status of root from root part of config file
         /// </summary>
@@ -74,6 +90,7 @@ namespace ConfigHandling
         ///     <term>Boolean</term>
         ///     <description>True for available root password | False for not available root password</description>
         /// </returns>
+        #endregion
 
     // public static class RootPart
     // {
@@ -94,6 +111,7 @@ namespace ConfigHandling
     //         }
     //     }
     // }
+        #region Root main password reader method
         /// <summary>
         /// Read root main password from root part of config file
         /// </summary>
@@ -101,7 +119,9 @@ namespace ConfigHandling
         ///     <term>String</term>
         ///     <description>In SHA256 format</description>
         /// </returns>
+        #endregion
 
+        #region Root main recovery password reader method
         /// <summary>
         /// Read root recovery password from root part of config file
         /// </summary>
@@ -109,6 +129,8 @@ namespace ConfigHandling
         ///     <term>String</term>
         ///     <description>In SHA256 format</description>
         /// </returns>
+        #endregion
+        #region Root recovery hint string reader method
         /// <summary>
         /// Read root recovery hint string from root part of config file
         /// </summary>
@@ -116,6 +138,9 @@ namespace ConfigHandling
         ///     <term>String</term>
         ///     <description>A hint string for recovery password</description>
         /// </returns>
+        #endregion
+    #endregion
+    #region Service part of config file class
     /// <summary>
     /// Contains methods which are related to service part of config file
     /// </summary>
@@ -157,7 +182,7 @@ namespace ConfigHandling
         /// </summary>
         #endregion
 
-        #region Return config file parts
+        #region Status reader method
         /// <summary>
         /// Status of application service from service part of config file
         /// </summary>
@@ -172,7 +197,9 @@ namespace ConfigHandling
             else
                 return false;
         }
+        #endregion
 
+        #region Start time of day reader method
         /// <summary>
         /// Read start time of day from service part of config file
         /// </summary>
@@ -184,7 +211,9 @@ namespace ConfigHandling
         {
             return ConfigFileParted[ConfigPartsNumbers["StartTimeOfDay"]];
         }
+        #endregion
 
+        #region End time of day reader method
         /// <summary>
         /// Read end time of day from service part of config file
         /// </summary>
@@ -196,7 +225,9 @@ namespace ConfigHandling
         {
             return ConfigFileParted[ConfigPartsNumbers["EndTimeOfDay"]];
         }
+        #endregion
 
+        #region Allowed duration reader method
         /// <summary>
         /// Read allowed duration from service part of config file
         /// </summary>
@@ -208,7 +239,9 @@ namespace ConfigHandling
         {
             return int.Parse(ConfigFileParted[ConfigPartsNumbers["AllowedDuration"]]);
         }
+        #endregion
 
+        #region Template allowed duration reader method
         /// <summary>
         /// Read template allowed duration from service part of config file
         /// </summary>
@@ -222,4 +255,5 @@ namespace ConfigHandling
         }
         #endregion
     }
+    #endregion
 }
