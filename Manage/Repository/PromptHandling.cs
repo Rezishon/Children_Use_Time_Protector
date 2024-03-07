@@ -137,7 +137,6 @@ namespace Manage.Repository
                     $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{timeName}[/]? "
                 );
 
-                AnsiConsole.MarkupLine($"Your new [bold]{timeName}[/] has been set");
                 AnsiConsole.MarkupLine("Press any key to exit");
                 Console.ReadKey();
                 if (usingTime is not >= 10 or not <= 1430 || usingTime % 10 != 0)
@@ -149,6 +148,9 @@ namespace Manage.Repository
                 }
                 #endregion
                 #region End of loop
+                AnsiConsole.MarkupLine(
+                    $"[green]Your{(IsNew ? " new" : "")} [bold]{timeName}[/] has been set[/]"
+                );
                 flag = false;
                 Console.Clear();
                 // }
