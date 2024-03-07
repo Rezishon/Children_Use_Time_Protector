@@ -59,7 +59,7 @@ namespace Manage.Repository
                 );
                 if (Password.Length >= 20)
                 {
-                    RepeatProcess(
+                    ExitProcess(
                         "[bold red]Your input should be less than 20 characters[/]\nPress any key to Repeat"
                     );
                     continue;
@@ -73,7 +73,7 @@ namespace Manage.Repository
                 );
                 if (!string.Equals(Password, RepeatedPassword))
                 {
-                    RepeatProcess(
+                    ExitProcess(
                         $"[bold red]{passwordName}s aren't the same[/]\nPress any key to Repeat"
                     );
                     continue;
@@ -96,7 +96,7 @@ namespace Manage.Repository
                     $"[green]Your{(IsNew ? " new" : "")} [bold]{passwordName}[/] has been set[/]"
                 );
 
-                RepeatProcess("Press any key to exit");
+                ExitProcess("Press any key to exit");
                 flag = false;
                 #endregion
             }
@@ -142,7 +142,7 @@ namespace Manage.Repository
                 Console.ReadKey();
                 if (usingTime is not >= 10 or not <= 1430 || usingTime % 10 != 0)
                 {
-                    RepeatProcess(
+                    ExitProcess(
                         $"[red][bold]{timeName}[/] is out of range. It must be a multiple of 10 & between [underline]10[/] and [underline]1430[/]\nPress any key to Repeat[/]"
                     );
                     continue;
@@ -246,13 +246,14 @@ namespace Manage.Repository
             AnsiConsole.Clear();
         }
         #endregion
-        #region Repeat process method
+
+        #region Exit process method
         /// <summary>
         /// Jobs we do before repeat a loop
         /// </summary>
         /// <param name="message">An string which shown to the user</param>
         /// <remarks>After calling this method, use Continue to ignore rest of loop</remarks>
-        private static void RepeatProcess(string? message = null)
+        private static void ExitProcess(string? message = null)
         {
             // AnsiConsole.Clear();
             if (message != null)
