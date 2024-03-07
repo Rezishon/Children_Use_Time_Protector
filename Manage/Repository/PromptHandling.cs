@@ -130,11 +130,11 @@ namespace Manage.Repository
 
             while (flag)
             {
-                var newUsingTime = AnsiConsole.Ask<string>(
-                    $"What's your [green]new[/] [bold]{timeName}[/]? "
                 HeaderMessageHandler(headerMessage);
 
                 #region Get & set use time
+                var usingTime = AnsiConsole.Ask<int>(
+                    $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{timeName}[/]? "
                 );
 
                 // if (DoesInsertValueValid(newUsingTime))
