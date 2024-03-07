@@ -198,6 +198,7 @@ namespace Manage.Repository
                     ExitProcess("[red]Inserted time has wrong format[/]");
                     continue;
                 }
+                AnsiConsole.MarkupLine(endTimeOfDay);
                 #endregion
 
                 #region End of loop
