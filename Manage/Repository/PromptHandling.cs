@@ -113,7 +113,6 @@ namespace Manage.Repository
         }
         #endregion
 
-        public static void AllowedUseTime(string timeName)
         #region Allowed use time changer prompt maker method
         /// <summary>
         /// Make prompt for changing/adding allowed use time
@@ -121,6 +120,9 @@ namespace Manage.Repository
         /// <param name="timeName">Name of time which could be template time or other names</param>
         /// <param name="headerMessage">This message shown to user at first line</param>
         /// <param name="IsNew">If user status was 1 it should be true</param>
+        public static void AllowedUseTimeChangerPrompt(
+            string timeName,
+        )
         {
             bool flag = true;
 
@@ -156,13 +158,14 @@ namespace Manage.Repository
         }
         #endregion
 
-        public static void AllowedTimeOfDay()
         #region Allowed time of day changer prompt maker method
         /// <summary>
         /// Make prompt for changing/adding allowed time of day
         /// </summary>
         /// <param name="headerMessage">This message shown to user at first line</param>
         /// <param name="IsNew">If user status was 1 it should be true</param>
+        public static void AllowedTimeOfDayChangerPrompt(
+        )
         {
             bool flag = true;
 
@@ -200,11 +203,11 @@ namespace Manage.Repository
         }
         #endregion
 
-        public static void UserValidation(string userName)
         /// <summary>
         /// Make prompt for Validate the user
         /// </summary>
         /// <param name="userName">Name of the user which we want to validate</param>
+        public static void UserValidationPrompt(string userName)
         {
             int wrongPasswordCounter = 0;
             AnsiConsole.Prompt(
