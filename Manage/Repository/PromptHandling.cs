@@ -145,6 +145,7 @@ namespace Manage.Repository
                     continue;
                 }
                 #endregion
+
                 #region End of loop
                 AnsiConsole.MarkupLine(
                     $"[green]Your{(IsNew ? " new" : "")} [bold]{timeName}[/] has been set[/]"
@@ -186,6 +187,7 @@ namespace Manage.Repository
                 Console.ReadKey();
                 #region Get & set end time of day
                 #endregion
+
                 #region End of loop
                 flag = false;
                 Console.Clear();
@@ -203,6 +205,7 @@ namespace Manage.Repository
         }
         #endregion
 
+        #region User validation prompt maker method
         /// <summary>
         /// Make prompt for Validate the user
         /// </summary>
@@ -254,6 +257,7 @@ namespace Manage.Repository
             AnsiConsole.Clear();
         }
         #endregion
+
         #region Header message handler method
         /// <summary>
         /// Handle header messages in prompts
