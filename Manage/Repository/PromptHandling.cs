@@ -193,6 +193,9 @@ namespace Manage.Repository
                     $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]End Time Of Day[/]? "
                 );
                 // end time should be after the start time in a day
+                if (!Regex.IsMatch(endTimeOfDay, @"\d{2}:\d{2}"))
+                {
+                }
                 #endregion
 
                 #region End of loop
