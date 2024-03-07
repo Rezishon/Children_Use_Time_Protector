@@ -137,8 +137,6 @@ namespace Manage.Repository
                     $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{timeName}[/]? "
                 );
 
-                AnsiConsole.MarkupLine("Press any key to exit");
-                Console.ReadKey();
                 if (usingTime is not >= 10 or not <= 1430 || usingTime % 10 != 0)
                 {
                     ExitProcess(
@@ -151,17 +149,8 @@ namespace Manage.Repository
                 AnsiConsole.MarkupLine(
                     $"[green]Your{(IsNew ? " new" : "")} [bold]{timeName}[/] has been set[/]"
                 );
+                ExitProcess("Press any key to exit");
                 flag = false;
-                Console.Clear();
-                // }
-                // else
-                // {
-                //     AnsiConsole.MarkupLine(
-                //         $"[bold]{timeName}s[/] aren't the same\nPress any key to Repeat"
-                //     );
-                //     Console.ReadKey();
-                //     Console.Clear();
-                // }
                 #endregion
             }
         }
