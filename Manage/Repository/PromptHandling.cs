@@ -172,11 +172,11 @@ namespace Manage.Repository
 
             while (flag)
             {
-                var newTimeOfDay = AnsiConsole.Ask<string>(
-                    $"What's your [green]new[/] [bold]Time Of Day[/]? "
                 HeaderMessageHandler(headerMessage);
 
                 #region Get & set start time of day
+                var startTimeOfDay = AnsiConsole.Ask<string>(
+                    $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]Start Time Of Day[/]? "
                 );
                 #endregion
 
