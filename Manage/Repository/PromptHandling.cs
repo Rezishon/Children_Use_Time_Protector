@@ -189,6 +189,9 @@ namespace Manage.Repository
                 #endregion
 
                 #region Get & set end time of day
+                var endTimeOfDay = AnsiConsole.Ask<string>(
+                    $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]End Time Of Day[/]? "
+                );
                 #endregion
 
                 #region End of loop
