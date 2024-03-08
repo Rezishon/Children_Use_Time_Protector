@@ -111,7 +111,6 @@ class Program
                             PromptHandler.AllowedTimeOfDayChangerPrompt(
                                 "Default allowed day time is from 06:00 to 23:59"
                             );
-                            PromptHandler.AllowedTimeOfDay();
                             break;
                         #endregion
 
