@@ -99,7 +99,8 @@ class Program
 
                         #region Change temporary allowed use time
                         case 2:
-                            AnsiConsole.MarkupLine(
+                            PromptHandler.AllowedUseTimeChangerPrompt(
+                                "Temporary allowed use time",
                                 "This time will added to the main allowed using duration"
                             );
                             PromptHandler.AllowedUseTime("Temporary allowed use time");
