@@ -23,43 +23,48 @@ class Program
             // Create main menu
             switch (PromptHandler.MenuPrompt(["Root", "Service", "Exit"])[1])
             {
-                // Root menu
+                #region Root menu
                 case 0:
-                    // Create root menu
                     switch (
+                        #region Create root menu
                         PromptHandler.MenuPrompt(
                             [
                                 "Change the root password",
                                 "Change The root recovery password",
                                 "Main menu"
                             ]
+                        #endregion
                         )[1]
                     )
                     {
-                        // Change the root password
+                        #region Change the root password
                         case 0:
                             PromptHandler.PasswordPrompt("Password");
                             break;
+                        #endregion
 
-                        // Change The root recovery password
+                        #region Change The root recovery password
                         case 1:
                             AnsiConsole.MarkupLine(
                                 "Using memorable password recommended\nThis password should be use in emergency situation because it resets all parts"
                             );
                             PromptHandler.PasswordPrompt("Recovery Password", true, true);
                             break;
+                        #endregion
 
-                        // Main Menu
+                        #region Main Menu
                         case 2:
                             PromptHandler.ReturnToMainMenu();
                             break;
+                        #endregion
                     }
                     break;
+                #endregion
 
-                // Service menu
+                #region Service menu
                 case 1:
                     switch (
-                        // Create service menu
+                        #region Create service menu
                         PromptHandler.MenuPrompt(
                             [
                                 "Change service status",
@@ -68,51 +73,59 @@ class Program
                                 "Change allowed time of day",
                                 "Main menu"
                             ]
+                        #endregion
                         )[1]
                     )
                     {
-                        // Change service status
+                        #region Change service status
                         case 0:
                             if (ServicePart.Status())
                                 Commands.TurnOffService();
                             else
                                 Commands.TurnOnService();
                             break;
+                        #endregion
 
-                        // Change allowed use time
+                        #region Change allowed use time
                         case 1:
                             AnsiConsole.MarkupLine("Default using time is 120 minute");
                             PromptHandler.AllowedUseTime("Allowed use time");
                             break;
+                        #endregion
 
-                        // Change temporary allowed use time
+                        #region Change temporary allowed use time
                         case 2:
                             AnsiConsole.MarkupLine(
                                 "This time will added to the main allowed using duration"
                             );
                             PromptHandler.AllowedUseTime("Temporary allowed use time");
                             break;
+                        #endregion
 
-                        // Change allowed time of day
+                        #region Change allowed time of day
                         case 3:
                             AnsiConsole.MarkupLine(
                                 "Default allowed day time is from 06:00 to 23:59"
                             );
                             PromptHandler.AllowedTimeOfDay();
                             break;
+                        #endregion
 
-                        // Main menu
+                        #region Main menu
                         case 4:
                             PromptHandler.ReturnToMainMenu();
                             break;
+                        #endregion
                     }
                     break;
+                #endregion
 
-                // Exit
+                #region Exit
                 case 2:
                     flag = false;
                     // Add exit message
                     break;
+                #endregion
             }
         }
     }
