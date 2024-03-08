@@ -5,6 +5,7 @@ namespace LogHandling
 {
     public class LogFile
     {
+        #region Log file path
         /// <summary>
         /// It find application path and then custom the path string
         /// </summary>
@@ -14,7 +15,9 @@ namespace LogHandling
                 @"\\Children_Use_Time_Protector\\(\w*\W*)*$",
                 @"\Children_Use_Time_Protector\Manage\bin\Debug\net8.0\Log.cutp"
             );
+        #endregion
 
+        #region Log reader method
         /// <summary>
         /// Read log file content
         /// </summary>
@@ -30,7 +33,9 @@ namespace LogHandling
         {
             return File.ReadAllLines(LogFilePath);
         }
+        #endregion
 
+        #region Log file cleaner method
         /// <summary>
         /// Clear file content
         /// </summary>
@@ -38,8 +43,10 @@ namespace LogHandling
         {
             File.WriteAllText(LogFilePath, "");
         }
+        #endregion
 
         public static string Date(
+        #region Date finder method
         /// <summary>
         /// Return date part of string<br/>
         /// Optionally, this method can find date of income string or other patterns
@@ -67,8 +74,10 @@ namespace LogHandling
                 return Regex.Match(inputString, pattern).ToString();
             }
         }
+        #endregion
 
         public static string Time(string? inputTime = null)
+        #region Time finder method
         /// <summary>
         /// Return time part of string<br/>
         /// Optionally, this method can find time of income string
@@ -82,5 +91,6 @@ namespace LogHandling
         {
             return Date(inputTime, @"(?<=T)\d{2}:\d{2}:\d{2}(?=\s)");
         }
+        #endregion
     }
 }
