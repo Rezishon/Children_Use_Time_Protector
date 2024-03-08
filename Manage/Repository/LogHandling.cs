@@ -45,7 +45,6 @@ namespace LogHandling
         }
         #endregion
 
-        public static string Date(
         #region Date finder method
         /// <summary>
         /// Return date part of string<br/>
@@ -58,6 +57,7 @@ namespace LogHandling
         ///     <description>Found pattern | By default it's date string | Can be null</description>
         /// </returns>
         /// <remarks>This method is a multifunction method</remarks>
+        public static string? Date(
             string? inputString = null,
             string pattern = @"^\d{4}(-\d{2})+(?=T)"
         )
@@ -76,7 +76,6 @@ namespace LogHandling
         }
         #endregion
 
-        public static string Time(string? inputTime = null)
         #region Time finder method
         /// <summary>
         /// Return time part of string<br/>
@@ -88,6 +87,7 @@ namespace LogHandling
         ///     <description>Found pattern | Can be null</description>
         /// </returns>
         /// <remarks>By default it find first log line time value</remarks>
+        public static string? Time(string? inputTime = null)
         {
             return Date(inputTime, @"(?<=T)\d{2}:\d{2}:\d{2}(?=\s)");
         }
