@@ -103,13 +103,12 @@ class Program
                                 "Temporary allowed use time",
                                 "This time will added to the main allowed using duration"
                             );
-                            PromptHandler.AllowedUseTime("Temporary allowed use time");
                             break;
                         #endregion
 
                         #region Change allowed time of day
                         case 3:
-                            AnsiConsole.MarkupLine(
+                            PromptHandler.AllowedTimeOfDayChangerPrompt(
                                 "Default allowed day time is from 06:00 to 23:59"
                             );
                             PromptHandler.AllowedTimeOfDay();
