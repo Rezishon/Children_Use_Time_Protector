@@ -12,7 +12,7 @@ class Program
     static void Main(string[] args)
     {
         // User validation
-        PromptHandler.UserValidation("Root");
+        PromptHandler.UserValidationPrompt("Root");
 
         // Main menu loop flag
         bool flag = true;
@@ -39,7 +39,7 @@ class Program
                     {
                         #region Change the root password
                         case 0:
-                            PromptHandler.PasswordPrompt("Password");
+                            PromptHandler.PasswordChangerPrompt("Password");
                             break;
                         #endregion
 
