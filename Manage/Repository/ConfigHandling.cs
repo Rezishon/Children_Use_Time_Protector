@@ -233,7 +233,7 @@ namespace ConfigHandling
         /// </returns>
         public static int TempAllowedDuration()
         {
-            return int.Parse(ConfigFileParted[ConfigPartsNumbers["TempAllowedDuration"]]);
+            return int.Parse(ConfigFileParted[ConfigPartsNumbersDictionary["TempAllowedDuration"]]);
         }
         #endregion
     }
