@@ -92,25 +92,6 @@ namespace ConfigHandling
         /// </returns>
         #endregion
 
-    // public static class RootPart
-    // {
-    //     public async Task<bool> ReadAppStatus()
-    //     {
-    //         Exist_Of_Database_File();
-
-    //         string[] linesOfText = await File.ReadAllLinesAsync(ConfigFile.ConfigFilePath);
-    //         return int.Parse(linesOfText[0].Trim()) == 0;
-    //     }
-
-    //     public async void Exist_Of_Database_File()
-    //     {
-    //         if (!File.Exists(ConfigFile.ConfigFilePath))
-    //         {
-    //             await File.WriteAllTextAsync(ConfigFile.ConfigFilePath, "0");
-    //             // ask for root password
-    //         }
-    //     }
-    // }
         #region Root main password reader method
         /// <summary>
         /// Read root main password from root part of config file
