@@ -166,20 +166,18 @@ namespace ConfigHandling
         #endregion
 
         #region Config file parts dictionary
-        private static readonly Dictionary<string, int> ConfigPartsNumbers = new Dictionary<
-            string,
-            int
-        >()
-        {
-            { "Status", 0 },
-            { "StartTimeOfDay", 2 },
-            { "EndTimeOfDay", 4 },
-            { "AllowedDuration", 6 },
-            { "TempAllowedDuration", 8 }
-        };
         /// <summary>
         /// Main parts of service part in config file with their index
         /// </summary>
+        private static readonly Dictionary<string, int> ConfigPartsNumbersDictionary =
+            new Dictionary<string, int>()
+            {
+                { "Status", 0 },
+                { "StartTimeOfDay", 2 },
+                { "EndTimeOfDay", 4 },
+                { "AllowedDuration", 6 },
+                { "TempAllowedDuration", 8 }
+            };
         #endregion
 
         #region Status reader method
