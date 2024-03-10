@@ -128,6 +128,10 @@ namespace ConfigHandling
         ///     <term>String</term>
         ///     <description>In SHA256 format</description>
         /// </returns>
+        public static string RootMainPassword()
+        {
+            return ConfigFileParted[ConfigPartsNumbersDictionary["RootMainPassword"]];
+        }
         #endregion
 
         #region Root main recovery password reader method
