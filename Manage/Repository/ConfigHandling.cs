@@ -155,6 +155,10 @@ namespace ConfigHandling
         ///     <term>String</term>
         ///     <description>A hint string for recovery password</description>
         /// </returns>
+        public static string RootRecoveryHintString()
+        {
+            return ConfigFileParted[ConfigPartsNumbersDictionary["RecoveryHintString"]];
+        }
         #endregion
     }
     #endregion
