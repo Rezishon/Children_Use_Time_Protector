@@ -91,6 +91,14 @@ namespace ConfigHandling
         /// <summary>
         /// Main parts of root part in config file with their index
         /// </summary>
+        private static readonly Dictionary<string, int> ConfigPartsNumbersDictionary =
+            new Dictionary<string, int>()
+            {
+                { "Status", 0 },
+                { "RootMainPassword", 1 },
+                { "RootRecoveryPassword", 2 },
+                { "RecoveryHintString", 3 }
+            };
         #endregion
         #region Status reader method
         /// <summary>
