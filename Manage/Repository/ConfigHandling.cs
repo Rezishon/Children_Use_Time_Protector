@@ -75,6 +75,8 @@ namespace ConfigHandling
     }
     #endregion
     #region Root part of config file class
+    public static class RootPart
+    {
         #region Reading Config file
         #endregion
         #region Config file parts dictionary
@@ -120,6 +122,7 @@ namespace ConfigHandling
         ///     <description>A hint string for recovery password</description>
         /// </returns>
         #endregion
+    }
     #endregion
     #region Service part of config file class
     /// <summary>
