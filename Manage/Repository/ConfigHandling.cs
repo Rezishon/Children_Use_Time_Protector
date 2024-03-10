@@ -142,6 +142,10 @@ namespace ConfigHandling
         ///     <term>String</term>
         ///     <description>In SHA256 format</description>
         /// </returns>
+        public static string RootRecoveryPassword()
+        {
+            return ConfigFileParted[ConfigPartsNumbersDictionary["RootRecoveryPassword"]];
+        }
         #endregion
         #region Root recovery hint string reader method
         /// <summary>
