@@ -108,6 +108,9 @@ namespace ConfigHandling
         ///     <term>Boolean</term>
         ///     <description>True for available root password | False for not available root password</description>
         /// </returns>
+        public static bool Status()
+        {
+        }
         #endregion
 
         #region Root main password reader method
