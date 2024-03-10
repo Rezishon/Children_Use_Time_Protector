@@ -110,6 +110,13 @@ namespace ConfigHandling
         /// </returns>
         public static bool Status()
         {
+            if (
+                Hashing.Hash.ToSha256("1")
+                == ConfigFileParted[ConfigPartsNumbersDictionary["Status"]]
+            )
+                return true;
+            else
+                return false;
         }
         #endregion
 
