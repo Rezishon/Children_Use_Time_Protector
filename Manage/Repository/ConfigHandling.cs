@@ -74,6 +74,7 @@ namespace ConfigHandling
         #endregion
     }
     #endregion
+
     #region Root part of config file class
     public static class RootPart
     {
@@ -87,6 +88,7 @@ namespace ConfigHandling
                 )
                 .Split(';');
         #endregion
+
         #region Config file parts dictionary
         /// <summary>
         /// Main parts of root part in config file with their index
@@ -100,6 +102,7 @@ namespace ConfigHandling
                 { "RecoveryHintString", 3 }
             };
         #endregion
+
         #region Status reader method
         /// <summary>
         /// Status of root from root part of config file
@@ -147,6 +150,7 @@ namespace ConfigHandling
             return ConfigFileParted[ConfigPartsNumbersDictionary["RootRecoveryPassword"]];
         }
         #endregion
+
         #region Root recovery hint string reader method
         /// <summary>
         /// Read root recovery hint string from root part of config file
@@ -162,6 +166,7 @@ namespace ConfigHandling
         #endregion
     }
     #endregion
+
     #region Service part of config file class
     /// <summary>
     /// Contains methods which are related to service part of config file
