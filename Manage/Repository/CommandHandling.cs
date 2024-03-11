@@ -2,6 +2,9 @@ using System.Diagnostics;
 
 namespace CommandHandling
 {
+    /// <summary>
+    /// Class will handle commands which should be run in powershell
+    /// </summary>
     public static class Commands
     {
         public static Dictionary<string, string> CommandsDic = new Dictionary<string, string>()
