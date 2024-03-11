@@ -24,6 +24,7 @@ namespace CommandHandling
         };
         #endregion
 
+        #region Commands runner method
         /// <summary>
         /// Runs valid commands in powershell
         /// </summary>
@@ -70,6 +71,7 @@ namespace CommandHandling
             return "";
             #endregion
         }
+        #endregion
 
         public static void Shutdown()
         {
