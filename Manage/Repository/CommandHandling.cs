@@ -73,21 +73,37 @@ namespace CommandHandling
         }
         #endregion
 
+        /// <summary>
+        /// Shutdown the system
+        /// </summary>
         public static void Shutdown()
         {
             CommandRunner("Shutdown");
         }
 
+        /// <summary>
+        /// Installs the service if it isn't installed already
+        /// </summary>
         public static void TurnOnService()
         {
             CommandRunner("TurnOnService");
         }
 
+        /// <summary>
+        /// Uninstalls the service if it isn't uninstalled already
+        /// </summary>
         public static void TurnOffService()
         {
             CommandRunner("TurnOffService");
         }
 
+        /// <summary>
+        /// Finds current path
+        /// </summary>
+        /// <returns>
+        ///     <term>String</term>
+        ///     <description>Additional lines removed and only the path returns</description>
+        /// </returns>
         public static string Pwd()
         {
             return CommandRunner("pwd", true).Split("\n")[3];
