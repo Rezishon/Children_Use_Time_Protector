@@ -35,6 +35,7 @@ namespace CommandHandling
         /// </returns>
         public static string CommandRunner(string CommandNameString, bool WantResult = false)
         {
+            #region create process object
             var processInfo = new ProcessStartInfo
             {
                 Verb = "runas", // Run as administrator
@@ -45,6 +46,7 @@ namespace CommandHandling
                 UseShellExecute = false,
                 CreateNoWindow = true
             };
+            #endregion
 
             try
             {
