@@ -7,11 +7,14 @@ namespace CommandHandling
     /// </summary>
     public static class Commands
     {
-        public static Dictionary<string, string> CommandsDic = new Dictionary<string, string>()
         #region Commands dictionary
         /// <summary>
         /// Contains each command name with its actual command string
         /// </summary>
+        public static Dictionary<string, string> CommandsDictionary = new Dictionary<
+            string,
+            string
+        >()
         {
             { "Shutdown", "shutdown.exe /s /f" },
             // ..\..\..\..\..\Services\bin\Debug\net8.0\Services.exe
