@@ -8,6 +8,7 @@ namespace CommandHandling
     public static class Commands
     {
         public static Dictionary<string, string> CommandsDic = new Dictionary<string, string>()
+        #region Commands dictionary
         /// <summary>
         /// Contains each command name with its actual command string
         /// </summary>
