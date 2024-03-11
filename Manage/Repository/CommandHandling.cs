@@ -24,6 +24,15 @@ namespace CommandHandling
         };
         #endregion
 
+        /// <summary>
+        /// Runs valid commands in powershell
+        /// </summary>
+        /// <param name="CommandNameString">Command name comes from dictionary - Added for validation commands</param>
+        /// <param name="WantResult">if command results needed this parameter should be true</param>
+        /// <returns>
+        ///     <term>String</term>
+        ///     <description>The result of run command will be return in shape of what powershell gives</description>
+        /// </returns>
         public static string CommandRunner(string CommandNameString, bool WantResult = false)
         {
             var processInfo = new ProcessStartInfo
