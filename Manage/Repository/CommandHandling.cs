@@ -41,7 +41,7 @@ namespace CommandHandling
                 Verb = "runas", // Run as administrator
                 LoadUserProfile = true,
                 FileName = "powershell.exe",
-                Arguments = CommandsDic[CommandNameString],
+                Arguments = CommandsDictionary[CommandNameString],
                 RedirectStandardOutput = true,
                 UseShellExecute = false,
                 CreateNoWindow = true
