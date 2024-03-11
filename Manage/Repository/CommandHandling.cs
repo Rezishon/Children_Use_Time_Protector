@@ -48,6 +48,7 @@ namespace CommandHandling
             };
             #endregion
 
+            #region Execute process
             try
             {
                 using (Process process = new Process { StartInfo = processInfo })
@@ -67,6 +68,7 @@ namespace CommandHandling
                 Console.WriteLine(e.Message);
             }
             return "";
+            #endregion
         }
 
         public static void Shutdown()
