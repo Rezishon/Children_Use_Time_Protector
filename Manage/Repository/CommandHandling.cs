@@ -73,6 +73,7 @@ namespace CommandHandling
         }
         #endregion
 
+        #region Shutdown method
         /// <summary>
         /// Shutdown the system
         /// </summary>
@@ -80,7 +81,9 @@ namespace CommandHandling
         {
             CommandRunner("Shutdown");
         }
+        #endregion
 
+        #region Turn on service method
         /// <summary>
         /// Installs the service if it isn't installed already
         /// </summary>
@@ -88,7 +91,9 @@ namespace CommandHandling
         {
             CommandRunner("TurnOnService");
         }
+        #endregion
 
+        #region Turn off service method
         /// <summary>
         /// Uninstalls the service if it isn't uninstalled already
         /// </summary>
@@ -96,7 +101,9 @@ namespace CommandHandling
         {
             CommandRunner("TurnOffService");
         }
+        #endregion
 
+        #region Pwd method
         /// <summary>
         /// Finds current path
         /// </summary>
