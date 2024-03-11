@@ -22,6 +22,7 @@ namespace CommandHandling
             { "TurnOffService", @"..\Services\bin\Debug\net8.0\Services.exe uninstall" },
             { "pwd", "pwd" }
         };
+        #endregion
 
         public static string CommandRunner(string CommandNameString, bool WantResult = false)
         {
