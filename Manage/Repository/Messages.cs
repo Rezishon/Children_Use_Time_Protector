@@ -8,6 +8,7 @@ namespace Children_Use_Time_Protector.Repository
     /// </summary>
     public class Messages
     {
+        #region Application name method
         /// <summary>
         /// App Name
         /// </summary>
@@ -19,6 +20,7 @@ namespace Children_Use_Time_Protector.Repository
         {
             return "Children Use Time Protector";
         }
+        #endregion
 
         public static string Say_App_Name_In_Brief()
         {
