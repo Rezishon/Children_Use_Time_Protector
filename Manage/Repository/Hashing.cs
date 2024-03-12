@@ -9,6 +9,7 @@ namespace Hashing
     /// </summary>
     public static class Hash
     {
+        #region SHA256 generator
         /// <summary>
         /// Generate SHA256 string from its parameter
         /// </summary>
@@ -24,6 +25,7 @@ namespace Hashing
             byte[] hashValue = SHA256.HashData(messageBytes);
             return BitConverter.ToString(hashValue).Replace("-", string.Empty);
         }
+        #endregion
     }
     #endregion
 }
