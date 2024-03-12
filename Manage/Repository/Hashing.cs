@@ -3,6 +3,7 @@ using System.Text;
 
 namespace Hashing
 {
+    #region Hash class
     /// <summary>
     /// Generate SHA256 hash strings
     /// </summary>
@@ -16,4 +17,5 @@ namespace Hashing
             return BitConverter.ToString(hashValue).Replace("-", string.Empty);
         }
     }
+    #endregion
 }
