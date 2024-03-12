@@ -22,6 +22,7 @@ namespace Children_Use_Time_Protector.Repository
         }
         #endregion
 
+        #region Application brief name method
         /// <summary>
         /// Brief name of application
         /// </summary>
@@ -33,6 +34,7 @@ namespace Children_Use_Time_Protector.Repository
         {
             return Regex.Replace(Say_App_Name(), "[^A-Z]", "");
         }
+        #endregion
 
         public static string Say_Database_File_Format()
         {
