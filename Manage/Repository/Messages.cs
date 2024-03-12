@@ -2,6 +2,7 @@ using System.Text.RegularExpressions;
 
 namespace Children_Use_Time_Protector.Repository
 {
+    #region Messages class
     /// <summary>
     /// Include messages we want to show to user
     /// </summary>
@@ -22,4 +23,5 @@ namespace Children_Use_Time_Protector.Repository
             return Say_App_Name_In_Brief().ToLower();
         }
     }
+    #endregion
 }
