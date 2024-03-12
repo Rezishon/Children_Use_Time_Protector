@@ -36,6 +36,7 @@ namespace Children_Use_Time_Protector.Repository
         }
         #endregion
 
+        #region Application database file format name method
         /// <summary>
         /// Database file format name
         /// </summary>
@@ -44,6 +45,7 @@ namespace Children_Use_Time_Protector.Repository
         {
             return Say_App_Name_In_Brief().ToLower();
         }
+        #endregion
     }
     #endregion
 }
