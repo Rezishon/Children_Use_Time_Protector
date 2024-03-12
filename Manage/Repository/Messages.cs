@@ -36,6 +36,10 @@ namespace Children_Use_Time_Protector.Repository
         }
         #endregion
 
+        /// <summary>
+        /// Database file format name
+        /// </summary>
+        /// <returns>Lower case of first letters of application name</returns>
         public static string Say_Database_File_Format()
         {
             return Say_App_Name_In_Brief().ToLower();
