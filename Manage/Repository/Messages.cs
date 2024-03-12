@@ -22,6 +22,13 @@ namespace Children_Use_Time_Protector.Repository
         }
         #endregion
 
+        /// <summary>
+        /// Brief name of application
+        /// </summary>
+        /// <returns>
+        ///     <term>String</term>
+        ///     <description>Upper case letters of application name</description>
+        /// </returns>
         public static string Say_App_Name_In_Brief()
         {
             return Regex.Replace(Say_App_Name(), "[^A-Z]", "");
