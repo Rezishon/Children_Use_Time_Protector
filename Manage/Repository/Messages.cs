@@ -8,6 +8,13 @@ namespace Children_Use_Time_Protector.Repository
     /// </summary>
     public class Messages
     {
+        /// <summary>
+        /// App Name
+        /// </summary>
+        /// <returns>
+        ///     <term>String</term>
+        ///     <description>The main name of application</description>
+        /// </returns>
         public static string Say_App_Name()
         {
             return "Children Use Time Protector";
