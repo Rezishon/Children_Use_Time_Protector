@@ -3,6 +3,9 @@ using System.Text;
 
 namespace Hashing
 {
+    /// <summary>
+    /// Generate SHA256 hash strings
+    /// </summary>
     public static class Hash
     {
         public static string ToSha256(string String)
