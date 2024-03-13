@@ -179,8 +179,9 @@ namespace ConfigHandling
         /// <remarks>
         /// Each part has its index number
         /// </remarks>
-        public static string[] ConfigFileParted { get; } =
-            Regex
+        private static string ConfigFileParted(string PartName)
+        {
+            return Regex
                 .Replace(
                     ConfigFile.ConfigFileReader()[
                         ConfigFile.ConfigLinesNumberDictionary["Service"]
@@ -188,7 +189,8 @@ namespace ConfigHandling
                     @"(^{)|(}$)",
                     ""
                 )
-                .Split(';');
+                .Split(';')[ConfigPartsNumbersDictionary[PartName]];
+        }
         #endregion
 
         #region Config file parts dictionary
