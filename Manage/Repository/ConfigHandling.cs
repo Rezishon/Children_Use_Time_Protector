@@ -249,7 +249,7 @@ namespace ConfigHandling
         /// </returns>
         public static string EndTimeOfDay()
         {
-            return ConfigFileParted[ConfigPartsNumbersDictionary["EndTimeOfDay"]];
+            return ConfigFileParted("EndTimeOfDay");
         }
         #endregion
 
