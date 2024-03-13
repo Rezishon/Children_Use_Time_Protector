@@ -235,7 +235,7 @@ namespace ConfigHandling
         /// </returns>
         public static string StartTimeOfDay()
         {
-            return ConfigFileParted[ConfigPartsNumbersDictionary["StartTimeOfDay"]];
+            return ConfigFileParted("StartTimeOfDay");
         }
         #endregion
 
