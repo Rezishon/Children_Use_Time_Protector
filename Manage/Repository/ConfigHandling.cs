@@ -160,7 +160,7 @@ namespace ConfigHandling
         /// </returns>
         public static string RootRecoveryHintString()
         {
-            return ConfigFileParted[ConfigPartsNumbersDictionary["RecoveryHintString"]];
+            return ConfigFileParted("RecoveryHintString");
         }
         #endregion
     }
