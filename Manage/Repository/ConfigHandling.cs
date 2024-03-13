@@ -170,7 +170,7 @@ namespace ConfigHandling
     /// <summary>
     /// Contains methods which are related to service part of config file
     /// </summary>
-    public static class ServicePart
+    public class ServicePart
     {
         #region Reading Config file
         /// <summary>
