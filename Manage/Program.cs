@@ -21,7 +21,7 @@ class Program
         while (flag)
         {
             // Create main menu
-            switch (PromptHandler.MenuPrompt(["Root", "Service", "Exit"])[1])
+            switch (PromptHandler.MenuPrompt(["Root", "Service", "Exit", "Test"])[1])
             {
                 #region Root menu
                 case 0:
@@ -127,6 +127,15 @@ class Program
                 case 2:
                     flag = false;
                     // Add exit message
+                    break;
+                #endregion
+
+                #region Test
+                case 3:
+                    Console.WriteLine(RootPart.Status().ToString());
+                    System.Console.WriteLine(RootPart.RootMainPassword());
+                    System.Console.WriteLine(RootPart.RootRecoveryPassword());
+                    System.Console.WriteLine(RootPart.RootRecoveryHintString());
                     break;
                 #endregion
             }
