@@ -136,7 +136,7 @@ namespace ConfigHandling
         }
         #endregion
 
-        #region Root main recovery password reader method
+        #region Root recovery password reader method
         /// <summary>
         /// Read root recovery password from root part of config file
         /// </summary>
