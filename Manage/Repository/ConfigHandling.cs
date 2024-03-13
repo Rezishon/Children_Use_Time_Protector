@@ -132,7 +132,7 @@ namespace ConfigHandling
         /// </returns>
         public static string RootMainPassword()
         {
-            return ConfigFileParted[ConfigPartsNumbersDictionary["RootMainPassword"]];
+            return ConfigFileParted("RootMainPassword");
         }
         #endregion
 
