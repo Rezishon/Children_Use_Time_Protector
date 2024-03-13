@@ -146,7 +146,7 @@ namespace ConfigHandling
         /// </returns>
         public static string RootRecoveryPassword()
         {
-            return ConfigFileParted[ConfigPartsNumbersDictionary["RootRecoveryPassword"]];
+            return ConfigFileParted("RootRecoveryPassword");
         }
         #endregion
 
