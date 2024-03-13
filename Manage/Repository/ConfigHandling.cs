@@ -79,14 +79,16 @@ namespace ConfigHandling
     public static class RootPart
     {
         #region Reading Config file
-        public static string[] ConfigFileParted { get; } =
-            Regex
+        private static string ConfigFileParted(string PartName)
+        {
+            return Regex
                 .Replace(
                     ConfigFile.ConfigFileReader()[ConfigFile.ConfigLinesNumberDictionary["Root"]],
                     @"(^{)|(}$)",
                     ""
                 )
-                .Split(';');
+                .Split(';')[ConfigPartsNumbersDictionary[PartName]];
+        }
         #endregion
 
         #region Config file parts dictionary
