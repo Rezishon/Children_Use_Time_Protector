@@ -263,7 +263,7 @@ namespace ConfigHandling
         /// </returns>
         public static int AllowedDuration()
         {
-            return int.Parse(ConfigFileParted[ConfigPartsNumbersDictionary["AllowedDuration"]]);
+            return int.Parse(ConfigFileParted("AllowedDuration"));
         }
         #endregion
 
