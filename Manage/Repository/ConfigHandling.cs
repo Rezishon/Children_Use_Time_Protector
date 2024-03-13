@@ -218,10 +218,7 @@ namespace ConfigHandling
         /// </returns>
         public static bool Status()
         {
-            if (
-                Hashing.Hash.ToSha256("1")
-                == ConfigFileParted[ConfigPartsNumbersDictionary["Status"]]
-            )
+            if (Hashing.Hash.ToSha256("1") == ConfigFileParted("Status"))
                 return true;
             else
                 return false;
