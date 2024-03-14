@@ -40,7 +40,7 @@ namespace CommandHandling
             var processInfo = new ProcessStartInfo
             {
                 Verb = "runas", // Run as administrator
-                LoadUserProfile = true,
+                // LoadUserProfile = true,
                 FileName = "powershell.exe",
                 Arguments = CommandsDictionary[CommandNameString],
                 RedirectStandardOutput = true,
