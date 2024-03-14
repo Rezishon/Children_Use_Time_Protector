@@ -57,7 +57,7 @@ namespace LogHandling
         ///     <description>Found pattern | By default it's date string | Can be null</description>
         /// </returns>
         /// <remarks>This method is a multifunction method</remarks>
-        public static string? Date(
+        public static string Date(
             string? inputString = null,
             string pattern = @"^\d{4}(-\d{2})+(?=T)"
         )
