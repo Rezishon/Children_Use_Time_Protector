@@ -47,6 +47,7 @@ namespace ConfigHandling
                 string RootPart =
                     $"{Hashing.Hash.ToSha256("0")};;;;";
                 string ServicePart =
+                    $"{Hashing.Hash.ToSha256("0")};04:00;;20:00;;120;;120;0;";
 
                 File.WriteAllText(ConfigFilePath, $"{RootPart}\n{ServicePart}");
             }
