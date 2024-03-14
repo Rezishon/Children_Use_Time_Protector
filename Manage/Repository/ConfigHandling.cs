@@ -34,7 +34,6 @@ namespace ConfigHandling
                 @"\Children_Use_Time_Protector\Manage\bin\Debug\net8.0\Config.cutp"
             );
         #endregion
-        private static string NullString { get; } = "*";
 
         #region Config file builder method
         /// <summary>
