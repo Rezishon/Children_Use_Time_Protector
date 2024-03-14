@@ -274,6 +274,7 @@
       },
       "Children_Use_Time_Protector/1.0.0": {
         "dependencies": {
+          "NodaTime": "3.1.11",
           "Spectre.Console": "0.48.0",
           "Spectre.Console.Cli": "0.48.0",
           "Topshelf": "4.3.0"
