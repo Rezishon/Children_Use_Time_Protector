@@ -307,6 +307,10 @@ namespace ConfigHandling
         public class SetConfigToRoot
         {
         }
+
+        public class SetConfigToService
+        {
+        }
     }
     #endregion
 }
