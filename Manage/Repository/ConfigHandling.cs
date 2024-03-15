@@ -286,4 +286,7 @@ namespace ConfigHandling
         #endregion
     }
     #endregion
+    public class ConfigSetter
+    {
+    }
 }
