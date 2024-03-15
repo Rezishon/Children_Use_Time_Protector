@@ -69,6 +69,8 @@ namespace ConfigHandling
             return File.ReadAllLines(ConfigFilePath);
         }
         #endregion
+
+        #region Normal content method
         /// <summary>
         /// The method returns the parts of wanted line of config file
         /// </summary>
@@ -87,6 +89,7 @@ namespace ConfigHandling
                 )
                 .Split(';');
         }
+        #endregion
     }
     #endregion
 
