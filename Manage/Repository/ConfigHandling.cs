@@ -69,6 +69,14 @@ namespace ConfigHandling
             return File.ReadAllLines(ConfigFilePath);
         }
         #endregion
+        /// <summary>
+        /// The method returns the parts of wanted line of config file
+        /// </summary>
+        /// <param name="lineName">The line name you want like Root, Service, and etc.</param>
+        /// <returns>
+        ///     <term>Array of string</term>
+        ///     <description>Each index represents each part of wanted line</description>
+        /// </returns>
         public static string[] NormalContent(string lineName)
         {
             return Regex
