@@ -1,4 +1,5 @@
 using System.Text.RegularExpressions;
+using ConfigHandling;
 using Hashing;
 using Spectre.Console;
 
@@ -228,7 +229,7 @@ namespace Manage.Repository
                     .ValidationErrorMessage("[red]That's not a valid password[/]")
                     .Validate(password =>
                     {
-                        if (string.Equals(Hash.ToSha256(password), Hash.ToSha256("test")))
+                        if (string.Equals(Hash.ToSha256(password), RootPart.RootMainPassword()))
                         {
                             return ValidationResult.Success();
                         }
