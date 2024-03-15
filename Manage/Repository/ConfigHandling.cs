@@ -303,6 +303,10 @@ namespace ConfigHandling
                     break;
             }
         }
+
+        public class SetConfigToRoot
+        {
+        }
     }
     #endregion
 }
