@@ -99,13 +99,7 @@ namespace ConfigHandling
         #region Reading Config file
         private static string ConfigFileParted(string PartName)
         {
-            return Regex
-                .Replace(
-                    ConfigFile.ConfigFileReader()[ConfigFile.ConfigLinesNumberDictionary["Root"]],
-                    @"(^{)|(}$)",
-                    ""
-                )
-                .Split(';')[ConfigPartsNumbersDictionary[PartName]];
+            return ConfigFile.NormalContent("Root")[ConfigPartsNumbersDictionary[PartName]];
         }
         #endregion
 
