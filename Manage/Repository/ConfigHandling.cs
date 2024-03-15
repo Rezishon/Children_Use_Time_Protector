@@ -193,15 +193,7 @@ namespace ConfigHandling
         /// </remarks>
         private static string ConfigFileParted(string PartName)
         {
-            return Regex
-                .Replace(
-                    ConfigFile.ConfigFileReader()[
-                        ConfigFile.ConfigLinesNumberDictionary["Service"]
-                    ],
-                    @"(^{)|(}$)",
-                    ""
-                )
-                .Split(';')[ConfigPartsNumbersDictionary[PartName]];
+            return ConfigFile.NormalContent("Service")[ConfigPartsNumbersDictionary[PartName]];
         }
         #endregion
 
