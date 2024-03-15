@@ -306,10 +306,14 @@ namespace ConfigHandling
 
         public class SetConfigToRoot
         {
+            // All methods pass the line name root
+            // for each part name we should have a method separately which the lineName is root and the the partName would be the method name
         }
 
         public class SetConfigToService
         {
+            // All methods pass the line name service
+            // for each part name we should have a method separately which the lineName is service and the the partName would be the method name
         }
     }
     #endregion
