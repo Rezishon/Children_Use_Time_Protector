@@ -292,6 +292,16 @@ namespace ConfigHandling
     {
         public static void SetThisConfig(string configContent, string lineName, string partName)
         {
+            switch (ConfigFile.ConfigLinesNumberDictionary[lineName])
+            {
+                // Root
+                case 0:
+                    break;
+
+                // Service
+                case 1:
+                    break;
+            }
         }
     }
     #endregion
