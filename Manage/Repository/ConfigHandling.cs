@@ -92,7 +92,7 @@ namespace ConfigHandling
         /// <summary>
         /// Main parts of root part in config file with their index
         /// </summary>
-        private static readonly Dictionary<string, int> ConfigPartsNumbersDictionary =
+        public static readonly Dictionary<string, int> ConfigPartsNumbersDictionary =
             new Dictionary<string, int>()
             {
                 { "Status", 0 },
@@ -194,7 +194,7 @@ namespace ConfigHandling
         /// <summary>
         /// Main parts of service part in config file with their index
         /// </summary>
-        private static readonly Dictionary<string, int> ConfigPartsNumbersDictionary =
+        public static readonly Dictionary<string, int> ConfigPartsNumbersDictionary =
             new Dictionary<string, int>()
             {
                 { "Status", 0 },
