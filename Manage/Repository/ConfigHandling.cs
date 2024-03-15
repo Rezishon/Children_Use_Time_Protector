@@ -290,6 +290,9 @@ namespace ConfigHandling
     #region Config setter Class
     public class ConfigSetter
     {
+        public static void SetThisConfig(string configContent, string lineName, string partName)
+        {
+        }
     }
     #endregion
 }
