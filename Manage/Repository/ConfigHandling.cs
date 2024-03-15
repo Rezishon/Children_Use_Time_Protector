@@ -69,6 +69,16 @@ namespace ConfigHandling
             return File.ReadAllLines(ConfigFilePath);
         }
         #endregion
+        public static string[] NormalContent(string lineName)
+        {
+            return Regex
+                .Replace(
+                    ConfigFile.ConfigFileReader()[ConfigFile.ConfigLinesNumberDictionary[lineName]],
+                    @"(^{)|(}$)",
+                    ""
+                )
+                .Split(';');
+        }
     }
     #endregion
 
