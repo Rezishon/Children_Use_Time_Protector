@@ -369,6 +369,18 @@ namespace ConfigHandling
                     configFileContentServiceCase[
                         ConfigFile.ConfigLinesNumberDictionary["Service"]
                     ] = string.Join(';', resultServiceCase).Insert(0, "{");
+
+                    // Reform value => add } at end index
+                    configFileContentServiceCase[
+                        ConfigFile.ConfigLinesNumberDictionary["Service"]
+                    ] = configFileContentServiceCase[
+                        ConfigFile.ConfigLinesNumberDictionary["Service"]
+                    ].Insert(
+                        configFileContentServiceCase[
+                            ConfigFile.ConfigLinesNumberDictionary["Service"]
+                        ].Length,
+                        "}"
+                    );
                     break;
             }
         }
