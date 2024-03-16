@@ -89,6 +89,16 @@ namespace ConfigHandling
                 )
                 .Split(';');
         }
+
+        /// <summary>
+        /// Convert the content into part by part array
+        /// </summary>
+        /// <param name="content">The string array which contains config data</param>
+        /// <param name="lineName">Name of config line you want</param>
+        /// <returns>
+        ///     <term>String array</term>
+        ///     <description>Each index represents each part</description>
+        /// </returns>
         public static string[] NormalContent(string[] content, string lineName)
         {
             return Regex
