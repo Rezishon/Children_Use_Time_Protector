@@ -342,6 +342,12 @@ namespace ConfigHandling
                             ].Length,
                             "}"
                         );
+
+                    // Print to config file
+                    File.WriteAllText(
+                        ConfigFile.ConfigFilePath,
+                        string.Join("\n", configFileContentRootCase)
+                    );
                     break;
 
                 // Service
