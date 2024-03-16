@@ -137,10 +137,8 @@ class Program
 
                 #region Test
                 case 3:
-                    Console.WriteLine(RootPart.Status().ToString());
-                    System.Console.WriteLine(RootPart.RootMainPassword());
-                    System.Console.WriteLine(RootPart.RootRecoveryPassword());
-                    System.Console.WriteLine(RootPart.RootRecoveryHintString());
+                    ConfigSetter.SetThisConfig("reza", "Root", "RecoveryHintString");
+                    ConfigSetter.SetThisConfig("06:00", "Service", "StartTimeOfDay");
                     break;
                 #endregion
             }
