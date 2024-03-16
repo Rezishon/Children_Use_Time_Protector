@@ -324,6 +324,9 @@ namespace ConfigHandling
                         configFileContentRootCase,
                         "Root"
                     );
+
+                    // Replace wanted value
+                    resultRootCase[RootPart.ConfigPartsNumbersDictionary[partName]] = configContent;
                     break;
 
                 // Service
