@@ -352,6 +352,8 @@ namespace ConfigHandling
 
                 // Service
                 case 1:
+                    // Read data of config file
+                    string[] configFileContentServiceCase = ConfigFile.ConfigFileReader();
                     break;
             }
         }
