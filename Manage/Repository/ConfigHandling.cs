@@ -354,6 +354,12 @@ namespace ConfigHandling
                 case 1:
                     // Read data of config file
                     string[] configFileContentServiceCase = ConfigFile.ConfigFileReader();
+
+                    // Separate content parts
+                    string[] resultServiceCase = ConfigFile.NormalContent(
+                        configFileContentServiceCase,
+                        "Service"
+                    );
                     break;
             }
         }
