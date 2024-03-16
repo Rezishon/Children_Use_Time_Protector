@@ -11,8 +11,13 @@ class Program
 {
     static void Main(string[] args)
     {
+        // Test phase
+#if Testing == true
         // User validation
         PromptHandler.UserValidationPrompt("Root");
+#endif
+        // For test
+        Console.Clear();
 
         // Main menu loop flag
         bool flag = true;
