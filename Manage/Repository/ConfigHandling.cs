@@ -316,6 +316,8 @@ namespace ConfigHandling
             {
                 // Root
                 case 0:
+                    // Read data of config file
+                    string[] configFileContentRootCase = ConfigFile.ConfigFileReader();
                     break;
 
                 // Service
