@@ -331,6 +331,17 @@ namespace ConfigHandling
                     // Reform value => add ; between parts & { at first index
                     configFileContentRootCase[ConfigFile.ConfigLinesNumberDictionary["Root"]] =
                         string.Join(';', resultRootCase).Insert(0, "{");
+
+                    // Reform value => add } at end index
+                    configFileContentRootCase[ConfigFile.ConfigLinesNumberDictionary["Root"]] =
+                        configFileContentRootCase[
+                            ConfigFile.ConfigLinesNumberDictionary["Root"]
+                        ].Insert(
+                            configFileContentRootCase[
+                                ConfigFile.ConfigLinesNumberDictionary["Root"]
+                            ].Length,
+                            "}"
+                        );
                     break;
 
                 // Service
