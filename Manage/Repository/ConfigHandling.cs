@@ -89,6 +89,16 @@ namespace ConfigHandling
                 )
                 .Split(';');
         }
+        public static string[] NormalContent(string[] content, string lineName)
+        {
+            return Regex
+                .Replace(
+                    content[ConfigFile.ConfigLinesNumberDictionary[lineName]],
+                    @"(^{)|(}$)",
+                    ""
+                )
+                .Split(';');
+        }
         #endregion
     }
     #endregion
