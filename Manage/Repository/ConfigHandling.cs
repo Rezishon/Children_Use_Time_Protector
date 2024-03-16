@@ -364,6 +364,11 @@ namespace ConfigHandling
                     // Replace wanted value
                     resultServiceCase[ServicePart.ConfigPartsNumbersDictionary[partName]] =
                         configContent;
+
+                    // Reform value => add ; between parts & { at first index
+                    configFileContentServiceCase[
+                        ConfigFile.ConfigLinesNumberDictionary["Service"]
+                    ] = string.Join(';', resultServiceCase).Insert(0, "{");
                     break;
             }
         }
