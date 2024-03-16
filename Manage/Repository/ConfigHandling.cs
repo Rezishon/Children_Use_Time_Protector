@@ -360,6 +360,10 @@ namespace ConfigHandling
                         configFileContentServiceCase,
                         "Service"
                     );
+
+                    // Replace wanted value
+                    resultServiceCase[ServicePart.ConfigPartsNumbersDictionary[partName]] =
+                        configContent;
                     break;
             }
         }
