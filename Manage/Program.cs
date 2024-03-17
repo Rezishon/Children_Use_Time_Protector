@@ -88,8 +88,10 @@ class Program
                         case 0:
                             if (ServicePart.Status())
                                 Commands.TurnOffService();
+                                ConfigSetter.SetConfigToService.Status(Hash.ToSha256("0"));
                             else
                                 Commands.TurnOnService();
+                                ConfigSetter.SetConfigToService.Status(Hash.ToSha256("1"));
                             break;
                         #endregion
 
