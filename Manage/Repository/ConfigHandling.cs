@@ -427,6 +427,11 @@ namespace ConfigHandling
             {
                 SetThisConfig(configContent, "Service", "StartTimeOfDay");
             }
+
+            public static void EndTimeOfDay(string configContent)
+            {
+                SetThisConfig(configContent, "Service", "EndTimeOfDay");
+            }
         }
     }
     #endregion
