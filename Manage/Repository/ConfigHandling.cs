@@ -437,6 +437,11 @@ namespace ConfigHandling
             {
                 SetThisConfig(configContent, "Service", "AllowedDuration");
             }
+
+            public static void TempAllowedDuration(string configContent)
+            {
+                SetThisConfig(configContent, "Service", "TempAllowedDuration");
+            }
         }
     }
     #endregion
