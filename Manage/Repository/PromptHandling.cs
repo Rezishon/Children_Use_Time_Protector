@@ -54,7 +54,7 @@ namespace Manage.Repository
             {
                 HeaderMessageHandler(headerMessage);
 
-                #region Get & set password
+                #region Get password
                 var Password = AnsiConsole.Ask<string>(
                     $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{passwordName}[/]? "
                 );
@@ -68,7 +68,7 @@ namespace Manage.Repository
                 // AnsiConsole.MarkupLine(Hash.ToSha256(Password));
                 #endregion
 
-                #region Get & set repeated password
+                #region Get repeated password
                 var RepeatedPassword = AnsiConsole.Ask<string>(
                     $"Repeat your{(IsNew ? " [green]new[/]" : "")} [bold]{passwordName}[/]: "
                 );
@@ -82,7 +82,7 @@ namespace Manage.Repository
                 // AnsiConsole.MarkupLine(Hash.ToSha256(RepeatedPassword));
                 #endregion
 
-                #region Get & set hint phrase
+                #region Get & set hint phrase and password
                 if (NeedsHint)
                 {
                     ConfigSetter.SetConfigToRoot.RootRecoveryPassword(Hash.ToSha256(Password));
