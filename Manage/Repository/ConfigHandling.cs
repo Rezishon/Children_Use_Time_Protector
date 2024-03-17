@@ -402,6 +402,11 @@ namespace ConfigHandling
             {
                 SetThisConfig(configContent, "Root", "RootMainPassword");
             }
+
+            public static void RootRecoveryPassword(string configContent)
+            {
+                SetThisConfig(configContent, "Root", "RootRecoveryPassword");
+            }
         }
 
         public class SetConfigToService
