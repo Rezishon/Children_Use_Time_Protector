@@ -88,6 +88,7 @@ class Program
                         case 0:
                             if (ServicePart.Status())
                             {
+                                // Doesn't work:
                                 Commands.TurnOffService();
                                 ConfigSetter.SetConfigToService.Status(Hash.ToSha256("0"));
                                 PromptHandler.ExitProcess(
@@ -96,6 +97,7 @@ class Program
                             }
                             else
                             {
+                                // Doesn't work:
                                 Commands.TurnOnService();
                                 ConfigSetter.SetConfigToService.Status(Hash.ToSha256("1"));
                                 PromptHandler.ExitProcess(
