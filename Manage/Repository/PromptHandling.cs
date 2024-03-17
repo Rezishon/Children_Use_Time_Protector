@@ -140,7 +140,7 @@ namespace Manage.Repository
             {
                 HeaderMessageHandler(headerMessage);
 
-                #region Get & set use time
+                #region Get use time
                 var usingTime = AnsiConsole.Ask<int>(
                     $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{timeName}[/]? "
                 );
@@ -154,7 +154,7 @@ namespace Manage.Repository
                 }
                 #endregion
 
-                #region End of loop
+                #region Setting data and end of loop
                 if (!IsTemp)
                 {
                     ConfigSetter.SetConfigToService.AllowedDuration(usingTime.ToString());
