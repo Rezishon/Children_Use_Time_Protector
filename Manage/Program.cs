@@ -137,8 +137,12 @@ class Program
 
                 #region Test
                 case 3:
-                    ConfigSetter.SetThisConfig("reza", "Root", "RecoveryHintString");
-                    ConfigSetter.SetThisConfig("06:00", "Service", "StartTimeOfDay");
+                    ConfigSetter.SetConfigToService.Status("1");
+                    ConfigSetter.SetConfigToService.StartTimeOfDay("08:33");
+                    ConfigSetter.SetConfigToService.EndTimeOfDay("28:33");
+                    ConfigSetter.SetConfigToService.AllowedDuration("10");
+                    ConfigSetter.SetConfigToService.TempAllowedDuration("30");
+
                     break;
                 #endregion
             }
