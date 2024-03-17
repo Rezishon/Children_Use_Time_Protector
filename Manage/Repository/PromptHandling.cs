@@ -155,6 +155,15 @@ namespace Manage.Repository
                 #endregion
 
                 #region End of loop
+                if (!IsTemp)
+                {
+                    ConfigSetter.SetConfigToService.AllowedDuration(usingTime.ToString());
+                }
+                else
+                {
+                    ConfigSetter.SetConfigToService.TempAllowedDuration(usingTime.ToString());
+                }
+
                 AnsiConsole.MarkupLine(
                     $"[green]Your{(IsNew ? " new" : "")} [bold]{timeName}[/] has been set[/]"
                 );
