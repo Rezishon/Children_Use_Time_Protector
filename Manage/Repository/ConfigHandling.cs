@@ -432,6 +432,11 @@ namespace ConfigHandling
             {
                 SetThisConfig(configContent, "Service", "EndTimeOfDay");
             }
+
+            public static void AllowedDuration(string configContent)
+            {
+                SetThisConfig(configContent, "Service", "AllowedDuration");
+            }
         }
     }
     #endregion
