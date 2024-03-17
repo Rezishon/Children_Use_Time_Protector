@@ -106,7 +106,8 @@ class Program
                         case 2:
                             PromptHandler.AllowedUseTimeChangerPrompt(
                                 "Temporary allowed use time",
-                                "This time will added to the main allowed using duration"
+                                "This time will added to the main allowed using duration",
+                                IsTemp: true
                             );
                             break;
                         #endregion
