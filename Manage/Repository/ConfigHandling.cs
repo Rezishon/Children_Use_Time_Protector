@@ -398,6 +398,10 @@ namespace ConfigHandling
                 SetThisConfig(configContent, "Root", "Status");
             }
 
+            public static void RootMainPassword(string configContent)
+            {
+                SetThisConfig(configContent, "Root", "RootMainPassword");
+            }
         }
 
         public class SetConfigToService
