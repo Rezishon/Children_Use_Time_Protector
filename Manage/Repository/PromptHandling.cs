@@ -65,7 +65,7 @@ namespace Manage.Repository
                     );
                     continue;
                 }
-                AnsiConsole.MarkupLine(Hash.ToSha256(Password));
+                // AnsiConsole.MarkupLine(Hash.ToSha256(Password));
                 #endregion
 
                 #region Get & set repeated password
@@ -79,7 +79,7 @@ namespace Manage.Repository
                     );
                     continue;
                 }
-                AnsiConsole.MarkupLine(Hash.ToSha256(RepeatedPassword));
+                // AnsiConsole.MarkupLine(Hash.ToSha256(RepeatedPassword));
                 #endregion
 
                 #region Get & set hint phrase
@@ -88,7 +88,7 @@ namespace Manage.Repository
                     var HintPassword = AnsiConsole.Ask<string>(
                         $"What's your [purple bold]hint[/] message: "
                     );
-                    AnsiConsole.MarkupLine(HintPassword);
+                    // AnsiConsole.MarkupLine(HintPassword);
                 }
                 #endregion
 
@@ -186,7 +186,7 @@ namespace Manage.Repository
                     );
                     continue;
                 }
-                AnsiConsole.MarkupLine(startTimeOfDay);
+                // AnsiConsole.MarkupLine(startTimeOfDay);
                 #endregion
 
                 #region Get & set end time of day
@@ -199,7 +199,7 @@ namespace Manage.Repository
                     ExitProcess("[red]Inserted time has wrong format[/]");
                     continue;
                 }
-                AnsiConsole.MarkupLine(endTimeOfDay);
+                // AnsiConsole.MarkupLine(endTimeOfDay);
                 #endregion
 
                 #region End of loop
