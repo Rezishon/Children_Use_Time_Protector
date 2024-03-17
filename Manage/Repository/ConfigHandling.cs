@@ -407,6 +407,11 @@ namespace ConfigHandling
             {
                 SetThisConfig(configContent, "Root", "RootRecoveryPassword");
             }
+
+            public static void RecoveryHintString(string configContent)
+            {
+                SetThisConfig(configContent, "Root", "RecoveryHintString");
+            }
         }
 
         public class SetConfigToService
