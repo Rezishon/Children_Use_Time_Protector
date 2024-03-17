@@ -393,6 +393,11 @@ namespace ConfigHandling
 
         public class SetConfigToRoot
         {
+            public static void Status(string configContent)
+            {
+                SetThisConfig(configContent, "Root", "Status");
+            }
+
         }
 
         public class SetConfigToService
