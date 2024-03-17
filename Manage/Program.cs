@@ -90,11 +90,17 @@ class Program
                             {
                                 Commands.TurnOffService();
                                 ConfigSetter.SetConfigToService.Status(Hash.ToSha256("0"));
+                                PromptHandler.ExitProcess(
+                                    "[red bold]Service disabled[/]\n[gray]Press any key to exit[/]"
+                                );
                             }
                             else
                             {
                                 Commands.TurnOnService();
                                 ConfigSetter.SetConfigToService.Status(Hash.ToSha256("1"));
+                                PromptHandler.ExitProcess(
+                                    "[green bold]Service enabled[/]\n[gray]Press any key to exit[/]"
+                                );
                             }
                             break;
                         #endregion
