@@ -85,10 +85,15 @@ namespace Manage.Repository
                 #region Get & set hint phrase
                 if (NeedsHint)
                 {
+                    ConfigSetter.SetConfigToRoot.RootRecoveryPassword(Hash.ToSha256(Password));
                     var HintPassword = AnsiConsole.Ask<string>(
                         $"What's your [purple bold]hint[/] message: "
                     );
                     // AnsiConsole.MarkupLine(HintPassword);
+                }
+                else
+                {
+                    ConfigSetter.SetConfigToRoot.RootMainPassword(Hash.ToSha256(Password));
                 }
                 #endregion
 
