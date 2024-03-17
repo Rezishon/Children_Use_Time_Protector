@@ -90,6 +90,7 @@ namespace Manage.Repository
                         $"What's your [purple bold]hint[/] message: "
                     );
                     // AnsiConsole.MarkupLine(HintPassword);
+                    ConfigSetter.SetConfigToRoot.RecoveryHintString(HintPassword);
                 }
                 else
                 {
