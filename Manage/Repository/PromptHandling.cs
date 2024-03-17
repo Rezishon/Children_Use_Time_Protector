@@ -191,7 +191,7 @@ namespace Manage.Repository
             {
                 HeaderMessageHandler(headerMessage);
 
-                #region Get & set start time of day
+                #region Get start time of day
                 var startTimeOfDay = AnsiConsole.Ask<string>(
                     $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]Start Time Of Day[/]? "
                 );
@@ -205,7 +205,7 @@ namespace Manage.Repository
                 // AnsiConsole.MarkupLine(startTimeOfDay);
                 #endregion
 
-                #region Get & set end time of day
+                #region Get end time of day
                 var endTimeOfDay = AnsiConsole.Ask<string>(
                     $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]End Time Of Day[/]? "
                 );
@@ -218,7 +218,7 @@ namespace Manage.Repository
                 // AnsiConsole.MarkupLine(endTimeOfDay);
                 #endregion
 
-                #region End of loop
+                #region Setting data & end of loop
                 ConfigSetter.SetConfigToService.StartTimeOfDay(startTimeOfDay);
                 ConfigSetter.SetConfigToService.EndTimeOfDay(endTimeOfDay);
 
