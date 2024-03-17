@@ -308,8 +308,17 @@ namespace ConfigHandling
     #endregion
 
     #region Config setter Class
+    /// <summary>
+    /// This class will set new config to the config file
+    /// </summary>
     public class ConfigSetter
     {
+        /// <summary>
+        /// Sets new config content to specific place of config file
+        /// </summary>
+        /// <param name="configContent">The data you want to set in the config file</param>
+        /// <param name="lineName">Name of line new data should be placed like root, service, and etc.</param>
+        /// <param name="partName">Name of part of line which could be status or other specific places of config line</param>
         public static void SetThisConfig(string configContent, string lineName, string partName)
         {
             switch (ConfigFile.ConfigLinesNumberDictionary[lineName])
@@ -391,23 +400,42 @@ namespace ConfigHandling
             }
         }
 
+        /// <summary>
+        /// For less possibility of spell error use methods of this class
+        /// </summary>
         public class SetConfigToRoot
         {
+            /// <summary>
+            /// Sets data to status part of Root line in config file
+            /// </summary>
+            /// <param name="configContent">Data you want to set in config file</param>
             public static void Status(string configContent)
             {
                 SetThisConfig(configContent, "Root", "Status");
             }
 
+            /// <summary>
+            /// Sets data to RootMainPassword part of Root line in config file
+            /// </summary>
+            /// <param name="configContent">Data you want to set in config file</param>
             public static void RootMainPassword(string configContent)
             {
                 SetThisConfig(configContent, "Root", "RootMainPassword");
             }
 
+            /// <summary>
+            /// Sets data to RootRecoveryPassword part of Root line in config file
+            /// </summary>
+            /// <param name="configContent">Data you want to set in config file</param>
             public static void RootRecoveryPassword(string configContent)
             {
                 SetThisConfig(configContent, "Root", "RootRecoveryPassword");
             }
 
+            /// <summary>
+            /// Sets data to RecoveryHintString part of Root line in config file
+            /// </summary>
+            /// <param name="configContent">Data you want to set in config file</param>
             public static void RecoveryHintString(string configContent)
             {
                 SetThisConfig(configContent, "Root", "RecoveryHintString");
@@ -416,26 +444,46 @@ namespace ConfigHandling
 
         public class SetConfigToService
         {
+            /// <summary>
+            /// Sets data to status part of Service line in config file
+            /// </summary>
+            /// <param name="configContent">Data you want to set in config file</param>
             public static void Status(string configContent)
             {
                 SetThisConfig(configContent, "Service", "Status");
             }
 
+            /// <summary>
+            /// Sets data to StartTimeOfDay part of Service line in config file
+            /// </summary>
+            /// <param name="configContent">Data you want to set in config file</param>
             public static void StartTimeOfDay(string configContent)
             {
                 SetThisConfig(configContent, "Service", "StartTimeOfDay");
             }
 
+            /// <summary>
+            /// Sets data to EndTimeOfDay part of Service line in config file
+            /// </summary>
+            /// <param name="configContent">Data you want to set in config file</param>
             public static void EndTimeOfDay(string configContent)
             {
                 SetThisConfig(configContent, "Service", "EndTimeOfDay");
             }
 
+            /// <summary>
+            /// Sets data to AllowedDuration part of Service line in config file
+            /// </summary>
+            /// <param name="configContent">Data you want to set in config file</param>
             public static void AllowedDuration(string configContent)
             {
                 SetThisConfig(configContent, "Service", "AllowedDuration");
             }
 
+            /// <summary>
+            /// Sets data to TempAllowedDuration part of Service line in config file
+            /// </summary>
+            /// <param name="configContent">Data you want to set in config file</param>
             public static void TempAllowedDuration(string configContent)
             {
                 SetThisConfig(configContent, "Service", "TempAllowedDuration");
