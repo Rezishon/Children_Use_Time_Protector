@@ -275,7 +275,7 @@ namespace Manage.Repository
         /// </summary>
         /// <param name="message">An string which shown to the user</param>
         /// <remarks>After calling this method, use Continue to ignore rest of loop</remarks>
-        private static void ExitProcess(string? message = null)
+        public static void ExitProcess(string? message = null)
         {
             // AnsiConsole.Clear();
             if (message != null)
