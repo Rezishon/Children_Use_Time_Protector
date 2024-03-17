@@ -219,6 +219,9 @@ namespace Manage.Repository
                 #endregion
 
                 #region End of loop
+                ConfigSetter.SetConfigToService.StartTimeOfDay(startTimeOfDay);
+                ConfigSetter.SetConfigToService.EndTimeOfDay(endTimeOfDay);
+
                 AnsiConsole.MarkupLine(
                     $"[green]Your{(IsNew ? " new" : "")} [bold]Allowed time of day[/] has been set[/]"
                 );
