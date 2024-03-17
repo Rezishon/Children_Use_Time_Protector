@@ -313,6 +313,7 @@ namespace ConfigHandling
     /// </summary>
     public class ConfigSetter
     {
+        #region Config setter method
         /// <summary>
         /// Sets new config content to specific place of config file
         /// </summary>
@@ -325,6 +326,7 @@ namespace ConfigHandling
             {
                 // Root
                 case 0:
+                    #region Initialization
                     // Read data of config file
                     string[] configFileContentRootCase = ConfigFile.ConfigFileReader();
 
@@ -333,10 +335,14 @@ namespace ConfigHandling
                         configFileContentRootCase,
                         "Root"
                     );
+                    #endregion
 
+                    #region Replace data
                     // Replace wanted value
                     resultRootCase[RootPart.ConfigPartsNumbersDictionary[partName]] = configContent;
+                    #endregion
 
+                    #region reassemble content
                     // Reform value => add ; between parts & { at first index
                     configFileContentRootCase[ConfigFile.ConfigLinesNumberDictionary["Root"]] =
                         string.Join(';', resultRootCase).Insert(0, "{");
@@ -351,16 +357,22 @@ namespace ConfigHandling
                             ].Length,
                             "}"
                         );
+                    #endregion
 
+                    #region Set data
                     // Print to config file
                     File.WriteAllText(
                         ConfigFile.ConfigFilePath,
                         string.Join("\n", configFileContentRootCase)
                     );
+                    #endregion
+
                     break;
 
                 // Service
                 case 1:
+
+                    #region Initialization
                     // Read data of config file
                     string[] configFileContentServiceCase = ConfigFile.ConfigFileReader();
 
@@ -369,11 +381,15 @@ namespace ConfigHandling
                         configFileContentServiceCase,
                         "Service"
                     );
+                    #endregion
 
+                    #region Replace data
                     // Replace wanted value
                     resultServiceCase[ServicePart.ConfigPartsNumbersDictionary[partName]] =
                         configContent;
+                    #endregion
 
+                    #region reassemble content
                     // Reform value => add ; between parts & { at first index
                     configFileContentServiceCase[
                         ConfigFile.ConfigLinesNumberDictionary["Service"]
@@ -390,21 +406,28 @@ namespace ConfigHandling
                         ].Length,
                         "}"
                     );
+                    #endregion
 
+                    #region Set data
                     // Print to config file
                     File.WriteAllText(
                         ConfigFile.ConfigFilePath,
                         string.Join("\n", configFileContentServiceCase)
                     );
+                    #endregion
+
                     break;
             }
         }
+        #endregion
 
+        #region Config setter for Root part class
         /// <summary>
         /// For less possibility of spell error use methods of this class
         /// </summary>
         public class SetConfigToRoot
         {
+            #region Status setter method
             /// <summary>
             /// Sets data to status part of Root line in config file
             /// </summary>
@@ -413,7 +436,9 @@ namespace ConfigHandling
             {
                 SetThisConfig(configContent, "Root", "Status");
             }
+            #endregion
 
+            #region Root main password setter method
             /// <summary>
             /// Sets data to RootMainPassword part of Root line in config file
             /// </summary>
@@ -422,7 +447,9 @@ namespace ConfigHandling
             {
                 SetThisConfig(configContent, "Root", "RootMainPassword");
             }
+            #endregion
 
+            #region Root recovery password setter method
             /// <summary>
             /// Sets data to RootRecoveryPassword part of Root line in config file
             /// </summary>
@@ -431,7 +458,9 @@ namespace ConfigHandling
             {
                 SetThisConfig(configContent, "Root", "RootRecoveryPassword");
             }
+            #endregion
 
+            #region Recovery hint string setter method
             /// <summary>
             /// Sets data to RecoveryHintString part of Root line in config file
             /// </summary>
@@ -440,10 +469,14 @@ namespace ConfigHandling
             {
                 SetThisConfig(configContent, "Root", "RecoveryHintString");
             }
+            #endregion
         }
+        #endregion
 
+        #region Config setter for service part class
         public class SetConfigToService
         {
+            #region Status setter method
             /// <summary>
             /// Sets data to status part of Service line in config file
             /// </summary>
@@ -452,7 +485,9 @@ namespace ConfigHandling
             {
                 SetThisConfig(configContent, "Service", "Status");
             }
+            #endregion
 
+            #region Start time of day setter method
             /// <summary>
             /// Sets data to StartTimeOfDay part of Service line in config file
             /// </summary>
@@ -461,7 +496,9 @@ namespace ConfigHandling
             {
                 SetThisConfig(configContent, "Service", "StartTimeOfDay");
             }
+            #endregion
 
+            #region End time of day setter method
             /// <summary>
             /// Sets data to EndTimeOfDay part of Service line in config file
             /// </summary>
@@ -470,7 +507,9 @@ namespace ConfigHandling
             {
                 SetThisConfig(configContent, "Service", "EndTimeOfDay");
             }
+            #endregion
 
+            #region Allowed duration setter method
             /// <summary>
             /// Sets data to AllowedDuration part of Service line in config file
             /// </summary>
@@ -479,7 +518,9 @@ namespace ConfigHandling
             {
                 SetThisConfig(configContent, "Service", "AllowedDuration");
             }
+            #endregion
 
+            #region Temp allowed duration setter method
             /// <summary>
             /// Sets data to TempAllowedDuration part of Service line in config file
             /// </summary>
@@ -488,7 +529,9 @@ namespace ConfigHandling
             {
                 SetThisConfig(configContent, "Service", "TempAllowedDuration");
             }
+            #endregion
         }
+        #endregion
     }
     #endregion
 }
