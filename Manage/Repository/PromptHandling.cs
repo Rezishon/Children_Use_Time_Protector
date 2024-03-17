@@ -130,7 +130,8 @@ namespace Manage.Repository
         public static void AllowedUseTimeChangerPrompt(
             string timeName,
             string? headerMessage = null,
-            bool IsNew = true
+            bool IsNew = true,
+            bool IsTemp = false
         )
         {
             bool flag = true;
