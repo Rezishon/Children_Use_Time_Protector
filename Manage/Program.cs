@@ -15,6 +15,9 @@ class Program
 #if Testing == true
         // User validation
         PromptHandler.UserValidationPrompt("Root");
+        // disappeared on reload
+        var rule = new Rule("[bold italic purple]Child use time protector[/]");
+        AnsiConsole.Write(rule);
 #endif
         // For test
         Console.Clear();
