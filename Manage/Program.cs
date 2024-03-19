@@ -171,6 +171,7 @@ class Program
         }
         else
         {
+            ConfigFile.ConfigFileBuilder();
         }
     }
 }
