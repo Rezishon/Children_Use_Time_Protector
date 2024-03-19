@@ -18,6 +18,9 @@ class Program
         // disappeared on reload
         var rule = new Rule("[bold italic purple]Child use time protector[/]");
         AnsiConsole.Write(rule);
+
+        if (File.Exists(ConfigFile.ConfigFilePath) && RootPart.Status())
+        {
 #endif
         // For test
         Console.Clear();
@@ -163,7 +166,11 @@ class Program
 
                     break;
                 #endregion
+                }
             }
+        }
+        else
+        {
         }
     }
 }
