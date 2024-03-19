@@ -90,10 +90,6 @@ namespace Manage.Repository
                 if (NeedsHint)
                 {
                     ConfigSetter.SetConfigToRoot.RootRecoveryPassword(Hash.ToSha256(Password));
-                    var HintPassword = AnsiConsole.Ask<string>(
-                        $"What's your [purple bold]hint[/] message: "
-                    );
-                    // AnsiConsole.MarkupLine(HintPassword);
                     ConfigSetter.SetConfigToRoot.RecoveryHintString(HintPassword);
                 }
                 else
