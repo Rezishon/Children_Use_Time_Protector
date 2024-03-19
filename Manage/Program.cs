@@ -178,6 +178,13 @@ class Program
             );
 
             PromptHandler.PasswordChangerPrompt("Password", IsNew: false, NeedsHint: false);
+
+            PromptHandler.PasswordChangerPrompt(
+                "Recovery Password",
+                "Using memorable password recommended\nThis password should be use in emergency situation because it resets all parts",
+                false,
+                true
+            );
         }
     }
 }
