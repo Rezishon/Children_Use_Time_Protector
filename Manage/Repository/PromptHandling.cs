@@ -71,8 +71,10 @@ namespace Manage.Repository
                 #endregion
 
                 #region Get repeated password
-                var RepeatedPassword = AnsiConsole.Ask<string>(
-                    $"Repeat your{(IsNew ? " [green]new[/]" : "")} [bold]{passwordName}[/]: "
+                var RepeatedPassword = AnsiConsole.Prompt(
+                    new TextPrompt<string>(
+                        $"Repeat your{(IsNew ? " [yellow]new[/]" : "")} [bold yellow]{passwordName}[/]: "
+                    ).Secret(' ')
                 );
                 if (!string.Equals(Password, RepeatedPassword))
                 {
