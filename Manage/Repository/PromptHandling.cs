@@ -143,8 +143,10 @@ namespace Manage.Repository
                 HeaderMessageHandler(headerMessage);
 
                 #region Get use time
-                var usingTime = AnsiConsole.Ask<int>(
-                    $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{timeName}[/]? "
+                var usingTime = AnsiConsole.Prompt(
+                    new TextPrompt<int>(
+                        $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{timeName}[/]? "
+                    )
                 );
 
                 if (usingTime is not >= 10 or not <= 1430 || usingTime % 10 != 0)
