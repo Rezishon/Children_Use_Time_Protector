@@ -212,8 +212,10 @@ namespace Manage.Repository
                 #endregion
 
                 #region Get end time of day
-                var endTimeOfDay = AnsiConsole.Ask<string>(
-                    $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]End Time Of Day[/]? "
+                var endTimeOfDay = AnsiConsole.Prompt(
+                    new TextPrompt<string>(
+                        $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]End Time Of Day[/]? "
+                    )
                 );
                 // end time should be after the start time in a day
                 if (!Regex.IsMatch(endTimeOfDay, @"\d{2}:\d{2}"))
