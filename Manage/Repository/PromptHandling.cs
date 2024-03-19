@@ -196,8 +196,10 @@ namespace Manage.Repository
                 HeaderMessageHandler(headerMessage);
 
                 #region Get start time of day
-                var startTimeOfDay = AnsiConsole.Ask<string>(
-                    $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]Start Time Of Day[/]? "
+                var startTimeOfDay = AnsiConsole.Prompt(
+                    new TextPrompt<string>(
+                        $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]Start Time Of Day[/]? "
+                    )
                 );
                 if (!Regex.IsMatch(startTimeOfDay, @"\d{2}:\d{2}"))
                 {
