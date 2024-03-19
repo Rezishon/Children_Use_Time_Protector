@@ -252,7 +252,7 @@ namespace Manage.Repository
             AnsiConsole.Prompt(
                 new TextPrompt<string>($"Please insert the [bold red]{userName}[/] password: ")
                     .PromptStyle("green")
-                    .Secret(null)
+                    .Secret(' ')
                     .ValidationErrorMessage("[red]That's not a valid password[/]")
                     .Validate(password =>
                     {
