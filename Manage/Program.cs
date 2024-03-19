@@ -176,6 +176,8 @@ class Program
             AnsiConsole.MarkupLine(
                 "Welcome to [bold purple]CUTP[/]\n[orange3 bold]To set default configuration blank or enter your favorite config[/]\n"
             );
+
+            PromptHandler.PasswordChangerPrompt("Password", IsNew: false, NeedsHint: false);
         }
     }
 }
