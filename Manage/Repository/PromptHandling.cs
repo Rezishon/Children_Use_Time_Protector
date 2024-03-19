@@ -55,8 +55,10 @@ namespace Manage.Repository
                 HeaderMessageHandler(headerMessage);
 
                 #region Get password
-                var Password = AnsiConsole.Ask<string>(
-                    $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{passwordName}[/]? "
+                var Password = AnsiConsole.Prompt(
+                    new TextPrompt<string>(
+                        $"What's your{(IsNew ? " [yellow]new[/]" : "")} [bold yellow]{passwordName}[/]? "
+                    ).Secret(' ')
                 );
                 if (Password.Length >= 20)
                 {
