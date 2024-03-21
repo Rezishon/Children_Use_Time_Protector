@@ -185,6 +185,11 @@ class Program
                 false,
                 true
             );
+
+            PromptHandler.AllowedTimeOfDayChangerPrompt(
+                "Default allowed day time is from 06:00 to 23:59",
+                false
+            );
         }
     }
 }
