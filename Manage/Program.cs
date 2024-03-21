@@ -197,6 +197,7 @@ class Program
                 false,
                 false
             );
+            ConfigSetter.SetConfigToRoot.Status(Hash.ToSha256("1"));
         }
     }
 }
