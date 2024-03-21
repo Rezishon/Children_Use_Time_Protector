@@ -11,6 +11,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        es:
         // disappeared on reload
         var rule = new Rule("[bold italic purple]Child use time protector[/]");
         AnsiConsole.Write(rule);
@@ -198,6 +199,7 @@ class Program
                 false
             );
             ConfigSetter.SetConfigToRoot.Status(Hash.ToSha256("1"));
+            goto es;
         }
     }
 }
