@@ -19,12 +19,6 @@ class Program
         if (File.Exists(ConfigFile.ConfigFilePath) && RootPart.Status())
         {
             // Test phase
-#if Testing == false
-            // User validation
-            PromptHandler.UserValidationPrompt("Root");
-#endif
-            // For test
-            Console.Clear();
 
             // Main menu loop flag
             bool flag = true;
