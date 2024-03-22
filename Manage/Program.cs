@@ -11,6 +11,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        Environment.SetEnvironmentVariable("Testing", "true");
         es:
         // disappeared on reload
         var rule = new Rule("[bold italic purple]Child use time protector[/]");
