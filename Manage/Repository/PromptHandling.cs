@@ -149,7 +149,8 @@ namespace Manage.Repository
             string timeName,
             string? headerMessage = null,
             bool IsNew = true,
-            bool IsTemp = false
+            bool IsTemp = false,
+            bool IsDefault = false
         )
         {
             bool flag = true;
@@ -157,18 +158,29 @@ namespace Manage.Repository
             while (flag)
             {
                 HeaderMessageHandler(headerMessage);
+                var usingTime = 0;
 
+                if (IsDefault == true)
+                {
+                    usingTime = IsTemp == true ? 0 : 120;
+                }
                 #region Get use time
-                var usingTime = AnsiConsole.Prompt(
-                    new TextPrompt<int>(
-                        $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{timeName}[/]? "
-                    )
-                );
+                else
+                {
+                    usingTime = AnsiConsole.Prompt(
+                        new TextPrompt<int>(
+                            $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{timeName}[/]? "
+                        )
+                    );
+                }
 
-                if (usingTime is not >= 10 or not <= 1430 || usingTime % 10 != 0)
+                if (
+                    (!IsTemp && usingTime is not >= 10 or not <= 1430 && usingTime % 10 != 0)
+                    || (IsTemp && usingTime is not >= 0 or not <= 1430 && usingTime % 10 != 0)
+                )
                 {
                     ExitProcess(
-                        $"[red][bold]{timeName}[/] is out of range. It must be a multiple of 10 & between [underline]10[/] and [underline]1430[/]\nPress any key to Repeat[/]"
+                        $"[red][bold]{timeName}[/] is out of range. It must be a multiple of 10 & between [underline]{(IsTemp == true ? "0" : "10")}[/] and [underline]1430[/]\nPress any key to Repeat[/]"
                     );
                     continue;
                 }
@@ -202,7 +214,8 @@ namespace Manage.Repository
         /// <param name="IsNew">If user status was 1 it should be true</param>
         public static void AllowedTimeOfDayChangerPrompt(
             string? headerMessage = null,
-            bool IsNew = true
+            bool IsNew = true,
+            bool IsDefault = false
         )
         {
             bool flag = true;
@@ -210,9 +223,27 @@ namespace Manage.Repository
             while (flag)
             {
                 HeaderMessageHandler(headerMessage);
+                var startTimeOfDay = string.Empty;
+                var endTimeOfDay = string.Empty;
+
+                if (IsDefault == true)
+                {
+                    startTimeOfDay = "06:00";
+                    endTimeOfDay = "23:59";
+
+                    ConfigSetter.SetConfigToService.StartTimeOfDay(startTimeOfDay);
+                    ConfigSetter.SetConfigToService.EndTimeOfDay(endTimeOfDay);
+
+                    AnsiConsole.MarkupLine(
+                        $"[green]Your{(IsNew ? " new" : "")} [bold]Allowed time of day[/] has been set[/]"
+                    );
+                    ExitProcess("Press any key to exit");
+                    flag = false;
+                    continue;
+                }
 
                 #region Get start time of day
-                var startTimeOfDay = AnsiConsole.Prompt(
+                startTimeOfDay = AnsiConsole.Prompt(
                     new TextPrompt<string>(
                         $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]Start Time Of Day[/]? "
                     )
@@ -228,7 +259,7 @@ namespace Manage.Repository
                 #endregion
 
                 #region Get end time of day
-                var endTimeOfDay = AnsiConsole.Prompt(
+                endTimeOfDay = AnsiConsole.Prompt(
                     new TextPrompt<string>(
                         $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]End Time Of Day[/]? "
                     )
