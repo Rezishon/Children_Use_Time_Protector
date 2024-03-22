@@ -25,6 +25,7 @@ class Program
             // Test phase
             if (Environment.GetEnvironmentVariable("Testing") != "true")
             {
+                PromptHandler.UserValidationPrompt("Root");
             }
 
             // Main menu loop flag
