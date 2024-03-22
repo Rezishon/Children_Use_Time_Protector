@@ -25,6 +25,7 @@ class Program
             // Test phase
             if (Environment.GetEnvironmentVariable("Testing") != "true")
             {
+                // User validation
                 PromptHandler.UserValidationPrompt("Root");
             }
 
