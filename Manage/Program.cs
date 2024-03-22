@@ -192,17 +192,7 @@ class Program
                 true
             );
 
-            PromptHandler.AllowedTimeOfDayChangerPrompt(
-                "Default allowed day time is from 06:00 to 23:59",
-                false
-            );
 
-            PromptHandler.AllowedUseTimeChangerPrompt(
-                "Allowed use time",
-                "Default using time is 120 minute\n[gray italic]Insert your answer in minute like [underline bold]120[/] which means 2 hour[/]",
-                false,
-                false
-            );
             ConfigSetter.SetConfigToRoot.Status(Hash.ToSha256("1"));
 
             goto es;
