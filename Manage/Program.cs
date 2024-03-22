@@ -27,6 +27,8 @@ class Program
             {
                 // User validation
                 PromptHandler.UserValidationPrompt("Root");
+
+                Console.Clear();
             }
 
             // Main menu loop flag
