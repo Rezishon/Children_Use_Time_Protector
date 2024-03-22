@@ -192,6 +192,7 @@ class Program
                 true
             );
 
+            var preCharDayTime = Console.ReadKey().Key;
 
             ConfigSetter.SetConfigToRoot.Status(Hash.ToSha256("1"));
 
