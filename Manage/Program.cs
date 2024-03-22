@@ -14,6 +14,7 @@ class Program
         #region Environment variables
         Environment.SetEnvironmentVariable("Testing", "true");
         #endregion
+
         es:
         // disappeared on reload
         var rule = new Rule("[bold italic purple]Child use time protector[/]");
