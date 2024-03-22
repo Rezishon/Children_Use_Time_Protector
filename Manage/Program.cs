@@ -23,6 +23,9 @@ class Program
         if (File.Exists(ConfigFile.ConfigFilePath) && RootPart.Status())
         {
             // Test phase
+            if (Environment.GetEnvironmentVariable("Testing") != "true")
+            {
+            }
 
             // Main menu loop flag
             bool flag = true;
