@@ -194,6 +194,12 @@ class Program
 
             var preCharDayTime = Console.ReadKey().Key;
 
+            if (preCharDayTime == ConsoleKey.Enter)
+            {
+            }
+            else
+            {
+            }
             ConfigSetter.SetConfigToRoot.Status(Hash.ToSha256("1"));
 
             goto es;
