@@ -209,6 +209,8 @@ class Program
                     false
                 );
             }
+
+            var preCharUseTime = Console.ReadKey().Key;
             ConfigSetter.SetConfigToRoot.Status(Hash.ToSha256("1"));
 
             goto es;
