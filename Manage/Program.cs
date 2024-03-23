@@ -211,6 +211,13 @@ class Program
             }
 
             var preCharUseTime = Console.ReadKey().Key;
+
+            if (preCharUseTime == ConsoleKey.Enter)
+            {
+            }
+            else
+            {
+            }
             ConfigSetter.SetConfigToRoot.Status(Hash.ToSha256("1"));
 
             goto es;
