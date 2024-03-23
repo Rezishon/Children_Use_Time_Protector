@@ -204,6 +204,10 @@ class Program
             }
             else
             {
+                PromptHandler.AllowedTimeOfDayChangerPrompt(
+                    "Default allowed day time is from 06:00 to 23:59",
+                    false
+                );
             }
             ConfigSetter.SetConfigToRoot.Status(Hash.ToSha256("1"));
 
