@@ -149,8 +149,6 @@ namespace Manage.Repository
             string timeName,
             string? headerMessage = null,
             bool IsNew = true,
-            bool IsTemp = false,
-            bool IsDefault = false
         )
         {
             bool flag = true;
@@ -158,21 +156,8 @@ namespace Manage.Repository
             while (flag)
             {
                 HeaderMessageHandler(headerMessage);
-                var usingTime = 0;
 
-                if (IsDefault == true)
-                {
-                    usingTime = IsTemp == true ? 0 : 120;
-                }
                 #region Get use time
-                else
-                {
-                    usingTime = AnsiConsole.Prompt(
-                        new TextPrompt<int>(
-                            $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{timeName}[/]? "
-                        )
-                    );
-                }
 
                 if (
                     (!IsTemp && usingTime is not >= 10 or not <= 1430 && usingTime % 10 != 0)
