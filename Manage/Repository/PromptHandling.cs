@@ -149,6 +149,7 @@ namespace Manage.Repository
             string timeName,
             string? headerMessage = null,
             bool IsNew = true,
+            bool IsTemp = false
         )
         {
             bool flag = true;
