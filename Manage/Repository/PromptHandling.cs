@@ -160,6 +160,12 @@ namespace Manage.Repository
 
                 #region Get use time
 
+                var usingTime = AnsiConsole.Prompt(
+                    new TextPrompt<int>(
+                        $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{timeName}[/]? "
+                    )
+                );
+
                 if (
                     (!IsTemp && usingTime is not >= 10 or not <= 1430 && usingTime % 10 != 0)
                     || (IsTemp && usingTime is not >= 0 or not <= 1430 && usingTime % 10 != 0)
