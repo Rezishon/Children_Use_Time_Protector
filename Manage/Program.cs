@@ -188,6 +188,10 @@ class Program
                 true
             );
 
+            AnsiConsole.Markup(
+                "Please press ENTER key if you want default setting unless press one other key to set your custom setting"
+            );
+
             var preCharDayTime = Console.ReadKey().Key;
 
             if (preCharDayTime == ConsoleKey.Enter)
@@ -205,6 +209,10 @@ class Program
                     false
                 );
             }
+
+            AnsiConsole.Markup(
+                "Please press ENTER key if you want default setting unless press one other key to set your custom setting"
+            );
 
             var preCharUseTime = Console.ReadKey().Key;
 
