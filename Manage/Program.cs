@@ -164,12 +164,8 @@ class Program
 
                     #region Test
                     case 3:
-                        ConfigSetter.SetConfigToService.Status("1");
-                        ConfigSetter.SetConfigToService.StartTimeOfDay("08:33");
-                        ConfigSetter.SetConfigToService.EndTimeOfDay("28:33");
-                        ConfigSetter.SetConfigToService.AllowedDuration("10");
-                        ConfigSetter.SetConfigToService.TempAllowedDuration("30");
-
+                        ConfigSetter.SetConfigToRoot.Status(Hash.ToSha256("0"));
+                        ConfigSetter.SetConfigToService.Status(Hash.ToSha256("0"));
                         break;
                     #endregion
                 }
