@@ -205,6 +205,7 @@ namespace Manage.Repository
         {
             if (!IsTemp)
             {
+                ConfigSetter.SetConfigToService.AllowedDuration("120");
             }
             else
             {
