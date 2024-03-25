@@ -209,6 +209,7 @@ namespace Manage.Repository
             }
             else
             {
+                ConfigSetter.SetConfigToService.TempAllowedDuration("0");
             }
         }
         #endregion
