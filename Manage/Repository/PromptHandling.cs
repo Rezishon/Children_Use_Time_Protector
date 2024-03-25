@@ -196,6 +196,14 @@ namespace Manage.Repository
                 #endregion
             }
         }
+
+        public static void AllowedUseTimeChangerPrompt(
+            string timeName,
+            bool IsTemp = false,
+            bool IsNew = true
+        )
+        {
+        }
         #endregion
 
         #region Allowed time of day changer prompt maker method
