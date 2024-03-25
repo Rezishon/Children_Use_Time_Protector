@@ -196,11 +196,7 @@ class Program
 
             if (preCharDayTime == ConsoleKey.Enter)
             {
-                PromptHandler.AllowedTimeOfDayChangerPrompt(
-                    "Default allowed day time is from 06:00 to 23:59",
-                    false,
-                    true
-                );
+                PromptHandler.AllowedTimeOfDayChangerPrompt(false);
             }
             else
             {
