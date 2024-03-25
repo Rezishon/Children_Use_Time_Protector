@@ -211,6 +211,11 @@ namespace Manage.Repository
             {
                 ConfigSetter.SetConfigToService.TempAllowedDuration("0");
             }
+
+            AnsiConsole.MarkupLine(
+                $"[green]Your{(IsNew ? " new" : "")} [bold]{timeName}[/] has been set[/]"
+            );
+            ExitProcess("Press any key to exit");
         }
         #endregion
 
