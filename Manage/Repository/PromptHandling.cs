@@ -227,8 +227,7 @@ namespace Manage.Repository
         /// <param name="IsNew">If user status was 1 it should be true</param>
         public static void AllowedTimeOfDayChangerPrompt(
             string? headerMessage = null,
-            bool IsNew = true,
-            bool IsDefault = false
+            bool IsNew = true
         )
         {
             bool flag = true;
@@ -236,27 +235,9 @@ namespace Manage.Repository
             while (flag)
             {
                 HeaderMessageHandler(headerMessage);
-                var startTimeOfDay = string.Empty;
-                var endTimeOfDay = string.Empty;
-
-                if (IsDefault == true)
-                {
-                    startTimeOfDay = "06:00";
-                    endTimeOfDay = "23:59";
-
-                    ConfigSetter.SetConfigToService.StartTimeOfDay(startTimeOfDay);
-                    ConfigSetter.SetConfigToService.EndTimeOfDay(endTimeOfDay);
-
-                    AnsiConsole.MarkupLine(
-                        $"[green]Your{(IsNew ? " new" : "")} [bold]Allowed time of day[/] has been set[/]"
-                    );
-                    ExitProcess("Press any key to exit");
-                    flag = false;
-                    continue;
-                }
 
                 #region Get start time of day
-                startTimeOfDay = AnsiConsole.Prompt(
+                var startTimeOfDay = AnsiConsole.Prompt(
                     new TextPrompt<string>(
                         $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]Start Time Of Day[/]? "
                     )
@@ -272,7 +253,7 @@ namespace Manage.Repository
                 #endregion
 
                 #region Get end time of day
-                endTimeOfDay = AnsiConsole.Prompt(
+                var endTimeOfDay = AnsiConsole.Prompt(
                     new TextPrompt<string>(
                         $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]End Time Of Day[/]? "
                     )
