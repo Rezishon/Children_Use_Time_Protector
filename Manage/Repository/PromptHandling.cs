@@ -280,6 +280,10 @@ namespace Manage.Repository
                 #endregion
             }
         }
+
+        public static void AllowedTimeOfDayChangerPrompt(bool IsNew = true)
+        {
+        }
         #endregion
 
         #region User validation prompt maker method
