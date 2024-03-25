@@ -283,6 +283,13 @@ namespace Manage.Repository
 
         public static void AllowedTimeOfDayChangerPrompt(bool IsNew = true)
         {
+            ConfigSetter.SetConfigToService.StartTimeOfDay("06:00");
+            ConfigSetter.SetConfigToService.EndTimeOfDay("23:50");
+
+            AnsiConsole.MarkupLine(
+                $"[green]Your{(IsNew ? " new" : "")} [bold]Allowed time of day[/] has been set[/]"
+            );
+            ExitProcess("Press any key to exit");
         }
         #endregion
 
