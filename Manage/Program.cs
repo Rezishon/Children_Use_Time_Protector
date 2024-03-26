@@ -231,6 +231,7 @@ class Program
             }
 
             ConfigSetter.SetConfigToRoot.Status(Hash.ToSha256("1"));
+            // Start the service
 
             goto es;
         }
