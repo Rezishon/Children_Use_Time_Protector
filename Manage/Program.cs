@@ -227,6 +227,7 @@ class Program
             }
             else
             {
+                PromptHandler.AllowedUseTimeChangerPrompt("Allowed use time", false, false);
             }
 
             ConfigSetter.SetConfigToRoot.Status(Hash.ToSha256("1"));
