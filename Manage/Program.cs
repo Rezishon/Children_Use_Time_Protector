@@ -11,6 +11,7 @@ class Program
 {
     static void Main(string[] args)
     {
+        AnsiConsole.Cursor.Hide();
         #region Environment variables
         Environment.SetEnvironmentVariable("Testing", "true");
         #endregion
