@@ -121,7 +121,7 @@ namespace Manage.Repository
                     $"[green]Your{(IsNew ? " new" : "")} [bold]{passwordName}[/] has been set[/]"
                 );
 
-                ExitProcess("Press any key to exit");
+                ExitProcess("Press any key to continue");
                 flag = false;
                 #endregion
             }
@@ -191,7 +191,7 @@ namespace Manage.Repository
                 AnsiConsole.MarkupLine(
                     $"[green]Your{(IsNew ? " new" : "")} [bold]{timeName}[/] has been set[/]"
                 );
-                ExitProcess("Press any key to exit");
+                ExitProcess("Press any key to continue");
                 flag = false;
                 #endregion
             }
@@ -215,7 +215,7 @@ namespace Manage.Repository
             AnsiConsole.MarkupLine(
                 $"[green]Your{(IsNew ? " new" : "")} [bold]{timeName}[/] has been set[/]"
             );
-            ExitProcess("Press any key to exit");
+            ExitProcess("Press any key to continue");
         }
         #endregion
 
@@ -275,7 +275,7 @@ namespace Manage.Repository
                     $"[green]Your{(IsNew ? " new" : "")} [bold]Allowed time of day[/] has been set[/]"
                 );
 
-                ExitProcess("Press any key to exit");
+                ExitProcess("Press any key to continue");
                 flag = false;
                 #endregion
             }
@@ -289,7 +289,7 @@ namespace Manage.Repository
             AnsiConsole.MarkupLine(
                 $"[green]Your{(IsNew ? " new" : "")} [bold]Allowed time of day[/] has been set[/]"
             );
-            ExitProcess("Press any key to exit");
+            ExitProcess("Press any key to continue");
         }
         #endregion
 
