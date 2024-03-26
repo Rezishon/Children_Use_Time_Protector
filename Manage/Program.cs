@@ -199,6 +199,7 @@ class Program
                 )
             )
             {
+                AnsiConsole.Clear();
                 PromptHandler.AllowedTimeOfDayChangerPrompt(
                     "Default allowed day time is from 06:00 to 23:50",
                     false
