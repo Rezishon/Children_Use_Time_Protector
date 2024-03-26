@@ -207,6 +207,7 @@ class Program
             }
             else
             {
+                PromptHandler.AllowedTimeOfDayChangerPrompt(false);
             }
             {
                 PromptHandler.AllowedUseTimeChangerPrompt(
