@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Services
-build_property.ProjectDir = S:\Projects\Children_Use_Time_Protector\Services\
+build_property.ProjectDir = s:\Projects\Children_Use_Time_Protector\Services\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
