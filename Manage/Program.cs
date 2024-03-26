@@ -192,12 +192,19 @@ class Program
                 true
             );
 
+            if (
+                AnsiConsole.Confirm(
+                    "Default allowed time of day is from 06:00 until 23:50 , want to change it? ",
+                    false
+                )
+            )
             {
                 PromptHandler.AllowedTimeOfDayChangerPrompt(
                     "Default allowed day time is from 06:00 to 23:50",
                     false
                 );
             }
+            else
             {
             }
             {
