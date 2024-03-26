@@ -209,6 +209,13 @@ class Program
             {
                 PromptHandler.AllowedTimeOfDayChangerPrompt(false);
             }
+
+            if (
+                AnsiConsole.Confirm(
+                    "Default allowed use time is 120 minute, want to change it? ",
+                    false
+                )
+            )
             {
                 PromptHandler.AllowedUseTimeChangerPrompt(
                     "Allowed use time",
@@ -216,6 +223,9 @@ class Program
                     false,
                     false
                 );
+            }
+            else
+            {
             }
 
             ConfigSetter.SetConfigToRoot.Status(Hash.ToSha256("1"));
