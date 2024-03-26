@@ -192,35 +192,14 @@ class Program
                 true
             );
 
-            AnsiConsole.Markup(
-                "Please press ENTER key if you want default setting unless press one other key to set your custom setting"
-            );
-
-            var preCharDayTime = Console.ReadKey().Key;
-
-            if (preCharDayTime == ConsoleKey.Enter)
-            {
-                PromptHandler.AllowedTimeOfDayChangerPrompt(false);
-            }
-            else
             {
                 PromptHandler.AllowedTimeOfDayChangerPrompt(
                     "Default allowed day time is from 06:00 to 23:50",
                     false
                 );
             }
-
-            AnsiConsole.Markup(
-                "Please press ENTER key if you want default setting unless press one other key to set your custom setting"
-            );
-
-            var preCharUseTime = Console.ReadKey().Key;
-
-            if (preCharUseTime == ConsoleKey.Enter)
             {
-                PromptHandler.AllowedUseTimeChangerPrompt("Allowed use time", false, false);
             }
-            else
             {
                 PromptHandler.AllowedUseTimeChangerPrompt(
                     "Allowed use time",
