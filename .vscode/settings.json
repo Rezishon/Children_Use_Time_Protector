@@ -1,5 +1,6 @@
 {
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "csharpier.csharpier-vscode",
-  "cSpell.words": ["CUTP", "Noda", "runas", "Tzdb"]
+  "cSpell.words": ["CUTP", "Noda", "runas", "Tzdb"],
+  "csharp.debug.console": "integratedTerminal"
 }
