@@ -58,7 +58,7 @@ namespace Manage.Repository
                 var Password = AnsiConsole.Prompt(
                     new TextPrompt<string>(
                         $"What's your{(IsNew ? " [yellow]new[/]" : "")} [bold yellow]{passwordName}[/]? "
-                    ).Secret(' ')
+                    ).Secret()
                 );
                 if (Password.Length >= 20)
                 {
@@ -74,7 +74,7 @@ namespace Manage.Repository
                 var RepeatedPassword = AnsiConsole.Prompt(
                     new TextPrompt<string>(
                         $"Repeat your{(IsNew ? " [yellow]new[/]" : "")} [bold yellow]{passwordName}[/]: "
-                    ).Secret(' ')
+                    ).Secret()
                 );
                 if (!string.Equals(Password, RepeatedPassword))
                 {
@@ -304,7 +304,7 @@ namespace Manage.Repository
             AnsiConsole.Prompt(
                 new TextPrompt<string>($"Please insert the [bold red]{userName}[/] password: ")
                     .PromptStyle("green")
-                    .Secret(' ')
+                    .Secret()
                     .ValidationErrorMessage("[red]That's not a valid password[/]")
                     .Validate(password =>
                     {
