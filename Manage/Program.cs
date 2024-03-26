@@ -217,6 +217,7 @@ class Program
                 )
             )
             {
+                AnsiConsole.Clear();
                 PromptHandler.AllowedUseTimeChangerPrompt(
                     "Allowed use time",
                     "Default using time is 120 minute\n[gray italic]Insert your answer in minute like [underline bold]120[/] which means 2 hour[/]",
