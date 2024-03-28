@@ -107,7 +107,7 @@ class Program
                                     // Doesn't work:
                                     Commands.TurnOffService();
                                     ConfigSetter.SetConfigToService.Status(Hash.ToSha256("0"));
-                                    PromptHandler.ExitProcess(
+                                    PromptHandler.Exit(
                                         "[red bold]Service disabled[/]\n[gray]Press any key to exit[/]"
                                     );
                                 }
@@ -116,7 +116,7 @@ class Program
                                     // Doesn't work:
                                     Commands.TurnOnService();
                                     ConfigSetter.SetConfigToService.Status(Hash.ToSha256("1"));
-                                    PromptHandler.ExitProcess(
+                                    PromptHandler.Exit(
                                         "[green bold]Service enabled[/]\n[gray]Press any key to exit[/]"
                                     );
                                 }

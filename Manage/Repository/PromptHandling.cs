@@ -62,7 +62,7 @@ namespace Manage.Repository
                 );
                 if (Password.Length >= 20)
                 {
-                    ExitProcess(
+                    Exit(
                         "[bold red]Your input should be less than 20 characters[/]\nPress any key to Repeat"
                     );
                     continue;
@@ -78,9 +78,7 @@ namespace Manage.Repository
                 );
                 if (!string.Equals(Password, RepeatedPassword))
                 {
-                    ExitProcess(
-                        $"[bold red]{passwordName}s aren't the same[/]\nPress any key to Repeat"
-                    );
+                    Exit($"[bold red]{passwordName}s aren't the same[/]\nPress any key to Repeat");
                     continue;
                 }
                 // AnsiConsole.MarkupLine(Hash.ToSha256(RepeatedPassword));
@@ -100,7 +98,7 @@ namespace Manage.Repository
                         );
                         if (HintPassword.Contains(';'))
                         {
-                            ExitProcess(
+                            Exit(
                                 "[bold red]Hint string shouldn't contains \"; { }\" characters[/]\nPress any key to Repeat"
                             );
                             continue;
@@ -121,7 +119,7 @@ namespace Manage.Repository
                     $"[green]Your{(IsNew ? " new" : "")} [bold]{passwordName}[/] has been set[/]"
                 );
 
-                ExitProcess("Press any key to continue");
+                Exit("Press any key to continue");
                 flag = false;
                 #endregion
             }
@@ -191,7 +189,7 @@ namespace Manage.Repository
                 AnsiConsole.MarkupLine(
                     $"[green]Your{(IsNew ? " new" : "")} [bold]{timeName}[/] has been set[/]"
                 );
-                ExitProcess("Press any key to continue");
+                Exit("Press any key to continue");
                 flag = false;
                 #endregion
             }
@@ -215,7 +213,7 @@ namespace Manage.Repository
             AnsiConsole.MarkupLine(
                 $"[green]Your{(IsNew ? " new" : "")} [bold]{timeName}[/] has been set[/]"
             );
-            ExitProcess("Press any key to continue");
+            Exit("Press any key to continue");
         }
         #endregion
 
@@ -244,7 +242,7 @@ namespace Manage.Repository
                 );
                 if (!Regex.IsMatch(startTimeOfDay, @"\d{2}:\d{2}"))
                 {
-                    ExitProcess(
+                    Exit(
                         "[red]Inserted time has wrong format. It must be like [[two digit number]][bold]:[/][[two digit number]][/]\nPress any key to repeat"
                     );
                     continue;
@@ -261,7 +259,6 @@ namespace Manage.Repository
                 // end time should be after the start time in a day
                 if (!Regex.IsMatch(endTimeOfDay, @"\d{2}:\d{2}"))
                 {
-                    ExitProcess("[red]Inserted time has wrong format[/]");
                     continue;
                 }
                 // AnsiConsole.MarkupLine(endTimeOfDay);
@@ -275,7 +272,7 @@ namespace Manage.Repository
                     $"[green]Your{(IsNew ? " new" : "")} [bold]Allowed time of day[/] has been set[/]"
                 );
 
-                ExitProcess("Press any key to continue");
+                Exit("Press any key to continue");
                 flag = false;
                 #endregion
             }
@@ -289,7 +286,7 @@ namespace Manage.Repository
             AnsiConsole.MarkupLine(
                 $"[green]Your{(IsNew ? " new" : "")} [bold]Allowed time of day[/] has been set[/]"
             );
-            ExitProcess("Press any key to continue");
+            Exit("Press any key to continue");
         }
         #endregion
 
@@ -335,7 +332,7 @@ namespace Manage.Repository
         /// </summary>
         /// <param name="message">An string which shown to the user</param>
         /// <remarks>After calling this method, use Continue to ignore rest of loop</remarks>
-        public static void ExitProcess(string? message = null)
+        public static void Exit(string? message = null)
         {
             // AnsiConsole.Clear();
             if (message != null)
