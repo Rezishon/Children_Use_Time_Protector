@@ -26,22 +26,22 @@ class Program
 
         if (File.Exists(ConfigFile.ConfigFilePath) && RootPart.Status())
         {
-            // Test phase
+            /// <summary>Test phase</summary>
             if (Environment.GetEnvironmentVariable("Testing") != "true")
             {
-                // User validation
+                /// <summary>User validation</summary>
                 PromptHandler.UserValidationPrompt("Root");
 
                 Console.Clear();
             }
 
-            // Main menu loop flag
+            /// <summary>Main menu loop flag</summary>
             bool flag = true;
 
-            // Main menu loop
+            /// <summary>Main menu loop</summary>
             while (flag)
             {
-                // Create main menu
+                /// <summary>Create main menu</summary>
                 switch (PromptHandler.MenuPrompt(["Root", "Service", "Exit", "Test"])[1])
                 {
                     #region Root menu
