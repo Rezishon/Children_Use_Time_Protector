@@ -349,11 +349,15 @@ namespace Manage.Repository
                 AnsiConsole.MarkupLine($"[gray italic]{message}[/]");
         }
         #endregion
+
+        #region Header prompt method
         public static void Header()
         {
             AnsiConsole.Clear();
             var rule = new Rule("[bold italic purple]Child use time protector[/]");
             AnsiConsole.Write(rule);
         }
+        #endregion
+
     }
 }
