@@ -162,11 +162,11 @@ class Program
 
                     #region Exit
                     case 2:
-                        flag = false;
                         PromptHandler.Header();
 
                         if (AnsiConsole.Confirm("Want to exit?", false))
                         {
+                            flag = false;
                         }
                         break;
                     #endregion
