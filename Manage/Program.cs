@@ -20,9 +20,6 @@ class Program
         #endregion
 
         es:
-        // disappeared on reload
-        var rule = new Rule("[bold italic purple]Child use time protector[/]");
-        AnsiConsole.Write(rule);
 
         if (File.Exists(ConfigFile.ConfigFilePath) && RootPart.Status())
         {
