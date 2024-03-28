@@ -353,6 +353,7 @@ namespace Manage.Repository
         {
             AnsiConsole.Clear();
             var rule = new Rule("[bold italic purple]Child use time protector[/]");
+            AnsiConsole.Write(rule);
         }
     }
 }
