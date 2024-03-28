@@ -162,7 +162,6 @@ class Program
                     #region Exit
                     case 2:
                         flag = false;
-                        // Add exit message
                         break;
                     #endregion
 
