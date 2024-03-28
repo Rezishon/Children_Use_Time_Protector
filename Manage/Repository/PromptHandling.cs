@@ -67,7 +67,6 @@ namespace Manage.Repository
                     );
                     continue;
                 }
-                // AnsiConsole.MarkupLine(Hash.ToSha256(Password));
                 #endregion
 
                 #region Get repeated password
@@ -81,7 +80,6 @@ namespace Manage.Repository
                     Exit($"[bold red]{passwordName}s aren't the same[/]\nPress any key to Repeat");
                     continue;
                 }
-                // AnsiConsole.MarkupLine(Hash.ToSha256(RepeatedPassword));
                 #endregion
 
                 #region Get & set hint phrase and password
@@ -247,7 +245,6 @@ namespace Manage.Repository
                     );
                     continue;
                 }
-                // AnsiConsole.MarkupLine(startTimeOfDay);
                 #endregion
 
                 #region Get end time of day
@@ -261,7 +258,6 @@ namespace Manage.Repository
                 {
                     continue;
                 }
-                // AnsiConsole.MarkupLine(endTimeOfDay);
                 #endregion
 
                 #region Setting data & end of loop
@@ -334,7 +330,6 @@ namespace Manage.Repository
         /// <remarks>After calling this method, use Continue to ignore rest of loop</remarks>
         public static void Exit(string? message = null)
         {
-            // AnsiConsole.Clear();
             if (message != null)
                 AnsiConsole.MarkupLine(message);
 
