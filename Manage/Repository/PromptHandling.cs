@@ -351,6 +351,7 @@ namespace Manage.Repository
         #endregion
         public static void Header()
         {
+            AnsiConsole.Clear();
         }
     }
 }
