@@ -15,6 +15,8 @@ namespace Manage.Repository
         /// <returns>List of object: [Menu row name, Menu row index]</returns>
         public static List<object> MenuPrompt(List<string> items)
         {
+            Header();
+
             Dictionary<string, int> PartsDictionary = new Dictionary<string, int>();
 
             items.ForEach(x => PartsDictionary.Add(x, items.IndexOf(x)));
@@ -52,6 +54,8 @@ namespace Manage.Repository
 
             while (flag)
             {
+                Header();
+
                 HeaderMessageHandler(headerMessage);
 
                 #region Get password
@@ -152,6 +156,8 @@ namespace Manage.Repository
 
             while (flag)
             {
+                Header();
+
                 HeaderMessageHandler(headerMessage);
 
                 #region Get use time
@@ -230,6 +236,8 @@ namespace Manage.Repository
 
             while (flag)
             {
+                Header();
+
                 HeaderMessageHandler(headerMessage);
 
                 #region Get start time of day
@@ -293,6 +301,8 @@ namespace Manage.Repository
         /// <param name="userName">Name of the user which we want to validate</param>
         public static void UserValidationPrompt(string userName)
         {
+            Header();
+
             int wrongPasswordCounter = 0;
             AnsiConsole.Prompt(
                 new TextPrompt<string>($"Please insert the [bold red]{userName}[/] password: ")

@@ -38,6 +38,8 @@ class Program
             /// <summary>Main menu loop</summary>
             while (flag)
             {
+                PromptHandler.Header();
+
                 /// <summary>Create main menu</summary>
                 switch (PromptHandler.MenuPrompt(["Root", "Service", "Exit", "Test"])[1])
                 {
@@ -99,6 +101,8 @@ class Program
                         {
                             #region Change service status
                             case 0:
+                                PromptHandler.Header();
+
                                 if (ServicePart.Status())
                                 {
                                     // Doesn't work:
@@ -173,6 +177,8 @@ class Program
         }
         else
         {
+            PromptHandler.Header();
+
             ConfigFile.ConfigFileBuilder();
 
             AnsiConsole.MarkupLine(
