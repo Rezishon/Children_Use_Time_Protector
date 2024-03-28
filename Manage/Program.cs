@@ -163,6 +163,7 @@ class Program
                     #region Exit
                     case 2:
                         flag = false;
+                        PromptHandler.Header();
                         break;
                     #endregion
 
