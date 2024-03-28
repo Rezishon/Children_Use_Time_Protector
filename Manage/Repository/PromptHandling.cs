@@ -349,5 +349,8 @@ namespace Manage.Repository
                 AnsiConsole.MarkupLine($"[gray italic]{message}[/]");
         }
         #endregion
+        public static void Header()
+        {
+        }
     }
 }
