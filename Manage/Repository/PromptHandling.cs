@@ -352,6 +352,7 @@ namespace Manage.Repository
         public static void Header()
         {
             AnsiConsole.Clear();
+            var rule = new Rule("[bold italic purple]Child use time protector[/]");
         }
     }
 }
