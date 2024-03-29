@@ -13,7 +13,7 @@ namespace Manage.Repository
         /// </summary>
         /// <param name="items">List of strings which are names or rows of menu</param>
         /// <returns>List of object: [Menu row name, Menu row index]</returns>
-        public static List<object> MenuPrompt(List<string> items)
+        public static List<object> MenuPrompt(List<string> items, bool InsideMenu = false)
         {
             Header();
 
