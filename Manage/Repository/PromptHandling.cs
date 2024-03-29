@@ -256,6 +256,7 @@ namespace Manage.Repository
                 // end time should be after the start time in a day
                 if (!Regex.IsMatch(endTimeOfDay, @"\d{2}:\d{2}"))
                 {
+                    Exit("[red]Inserted time has wrong format[/]");
                     continue;
                 }
                 #endregion
