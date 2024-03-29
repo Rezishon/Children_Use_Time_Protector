@@ -170,6 +170,7 @@ namespace Manage.Repository
 
                 {
                 }
+
                 #endregion
 
                 #region Setting data and end of loop
