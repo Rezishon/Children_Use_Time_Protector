@@ -351,7 +351,9 @@ namespace Manage.Repository
                 AnsiConsole.MarkupLine(message);
             #endregion
 
+            #region Wait for the user
             Console.ReadKey();
+            #endregion
             AnsiConsole.Clear();
         }
         #endregion
