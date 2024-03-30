@@ -346,8 +346,10 @@ namespace Manage.Repository
         /// <remarks>After calling this method, use Continue to ignore rest of loop</remarks>
         public static void Exit(string? message = null)
         {
+            #region Jobs
             if (message != null)
                 AnsiConsole.MarkupLine(message);
+            #endregion
 
             Console.ReadKey();
             AnsiConsole.Clear();
