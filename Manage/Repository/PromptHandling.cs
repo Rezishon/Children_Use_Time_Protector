@@ -305,7 +305,9 @@ namespace Manage.Repository
         /// <param name="userName">Name of the user which we want to validate</param>
         public static void UserValidationPrompt(string userName)
         {
+            #region Header
             Header();
+            #endregion
 
             int wrongPasswordCounter = 0;
             AnsiConsole.Prompt(
