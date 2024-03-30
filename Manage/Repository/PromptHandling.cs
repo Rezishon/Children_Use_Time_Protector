@@ -382,7 +382,9 @@ namespace Manage.Repository
             #region Clear the console
             AnsiConsole.Clear();
             #endregion
+            #region Create the header
             var rule = new Rule("[bold italic purple]Child use time protector[/]");
+            #endregion
             AnsiConsole.Write(rule);
         }
         #endregion
