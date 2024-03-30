@@ -374,6 +374,9 @@ namespace Manage.Repository
         #endregion
 
         #region Header prompt method
+        /// <summary>
+        /// This method Will do the main app header jobs
+        /// </summary>
         public static void Header()
         {
             AnsiConsole.Clear();
