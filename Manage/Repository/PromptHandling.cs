@@ -354,7 +354,9 @@ namespace Manage.Repository
             #region Wait for the user
             Console.ReadKey();
             #endregion
+            #region End method
             AnsiConsole.Clear();
+            #endregion
         }
         #endregion
 
