@@ -275,9 +275,11 @@ class Program
             }
             #endregion
 
+            #region Start service & change statuses
             ConfigSetter.SetConfigToRoot.Status(Hash.ToSha256("1"));
             Commands.TurnOnService();
             ConfigSetter.SetConfigToService.Status(Hash.ToSha256("1"));
+            #endregion
 
             goto es;
         }
