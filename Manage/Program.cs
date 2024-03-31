@@ -179,6 +179,8 @@ class Program
                         )
                         {
                             flag = false;
+                            case 0:
+                                break;
                         }
                         break;
                     #endregion
