@@ -195,10 +195,10 @@ class Program
 
                     #region Test
                     case 3:
-                        ConfigSetter.SetConfigToRoot.Status(Hash.ToSha256("0"));
-                        ConfigSetter.SetConfigToService.Status(Hash.ToSha256("0"));
                         if (Environment.GetEnvironmentVariable("Testing") == "true")
                         {
+                            ConfigSetter.SetConfigToRoot.Status(Hash.ToSha256("0"));
+                            ConfigSetter.SetConfigToService.Status(Hash.ToSha256("0"));
                         }
                         break;
                     #endregion
