@@ -180,6 +180,7 @@ class Program
                         {
                             flag = false;
                             case 0:
+                                /// <comment>Repeat the loop and start over the app</comment>
                                 break;
                         }
                         break;
