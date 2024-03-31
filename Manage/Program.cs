@@ -40,8 +40,13 @@ class Program
             {
                 PromptHandler.Header();
 
-                switch (PromptHandler.MenuPrompt(["Root", "Service", "Exit", "Test"])[1])
                 /// <comment>Create main menu</comment>
+                switch (
+                    PromptHandler.MenuPrompt(
+                        ["Root", "Service", "Exit", "Test"],
+                        "What part you want to change?"
+                    )[1]
+                )
                 {
                     #region Root menu
                     case 0:
