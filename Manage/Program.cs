@@ -276,7 +276,7 @@ class Program
             #endregion
 
             ConfigSetter.SetConfigToRoot.Status(Hash.ToSha256("1"));
-            // Start the service
+            Commands.TurnOnService();
 
             goto es;
         }
