@@ -277,6 +277,7 @@ class Program
 
             ConfigSetter.SetConfigToRoot.Status(Hash.ToSha256("1"));
             Commands.TurnOnService();
+            ConfigSetter.SetConfigToService.Status(Hash.ToSha256("1"));
 
             goto es;
         }
