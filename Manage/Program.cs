@@ -231,7 +231,7 @@ class Program
 
             if (
                 AnsiConsole.Confirm(
-                    "Default allowed time of day is from 06:00 until 23:50 , want to change it? ",
+                    "Default allowed time of day is from 06:00 until 23:50, want to change it? ",
                     false
                 )
             )
