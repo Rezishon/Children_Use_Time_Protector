@@ -57,7 +57,8 @@ class Program
                                     "Change the root password",
                                     "Change The root recovery password",
                                     "Main menu"
-                                ]
+                                ],
+                                "What part you want to change?"
                             #endregion
                             )[1]
                         )
