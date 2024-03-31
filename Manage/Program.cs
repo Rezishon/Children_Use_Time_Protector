@@ -290,6 +290,8 @@ class Program
             {
                 case 0:
                     goto es;
+                case 1:
+                    break;
             }
         }
     }
