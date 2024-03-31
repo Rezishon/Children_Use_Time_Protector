@@ -215,9 +215,12 @@ class Program
             ConfigFile.ConfigFileBuilder();
             #endregion
 
+            PromptHandler.PasswordChangerPrompt(
+                "Password",
+                "[white]Welcome to[/] [bold purple]CUTP[/]\n[orange3 bold]This app will help you to manage your child's usage time of pc[/]\n",
+                IsNew: false,
+                NeedsHint: false
             );
-
-            PromptHandler.PasswordChangerPrompt("Password", IsNew: false, NeedsHint: false);
 
             PromptHandler.PasswordChangerPrompt(
                 "Recovery Password",
