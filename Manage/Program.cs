@@ -178,12 +178,17 @@ class Program
                             )[1]
                         )
                         {
+                            #region No
                             case 0:
                                 /// <comment>Repeat the loop and start over the app</comment>
                                 break;
+                            #endregion
+
+                            #region Yes
                             case 1:
                                 flag = false;
                                 break;
+                            #endregion
                         }
                         break;
                     #endregion
