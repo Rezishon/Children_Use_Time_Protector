@@ -100,7 +100,8 @@ class Program
                                     "Change temporary allowed use time",
                                     "Change allowed time of day",
                                     "Main menu"
-                                ]
+                                ],
+                                "What part you want to change?"
                             #endregion
                             )[1]
                         )
