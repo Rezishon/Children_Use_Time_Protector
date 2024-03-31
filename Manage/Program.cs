@@ -291,6 +291,7 @@ class Program
                 case 0:
                     goto es;
                 case 1:
+                    /// <comment>Exit peacefully :)</comment>
                     break;
             }
         }
