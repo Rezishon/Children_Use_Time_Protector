@@ -283,6 +283,10 @@ class Program
 
             goto es;
             switch (
+                PromptHandler.MenuPrompt(
+                    ["Enter manage app", "Exit"],
+                    "[green bold]All has been set[/]"
+                )[1]
             )
             {
             }
