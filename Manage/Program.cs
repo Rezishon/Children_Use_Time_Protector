@@ -204,9 +204,13 @@ class Program
         }
         else
         {
+            #region Header
             PromptHandler.Header();
+            #endregion
 
+            #region Build configuration file
             ConfigFile.ConfigFileBuilder();
+            #endregion
 
             AnsiConsole.MarkupLine(
                 "Welcome to [bold purple]CUTP[/]\n[orange3 bold]To set default configuration blank or enter your favorite config[/]\n"
