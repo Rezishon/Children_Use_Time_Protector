@@ -281,6 +281,7 @@ class Program
             ConfigSetter.SetConfigToService.Status(Hash.ToSha256("1"));
             #endregion
 
+            #region End messages
             switch (
                 PromptHandler.MenuPrompt(
                     ["Enter manage app", "Exit"],
@@ -288,12 +289,18 @@ class Program
                 )[1]
             )
             {
+                #region Enter manage app
                 case 0:
                     goto es;
+                #endregion
+
+                #region Exit
                 case 1:
                     /// <comment>Exit peacefully :)</comment>
                     break;
+                #endregion
             }
+            #endregion
         }
     }
 }
