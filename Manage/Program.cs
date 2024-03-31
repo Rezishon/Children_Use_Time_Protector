@@ -215,20 +215,25 @@ class Program
             ConfigFile.ConfigFileBuilder();
             #endregion
 
+            #region Ask for password
             PromptHandler.PasswordChangerPrompt(
                 "Password",
                 "[white]Welcome to[/] [bold purple]CUTP[/]\n[orange3 bold]This app will help you to manage your child's usage time of pc[/]\n",
                 IsNew: false,
                 NeedsHint: false
             );
+            #endregion
 
+            #region Ask for recovery password
             PromptHandler.PasswordChangerPrompt(
                 "Recovery Password",
                 "Using memorable password recommended\nThis password should be use in emergency situation because it resets all parts",
                 false,
                 true
             );
+            #endregion
 
+            #region Ask for time of day
             if (
                 AnsiConsole.Confirm(
                     "Default allowed time of day is from 06:00 until 23:50, want to change it? ",
@@ -246,7 +251,9 @@ class Program
             {
                 PromptHandler.AllowedTimeOfDayChangerPrompt(false);
             }
+            #endregion
 
+            #region Ask for use time
             if (
                 AnsiConsole.Confirm(
                     "Default allowed use time is 120 minute, want to change it? ",
@@ -266,6 +273,7 @@ class Program
             {
                 PromptHandler.AllowedUseTimeChangerPrompt("Allowed use time", false, false);
             }
+            #endregion
 
             ConfigSetter.SetConfigToRoot.Status(Hash.ToSha256("1"));
             // Start the service
