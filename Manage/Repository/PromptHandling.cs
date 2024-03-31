@@ -23,8 +23,8 @@ namespace Manage.Repository
 
             string chosenPartMenu = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()
-                    .Title("What part you want to change?")
                     .PageSize(items.Count)
+                    .Title(message)
                     .HighlightStyle(Style.Parse("purple bold"))
                     .AddChoices(items)
             );
