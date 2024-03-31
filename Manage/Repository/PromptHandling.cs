@@ -23,8 +23,8 @@ namespace Manage.Repository
 
             string chosenPartMenu = AnsiConsole.Prompt(
                 new SelectionPrompt<string>()
-                    .PageSize(items.Count)
                     .Title(message)
+                    .PageSize(items.Count < 3 ? (items.Count + 1) : items.Count)
                     .HighlightStyle(Style.Parse("purple bold"))
                     .AddChoices(items)
             );
