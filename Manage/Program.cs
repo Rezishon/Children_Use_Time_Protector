@@ -282,6 +282,10 @@ class Program
             #endregion
 
             goto es;
+            switch (
+            )
+            {
+            }
         }
     }
 }
