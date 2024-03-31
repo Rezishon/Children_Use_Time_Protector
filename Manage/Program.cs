@@ -178,9 +178,11 @@ class Program
                             )[1]
                         )
                         {
-                            flag = false;
                             case 0:
                                 /// <comment>Repeat the loop and start over the app</comment>
+                                break;
+                            case 1:
+                                flag = false;
                                 break;
                         }
                         break;
