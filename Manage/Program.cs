@@ -171,7 +171,12 @@ class Program
                     case 2:
                         PromptHandler.Header();
 
-                        if (AnsiConsole.Confirm("Want to exit?", false))
+                        switch (
+                            PromptHandler.MenuPrompt(
+                                ["No", "Yes"],
+                                "[orange3 bold]Want to exit?[/]"
+                            )[1]
+                        )
                         {
                             flag = false;
                         }
