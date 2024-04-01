@@ -24,6 +24,7 @@ class Program
             PromptHandler.UserValidationPrompt("Root");
             #endregion
 
+            Console.Clear();
 #endif
 
             bool loopFlag = true;
