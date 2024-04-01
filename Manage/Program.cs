@@ -1,4 +1,6 @@
-﻿using System.Text.RegularExpressions;
+﻿#define IsTesting
+
+using System.Text.RegularExpressions;
 using CommandHandling;
 using ConfigHandling;
 using Hashing;
