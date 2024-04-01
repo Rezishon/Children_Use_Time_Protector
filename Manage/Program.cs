@@ -20,7 +20,9 @@ class Program
         if (File.Exists(ConfigFile.ConfigFilePath) && RootPart.Status())
         {
 #if IsTesting != true
+            #region User validation
             PromptHandler.UserValidationPrompt("Root");
+            #endregion
 
 #endif
 
