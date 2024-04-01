@@ -37,7 +37,9 @@ class Program
             #region Main menu loop
             while (loopFlag)
             {
+                #region Header method
                 PromptHandler.Header();
+                #endregion
 
                 #region Main menu switch
                 switch (
