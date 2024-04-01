@@ -35,12 +35,12 @@ class Program
             /// <comment>Main menu loop flag</comment>
             bool flag = true;
 
-            /// <comment>Main menu loop</comment>
             while (flag)
+            #region Main menu loop
             {
                 PromptHandler.Header();
 
-                /// <comment>Create main menu</comment>
+                #region Main menu switch
                 switch (
                     PromptHandler.MenuPrompt(
                         ["Root", "Service", "Exit", "Test"],
@@ -203,7 +203,9 @@ class Program
                         break;
                     #endregion
                 }
+                #endregion
             }
+            #endregion
         }
         else
         {
