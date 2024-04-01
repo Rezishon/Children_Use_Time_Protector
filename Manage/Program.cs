@@ -19,7 +19,9 @@ class Program
 
         if (File.Exists(ConfigFile.ConfigFilePath) && RootPart.Status())
         {
+#if IsTesting != true
 
+#endif
 
             bool loopFlag = true;
 
@@ -185,6 +187,8 @@ class Program
 
                     #region Test
                     case 3:
+#if IsTesting == true
+#endif
                         break;
                     #endregion
                 }
