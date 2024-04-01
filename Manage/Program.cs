@@ -32,7 +32,6 @@ class Program
                 Console.Clear();
             }
 
-            /// <comment>Main menu loop flag</comment>
             bool loopFlag = true;
 
             #region Main menu loop
