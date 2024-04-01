@@ -33,10 +33,10 @@ class Program
             }
 
             /// <comment>Main menu loop flag</comment>
-            bool flag = true;
+            bool loopFlag = true;
 
-            while (flag)
             #region Main menu loop
+            while (loopFlag)
             {
                 PromptHandler.Header();
 
@@ -186,7 +186,7 @@ class Program
 
                             #region Yes
                             case 1:
-                                flag = false;
+                                loopFlag = false;
                                 break;
                             #endregion
                         }
