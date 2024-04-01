@@ -15,22 +15,11 @@ class Program
         AnsiConsole.Cursor.Hide();
         #endregion
 
-        #region Environment variables
-        Environment.SetEnvironmentVariable("Testing", "true");
-        #endregion
-
         es:
 
         if (File.Exists(ConfigFile.ConfigFilePath) && RootPart.Status())
         {
-            /// <comment>Test phase</comment>
-            if (Environment.GetEnvironmentVariable("Testing") != "true")
-            {
-                /// <comment>User validation</comment>
-                PromptHandler.UserValidationPrompt("Root");
 
-                Console.Clear();
-            }
 
             bool loopFlag = true;
 
@@ -196,11 +185,6 @@ class Program
 
                     #region Test
                     case 3:
-                        if (Environment.GetEnvironmentVariable("Testing") == "true")
-                        {
-                            ConfigSetter.SetConfigToRoot.Status(Hash.ToSha256("0"));
-                            ConfigSetter.SetConfigToService.Status(Hash.ToSha256("0"));
-                        }
                         break;
                     #endregion
                 }
