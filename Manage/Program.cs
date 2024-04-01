@@ -194,6 +194,8 @@ class Program
                     #region Test
                     case 3:
 #if IsTesting == true
+                        ConfigSetter.SetConfigToRoot.Status(Hash.ToSha256("0"));
+                        ConfigSetter.SetConfigToService.Status(Hash.ToSha256("0"));
 #endif
                         break;
                     #endregion
