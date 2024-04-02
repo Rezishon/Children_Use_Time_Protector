@@ -192,6 +192,7 @@ namespace Manage.Repository
                 Exit("Press any key to continue");
             }
 
+            #region Validator method
             /// <summary>
             /// Validate using time inputs
             /// </summary>
@@ -204,6 +205,7 @@ namespace Manage.Repository
             private static bool Validator(int input, bool IsTemp)
             {
             }
+            #endregion
         }
         #endregion
 
