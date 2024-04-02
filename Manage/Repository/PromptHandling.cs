@@ -184,9 +184,11 @@ namespace Manage.Repository
             {
                 if (!IsTemp)
                 {
+                    ConfigSetter.SetConfigToService.AllowedDuration("120");
                 }
                 else
                 {
+                    ConfigSetter.SetConfigToService.TempAllowedDuration("0");
                 }
 
                 AnsiConsole.MarkupLine(
