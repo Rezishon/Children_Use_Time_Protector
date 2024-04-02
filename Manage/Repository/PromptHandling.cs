@@ -173,6 +173,9 @@ namespace Manage.Repository
                             $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{timeName}[/]? "
                         )
                     );
+                    if (Validator(usingTime, IsTemp) == false)
+                    {
+                    }
                     #endregion
 
                     #region Setting data and end of loop
