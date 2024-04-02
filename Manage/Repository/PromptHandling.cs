@@ -151,6 +151,7 @@ namespace Manage.Repository
             bool IsNew = true,
             bool IsTemp = false
         )
+        public class AllowedUseTime
         {
             bool flag = true;
 
