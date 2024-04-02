@@ -176,7 +176,9 @@ namespace Manage.Repository
                     #endregion
 
                     #region Setting data and end of loop
+            }
 
+            {
                 if (!IsTemp)
                 {
                 }
@@ -190,6 +192,7 @@ namespace Manage.Repository
                 Exit("Press any key to continue");
             }
 
+            private static bool Validator(int input, bool IsTemp)
             {
             }
         }
