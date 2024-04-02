@@ -195,6 +195,7 @@ namespace Manage.Repository
                     AnsiConsole.MarkupLine(
                         $"[green]Your{(IsNew ? " new" : "")} [bold]{timeName}[/] has been set[/]"
                     );
+                    Exit("Press any key to continue");
                     #endregion
             }
             #endregion
