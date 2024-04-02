@@ -142,32 +142,31 @@ namespace Manage.Repository
         /// <summary>
         /// Contains methods which are related to Using time
         /// </summary>
-        /// <param name="timeName">Name of time which could be template time or other names</param>
-        /// <param name="headerMessage">This message shown to user at first line</param>
-        /// <param name="IsNew">If user status was 1 it should be true</param>
-        public static void AllowedUseTimeChangerPrompt(
-            string timeName,
-            string? headerMessage = null,
-            bool IsNew = true,
-            bool IsTemp = false
-        )
         public class AllowedUseTime
         {
-            bool flag = true;
-
-            while (flag)
+            #region Setter Prompt maker method
+            /// <summary>
+            /// Make prompt for changing/adding allowed use time
+            /// </summary>
+            /// <param name="timeName">Name of time which could be template time or other names</param>
+            /// <param name="headerMessage">This message shown to user at first line</param>
+            /// <param name="IsNew">If user status was 1 it should be true</param>
+            public static void AllowedUseTimeSetterPrompt(
+                string timeName,
+                string? headerMessage = null,
+                bool IsNew = true,
+                bool IsTemp = false
+            )
             {
-                Header();
+                bool flag = true;
 
-                HeaderMessageHandler(headerMessage);
+                while (flag)
+                {
+                    Header();
 
-                #region Get use time
+                    HeaderMessageHandler(headerMessage);
 
-                var usingTime = AnsiConsole.Prompt(
-                    new TextPrompt<int>(
-                        $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{timeName}[/]? "
-                    )
-                );
+                    #region Get use time
 
                 // if (
                 //     (!IsTemp && usingTime % 10 != 0 || (usingTime < 10 && usingTime > 1430))
@@ -181,6 +180,11 @@ namespace Manage.Repository
                 // }
                 {
                 }
+                    var usingTime = AnsiConsole.Prompt(
+                        new TextPrompt<int>(
+                            $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{timeName}[/]? "
+                        )
+                    );
 
                 #endregion
 
