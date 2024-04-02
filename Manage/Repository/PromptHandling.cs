@@ -175,6 +175,10 @@ namespace Manage.Repository
                     );
                     if (Validator(usingTime, IsTemp) == false)
                     {
+                        Exit(
+                            $"[red][bold]{timeName}[/] is out of range. It must be a multiple of 10 & between [underline]{(IsTemp == true ? "0" : "10")}[/] and [underline]1430[/]\nPress any key to Repeat[/]"
+                        );
+                        continue;
                     }
                     #endregion
 
