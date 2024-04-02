@@ -168,18 +168,6 @@ namespace Manage.Repository
 
                     #region Get use time
 
-                // if (
-                //     (!IsTemp && usingTime % 10 != 0 || (usingTime < 10 && usingTime > 1430))
-                //     || (IsTemp && usingTime % 10 != 0 || (usingTime < 0 && usingTime > 1430))
-                // )
-                // {
-                //     ExitProcess(
-                //         $"[red][bold]{timeName}[/] is out of range. It must be a multiple of 10 & between [underline]{(IsTemp == true ? "0" : "10")}[/] and [underline]1430[/]\nPress any key to Repeat[/]"
-                //     );
-                //     continue;
-                // }
-                {
-                }
                     var usingTime = AnsiConsole.Prompt(
                         new TextPrompt<int>(
                             $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{timeName}[/]? "
