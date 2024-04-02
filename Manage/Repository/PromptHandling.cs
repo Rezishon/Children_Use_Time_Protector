@@ -183,6 +183,10 @@ namespace Manage.Repository
                     #endregion
 
                     #region Setting data and end of loop
+                    if (!IsTemp)
+                    {
+                        ConfigSetter.SetConfigToService.AllowedDuration(usingTime.ToString());
+                    }
                     #endregion
             }
             #endregion
