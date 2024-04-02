@@ -187,6 +187,10 @@ namespace Manage.Repository
                     {
                         ConfigSetter.SetConfigToService.AllowedDuration(usingTime.ToString());
                     }
+                    else
+                    {
+                        ConfigSetter.SetConfigToService.TempAllowedDuration(usingTime.ToString());
+                    }
                     #endregion
             }
             #endregion
