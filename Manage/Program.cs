@@ -133,7 +133,7 @@ class Program
 
                             #region Change allowed use time
                             case 1:
-                                PromptHandler.AllowedUseTimeChangerPrompt(
+                                PromptHandler.AllowedUseTime.AllowedUseTimeSetterPrompt(
                                     "Allowed use time",
                                     "Default using time is 120 minute\n[gray italic]Insert your answer in minute like [underline bold]120[/] which means 2 hour[/]"
                                 );
@@ -142,7 +142,7 @@ class Program
 
                             #region Change temporary allowed use time
                             case 2:
-                                PromptHandler.AllowedUseTimeChangerPrompt(
+                                PromptHandler.AllowedUseTime.AllowedUseTimeSetterPrompt(
                                     "Temporary allowed use time",
                                     "This time will added to the main allowed using duration",
                                     IsTemp: true
@@ -263,7 +263,7 @@ class Program
             )
             {
                 AnsiConsole.Clear();
-                PromptHandler.AllowedUseTimeChangerPrompt(
+                PromptHandler.AllowedUseTime.AllowedUseTimeSetterPrompt(
                     "Allowed use time",
                     "Default using time is 120 minute\n[gray italic]Insert your answer in minute like [underline bold]120[/] which means 2 hour[/]",
                     false,
@@ -272,7 +272,7 @@ class Program
             }
             else
             {
-                PromptHandler.AllowedUseTimeChangerPrompt("Allowed use time", false, false);
+                PromptHandler.AllowedUseTime.AllowedUseTimeSetterPrompt("Allowed use time", false, false);
             }
             #endregion
 
