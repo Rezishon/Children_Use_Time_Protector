@@ -206,9 +206,11 @@ namespace Manage.Repository
             {
                 if (IsTemp == true)
                 {
+                    return (input % 10 != 0 || input < 0 || input > 1430) ? false : true;
                 }
                 else
                 {
+                    return (input % 10 != 0 || input < 10 || input > 1430) ? false : true;
                 }
             }
             #endregion
