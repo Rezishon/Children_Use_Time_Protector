@@ -138,7 +138,7 @@ namespace Manage.Repository
         }
         #endregion
 
-        #region Allowed use time changer prompt maker method
+        #region Allowed use time
         /// <summary>
         /// Make prompt for changing/adding allowed use time
         /// </summary>
