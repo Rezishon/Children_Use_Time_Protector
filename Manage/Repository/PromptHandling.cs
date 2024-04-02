@@ -181,6 +181,11 @@ namespace Manage.Repository
             #endregion
 
             #region Default setter method
+            public static void AllowedUseTimeSetterPrompt(
+                string timeName,
+                bool IsTemp = false,
+                bool IsNew = true
+            )
             {
                 if (!IsTemp)
                 {
