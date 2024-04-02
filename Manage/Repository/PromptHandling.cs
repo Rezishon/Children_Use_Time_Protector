@@ -196,6 +196,7 @@ namespace Manage.Repository
                         $"[green]Your{(IsNew ? " new" : "")} [bold]{timeName}[/] has been set[/]"
                     );
                     Exit("Press any key to continue");
+                    flag = false;
                     #endregion
             }
             #endregion
