@@ -179,41 +179,19 @@ namespace Manage.Repository
 
                 if (!IsTemp)
                 {
-                    ConfigSetter.SetConfigToService.AllowedDuration(usingTime.ToString());
                 }
                 else
                 {
-                    ConfigSetter.SetConfigToService.TempAllowedDuration(usingTime.ToString());
                 }
 
                 AnsiConsole.MarkupLine(
                     $"[green]Your{(IsNew ? " new" : "")} [bold]{timeName}[/] has been set[/]"
                 );
                 Exit("Press any key to continue");
-                flag = false;
-                #endregion
-            }
-        }
-
-        public static void AllowedUseTimeChangerPrompt(
-            string timeName,
-            bool IsTemp = false,
-            bool IsNew = true
-        )
-        {
-            if (!IsTemp)
-            {
-                ConfigSetter.SetConfigToService.AllowedDuration("120");
-            }
-            else
-            {
-                ConfigSetter.SetConfigToService.TempAllowedDuration("0");
             }
 
-            AnsiConsole.MarkupLine(
-                $"[green]Your{(IsNew ? " new" : "")} [bold]{timeName}[/] has been set[/]"
-            );
-            Exit("Press any key to continue");
+            {
+            }
         }
         #endregion
 
