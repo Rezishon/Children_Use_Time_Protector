@@ -173,10 +173,10 @@ namespace Manage.Repository
                             $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{timeName}[/]? "
                         )
                     );
+                    #endregion
 
-                #endregion
+                    #region Setting data and end of loop
 
-                #region Setting data and end of loop
                 if (!IsTemp)
                 {
                     ConfigSetter.SetConfigToService.AllowedDuration(usingTime.ToString());
