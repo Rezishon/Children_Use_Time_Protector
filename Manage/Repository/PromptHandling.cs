@@ -191,6 +191,10 @@ namespace Manage.Repository
                     {
                         ConfigSetter.SetConfigToService.TempAllowedDuration(usingTime.ToString());
                     }
+
+                    AnsiConsole.MarkupLine(
+                        $"[green]Your{(IsNew ? " new" : "")} [bold]{timeName}[/] has been set[/]"
+                    );
                     #endregion
             }
             #endregion
