@@ -192,6 +192,15 @@ namespace Manage.Repository
                 Exit("Press any key to continue");
             }
 
+            /// <summary>
+            /// Validate using time inputs
+            /// </summary>
+            /// <param name="input">The value which user inserted</param>
+            /// <param name="IsTemp">Is the time for temporary time or it's main time</param>
+            /// <returns>
+            ///     <term>Bool</term>
+            ///     <description>Is the input valid or not</description>
+            /// </returns>
             private static bool Validator(int input, bool IsTemp)
             {
             }
