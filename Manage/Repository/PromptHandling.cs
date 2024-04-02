@@ -176,8 +176,11 @@ namespace Manage.Repository
                     #endregion
 
                     #region Setting data and end of loop
+                    #endregion
             }
+            #endregion
 
+            #region Default setter method
             {
                 if (!IsTemp)
                 {
@@ -191,6 +194,7 @@ namespace Manage.Repository
                 );
                 Exit("Press any key to continue");
             }
+            #endregion
 
             #region Validator method
             /// <summary>
