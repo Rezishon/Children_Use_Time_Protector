@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "S:\\Projects\\Children_Use_Time_Protector\\Manage\\Children_Use_Time_Protector.csproj": {}
+    "s:\\Projects\\Children_Use_Time_Protector\\Manage\\Children_Use_Time_Protector.csproj": {}
   },
   "projects": {
-    "S:\\Projects\\Children_Use_Time_Protector\\Manage\\Children_Use_Time_Protector.csproj": {
+    "s:\\Projects\\Children_Use_Time_Protector\\Manage\\Children_Use_Time_Protector.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "S:\\Projects\\Children_Use_Time_Protector\\Manage\\Children_Use_Time_Protector.csproj",
+        "projectUniqueName": "s:\\Projects\\Children_Use_Time_Protector\\Manage\\Children_Use_Time_Protector.csproj",
         "projectName": "Children_Use_Time_Protector",
-        "projectPath": "S:\\Projects\\Children_Use_Time_Protector\\Manage\\Children_Use_Time_Protector.csproj",
+        "projectPath": "s:\\Projects\\Children_Use_Time_Protector\\Manage\\Children_Use_Time_Protector.csproj",
         "packagesPath": "C:\\Users\\Reza\\.nuget\\packages\\",
-        "outputPath": "S:\\Projects\\Children_Use_Time_Protector\\Manage\\obj\\",
+        "outputPath": "s:\\Projects\\Children_Use_Time_Protector\\Manage\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
