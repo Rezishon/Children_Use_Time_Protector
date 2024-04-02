@@ -140,7 +140,7 @@ namespace Manage.Repository
 
         #region Allowed use time
         /// <summary>
-        /// Make prompt for changing/adding allowed use time
+        /// Contains methods which are related to Using time
         /// </summary>
         /// <param name="timeName">Name of time which could be template time or other names</param>
         /// <param name="headerMessage">This message shown to user at first line</param>
