@@ -334,6 +334,7 @@ namespace Manage.Repository
             /// </returns>
             private static bool Validator(string timeOfDay)
             {
+                return Regex.IsMatch(timeOfDay, @"\d{2}:\d{2}") ? true : false;
             }
             #endregion
         }
