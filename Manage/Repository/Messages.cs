@@ -60,6 +60,9 @@ namespace Children_Use_Time_Protector.Repository
             return "[red]Inserted time has wrong format. It must be like [[two digit number]][bold]:[/][[two digit number]][/]\nPress any key to repeat";
         }
         #endregion
+        public static string PromptText(string name, bool IsNew)
+        {
+        }
     }
     #endregion
 }
