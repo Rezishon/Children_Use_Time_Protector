@@ -60,6 +60,8 @@ namespace Children_Use_Time_Protector.Repository
             return "[red]Inserted time has wrong format. It must be like [[two digit number]][bold]:[/][[two digit number]][/]\nPress any key to repeat";
         }
         #endregion
+
+        #region Prompt text
         /// <summary>
         /// Text of prompts while asking
         /// </summary>
@@ -73,6 +75,7 @@ namespace Children_Use_Time_Protector.Repository
         {
             return $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{name}[/]? ";
         }
+        #endregion
     }
     #endregion
 }
