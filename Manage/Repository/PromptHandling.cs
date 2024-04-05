@@ -290,6 +290,7 @@ namespace Manage.Repository
                     if (!Validator(endTimeOfDay))
                     {
                         Exit(Messages.TimeOfDayErrorMessage());
+                        continue;
                     }
                 }
             }
