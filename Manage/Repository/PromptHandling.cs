@@ -313,6 +313,7 @@ namespace Manage.Repository
             /// <param name="IsNew">Is this config should be change or should be set for the first time</param>
             public static void AllowedTimeOfDaySetterPrompt(bool IsNew = true)
             {
+                ConfigSetter.SetConfigToService.StartTimeOfDay("06:00");
 
                 AnsiConsole.MarkupLine(
                     $"[green]Your{(IsNew ? " new" : "")} [bold]Allowed time of day[/] has been set[/]"
