@@ -253,6 +253,10 @@ namespace Manage.Repository
 
         public class AllowedTimeOfDay
         {
+            public static void AllowedTimeOfDaySetterPrompt(
+                string? headerMessage = null,
+                bool IsNew = true
+            )
             {
 
                 {
