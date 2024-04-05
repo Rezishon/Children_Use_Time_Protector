@@ -287,6 +287,9 @@ namespace Manage.Repository
                         new TextPrompt<string>(Messages.PromptText("End Time Of Day", IsNew))
                     );
                     // end time should be after the start time in a day
+                    if (!Validator(endTimeOfDay))
+                    {
+                    }
                 }
             }
             #endregion
