@@ -274,6 +274,9 @@ namespace Manage.Repository
                     var startTimeOfDay = AnsiConsole.Prompt(
                         new TextPrompt<string>(Messages.PromptText("Start Time Of Day", IsNew))
                     );
+                    if (!Validator(startTimeOfDay))
+                    {
+                    }
 
                 }
             }
