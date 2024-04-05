@@ -276,6 +276,7 @@ namespace Manage.Repository
                     );
                     if (!Validator(startTimeOfDay))
                     {
+                        Exit(Messages.TimeOfDayErrorMessage());
                     }
 
                 }
