@@ -251,79 +251,22 @@ namespace Manage.Repository
         }
         #endregion
 
-        #region Allowed time of day changer prompt maker method
-        /// <summary>
-        /// Make prompt for changing/adding allowed time of day
-        /// </summary>
-        /// <param name="headerMessage">This message shown to user at first line</param>
-        /// <param name="IsNew">If user status was 1 it should be true</param>
-        public static void AllowedTimeOfDayChangerPrompt(
-            string? headerMessage = null,
-            bool IsNew = true
-        )
         {
-            bool flag = true;
-
-            while (flag)
             {
-                Header();
 
-                HeaderMessageHandler(headerMessage);
-
-                #region Get start time of day
-                var startTimeOfDay = AnsiConsole.Prompt(
-                    new TextPrompt<string>(
-                        $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]Start Time Of Day[/]? "
-                    )
-                );
-                if (!Regex.IsMatch(startTimeOfDay, @"\d{2}:\d{2}"))
                 {
-                    Exit(
-                        "[red]Inserted time has wrong format. It must be like [[two digit number]][bold]:[/][[two digit number]][/]\nPress any key to repeat"
                     );
-                    continue;
-                }
-                #endregion
 
-                #region Get end time of day
-                var endTimeOfDay = AnsiConsole.Prompt(
-                    new TextPrompt<string>(
-                        $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]End Time Of Day[/]? "
-                    )
-                );
-                // end time should be after the start time in a day
-                if (!Regex.IsMatch(endTimeOfDay, @"\d{2}:\d{2}"))
-                {
-                    Exit("[red]Inserted time has wrong format[/]");
-                    continue;
                 }
-                #endregion
 
-                #region Setting data & end of loop
-                ConfigSetter.SetConfigToService.StartTimeOfDay(startTimeOfDay);
-                ConfigSetter.SetConfigToService.EndTimeOfDay(endTimeOfDay);
 
                 AnsiConsole.MarkupLine(
                     $"[green]Your{(IsNew ? " new" : "")} [bold]Allowed time of day[/] has been set[/]"
                 );
-
                 Exit("Press any key to continue");
-                flag = false;
-                #endregion
             }
-        }
 
-        public static void AllowedTimeOfDayChangerPrompt(bool IsNew = true)
-        {
-            ConfigSetter.SetConfigToService.StartTimeOfDay("06:00");
-            ConfigSetter.SetConfigToService.EndTimeOfDay("23:50");
-
-            AnsiConsole.MarkupLine(
-                $"[green]Your{(IsNew ? " new" : "")} [bold]Allowed time of day[/] has been set[/]"
-            );
-            Exit("Press any key to continue");
         }
-        #endregion
 
         #region User validation prompt maker method
         /// <summary>
