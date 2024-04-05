@@ -283,6 +283,7 @@ namespace Manage.Repository
                     }
                     #endregion
 
+                    #region Get end time of day
                     var endTimeOfDay = AnsiConsole.Prompt(
                         new TextPrompt<string>(Messages.PromptText("End Time Of Day", IsNew))
                     );
@@ -292,6 +293,7 @@ namespace Manage.Repository
                         Exit(Messages.TimeOfDayErrorMessage());
                         continue;
                     }
+                    #endregion
                 }
             }
             #endregion
