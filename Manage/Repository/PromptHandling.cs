@@ -266,6 +266,7 @@ namespace Manage.Repository
             {
                 bool loopFlag = true;
 
+                while (loopFlag)
                 {
                     );
 
