@@ -152,7 +152,7 @@ class Program
 
                             #region Change allowed time of day
                             case 3:
-                                PromptHandler.AllowedTimeOfDayChangerPrompt(
+                                PromptHandler.AllowedTimeOfDay.AllowedTimeOfDaySetterPrompt(
                                     "Default allowed day time is from 06:00 to 23:50"
                                 );
                                 break;
@@ -243,14 +243,14 @@ class Program
             )
             {
                 AnsiConsole.Clear();
-                PromptHandler.AllowedTimeOfDayChangerPrompt(
+                PromptHandler.AllowedTimeOfDay.AllowedTimeOfDaySetterPrompt(
                     "Default allowed day time is from 06:00 to 23:50",
                     false
                 );
             }
             else
             {
-                PromptHandler.AllowedTimeOfDayChangerPrompt(false);
+                PromptHandler.AllowedTimeOfDay.AllowedTimeOfDaySetterPrompt(false);
             }
             #endregion
 
@@ -272,7 +272,11 @@ class Program
             }
             else
             {
-                PromptHandler.AllowedUseTime.AllowedUseTimeSetterPrompt("Allowed use time", false, false);
+                PromptHandler.AllowedUseTime.AllowedUseTimeSetterPrompt(
+                    "Allowed use time",
+                    false,
+                    false
+                );
             }
             #endregion
 
