@@ -289,6 +289,7 @@ namespace Manage.Repository
                     // end time should be after the start time in a day
                     if (!Validator(endTimeOfDay))
                     {
+                        Exit(Messages.TimeOfDayErrorMessage());
                     }
                 }
             }
