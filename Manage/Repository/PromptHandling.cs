@@ -253,6 +253,7 @@ namespace Manage.Repository
 
         public class AllowedTimeOfDay
         {
+            #region Setter prompt maker method
             /// <summary>
             /// Make prompt for changing/adding allowed time of day
             /// </summary>
@@ -268,6 +269,8 @@ namespace Manage.Repository
                     );
 
                 }
+            }
+            #endregion
 
 
                 AnsiConsole.MarkupLine(
