@@ -323,6 +323,9 @@ namespace Manage.Repository
             }
             #endregion
 
+            private static bool Validator(string timeOfDay)
+            {
+            }
         }
 
         #region User validation prompt maker method
