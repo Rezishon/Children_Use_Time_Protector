@@ -60,6 +60,15 @@ namespace Children_Use_Time_Protector.Repository
             return "[red]Inserted time has wrong format. It must be like [[two digit number]][bold]:[/][[two digit number]][/]\nPress any key to repeat";
         }
         #endregion
+        /// <summary>
+        /// Text of prompts while asking
+        /// </summary>
+        /// <param name="name">The name of prompt which you are asking user</param>
+        /// <param name="IsNew">Is this config should be change or will set for the first time</param>
+        /// <returns>
+        ///     <term>String</term>
+        ///     <description>The message</description>
+        /// </returns>
         public static string PromptText(string name, bool IsNew)
         {
             return $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{name}[/]? ";
