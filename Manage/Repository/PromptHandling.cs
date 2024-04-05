@@ -269,6 +269,8 @@ namespace Manage.Repository
                 while (loopFlag)
                 {
                     Header();
+
+                    HeaderMessageHandler(headerMessage);
                     );
 
                 }
