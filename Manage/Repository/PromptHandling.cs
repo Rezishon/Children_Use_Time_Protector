@@ -296,6 +296,8 @@ namespace Manage.Repository
                     #endregion
                     ConfigSetter.SetConfigToService.StartTimeOfDay(startTimeOfDay);
                     ConfigSetter.SetConfigToService.EndTimeOfDay(endTimeOfDay);
+
+                    Exit(Messages.FinishedSettingConfig("Allowed time of day", IsNew));
                 }
             }
             #endregion
