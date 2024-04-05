@@ -46,6 +46,13 @@ namespace Children_Use_Time_Protector.Repository
             return Say_App_Name_In_Brief().ToLower();
         }
         #endregion
+        /// <summary>
+        /// Error message which should be shown to user when entered wrong value
+        /// </summary>
+        /// <returns>
+        ///     <term>String</term>
+        ///     <description>The message</description>
+        /// </returns>
         public static string TimeOfDayErrorMessage()
         {
             return "[red]Inserted time has wrong format. It must be like [[two digit number]][bold]:[/][[two digit number]][/]\nPress any key to repeat";
