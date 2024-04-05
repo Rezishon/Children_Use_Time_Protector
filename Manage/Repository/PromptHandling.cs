@@ -323,6 +323,14 @@ namespace Manage.Repository
             }
             #endregion
 
+            /// <summary>
+            /// Validate time of days values(start and end time of day)
+            /// </summary>
+            /// <param name="timeOfDay">The format like: 06:00</param>
+            /// <returns>
+            ///     <term>Boolean</term>
+            ///     <description>If the value was in correct format or not</description>
+            /// </returns>
             private static bool Validator(string timeOfDay)
             {
             }
