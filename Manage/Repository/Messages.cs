@@ -76,6 +76,9 @@ namespace Children_Use_Time_Protector.Repository
             return $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{name}[/]? ";
         }
         #endregion
+        public static string FinishedSettingConfig(string name, bool IsNew)
+        {
+        }
     }
     #endregion
 }
