@@ -323,6 +323,7 @@ namespace Manage.Repository
             }
             #endregion
 
+            #region Validator method
             /// <summary>
             /// Validate time of days values(start and end time of day)
             /// </summary>
@@ -334,6 +335,7 @@ namespace Manage.Repository
             private static bool Validator(string timeOfDay)
             {
             }
+            #endregion
         }
 
         #region User validation prompt maker method
