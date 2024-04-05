@@ -253,6 +253,11 @@ namespace Manage.Repository
 
         public class AllowedTimeOfDay
         {
+            /// <summary>
+            /// Make prompt for changing/adding allowed time of day
+            /// </summary>
+            /// <param name="headerMessage">This message shown to user at first line</param>
+            /// <param name="IsNew">If user status was 1 it should be true</param>
             public static void AllowedTimeOfDaySetterPrompt(
                 string? headerMessage = null,
                 bool IsNew = true
