@@ -294,6 +294,7 @@ namespace Manage.Repository
                         continue;
                     }
                     #endregion
+                    ConfigSetter.SetConfigToService.StartTimeOfDay(startTimeOfDay);
                 }
             }
             #endregion
