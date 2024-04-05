@@ -283,6 +283,9 @@ namespace Manage.Repository
                     }
                     #endregion
 
+                    var endTimeOfDay = AnsiConsole.Prompt(
+                        new TextPrompt<string>(Messages.PromptText("End Time Of Day", IsNew))
+                    );
                 }
             }
             #endregion
