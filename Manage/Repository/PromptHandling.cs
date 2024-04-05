@@ -271,6 +271,8 @@ namespace Manage.Repository
                     Header();
 
                     HeaderMessageHandler(headerMessage);
+                    var startTimeOfDay = AnsiConsole.Prompt(
+                        new TextPrompt<string>(Messages.PromptText("Start Time Of Day", IsNew))
                     );
 
                 }
