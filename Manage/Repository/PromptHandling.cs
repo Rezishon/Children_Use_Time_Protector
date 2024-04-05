@@ -251,6 +251,7 @@ namespace Manage.Repository
         }
         #endregion
 
+        public class AllowedTimeOfDay
         {
             {
 
