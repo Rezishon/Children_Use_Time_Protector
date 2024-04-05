@@ -264,6 +264,7 @@ namespace Manage.Repository
                 bool IsNew = true
             )
             {
+                bool loopFlag = true;
 
                 {
                     );
