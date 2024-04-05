@@ -306,6 +306,7 @@ namespace Manage.Repository
             }
             #endregion
 
+            #region Default setter method
             /// <summary>
             /// Set default values of Allowed time of day config
             /// </summary>
@@ -318,6 +319,7 @@ namespace Manage.Repository
                 );
                 Exit("Press any key to continue");
             }
+            #endregion
 
         }
 
