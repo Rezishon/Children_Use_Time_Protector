@@ -46,6 +46,9 @@ namespace Children_Use_Time_Protector.Repository
             return Say_App_Name_In_Brief().ToLower();
         }
         #endregion
+        public static string TimeOfDayErrorMessage()
+        {
+        }
     }
     #endregion
 }
