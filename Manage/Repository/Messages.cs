@@ -78,6 +78,15 @@ namespace Children_Use_Time_Protector.Repository
         #endregion
 
         #region Finished setting config
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="name">The name of prompt which you asked user</param>
+        /// <param name="IsNew">Is this config should be change or will set for the first time</param>
+        /// <returns>
+        ///     <term>String</term>
+        ///     <description>The message</description>
+        /// </returns>
         public static string FinishedSettingConfig(string name, bool IsNew)
         {
             return $"[green]Your{(IsNew ? " new" : "")} [bold]{name}[/] has been set[/]\nPress any key to continue";
