@@ -306,6 +306,8 @@ namespace Manage.Repository
             }
             #endregion
 
+            public static void AllowedTimeOfDaySetterPrompt(bool IsNew = true)
+            {
 
                 AnsiConsole.MarkupLine(
                     $"[green]Your{(IsNew ? " new" : "")} [bold]Allowed time of day[/] has been set[/]"
