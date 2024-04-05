@@ -78,6 +78,7 @@ namespace Children_Use_Time_Protector.Repository
         #endregion
         public static string FinishedSettingConfig(string name, bool IsNew)
         {
+            return $"[green]Your{(IsNew ? " new" : "")} [bold]{name}[/] has been set[/]\nPress any key to continue";
         }
     }
     #endregion
