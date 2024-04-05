@@ -48,6 +48,7 @@ namespace Children_Use_Time_Protector.Repository
         #endregion
         public static string TimeOfDayErrorMessage()
         {
+            return "[red]Inserted time has wrong format. It must be like [[two digit number]][bold]:[/][[two digit number]][/]\nPress any key to repeat";
         }
     }
     #endregion
