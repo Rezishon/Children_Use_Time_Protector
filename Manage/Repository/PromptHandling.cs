@@ -306,6 +306,10 @@ namespace Manage.Repository
             }
             #endregion
 
+            /// <summary>
+            /// Set default values of Allowed time of day config
+            /// </summary>
+            /// <param name="IsNew">Is this config should be change or should be set for the first time</param>
             public static void AllowedTimeOfDaySetterPrompt(bool IsNew = true)
             {
 
