@@ -62,6 +62,7 @@ namespace Children_Use_Time_Protector.Repository
         #endregion
         public static string PromptText(string name, bool IsNew)
         {
+            return $"What's your{(IsNew ? " [green]new[/]" : "")} [bold]{name}[/]? ";
         }
     }
     #endregion
