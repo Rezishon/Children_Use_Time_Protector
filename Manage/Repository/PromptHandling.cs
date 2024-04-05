@@ -271,6 +271,8 @@ namespace Manage.Repository
                     Header();
 
                     HeaderMessageHandler(headerMessage);
+
+                    #region Get start time of day
                     var startTimeOfDay = AnsiConsole.Prompt(
                         new TextPrompt<string>(Messages.PromptText("Start Time Of Day", IsNew))
                     );
@@ -279,6 +281,7 @@ namespace Manage.Repository
                         Exit(Messages.TimeOfDayErrorMessage());
                         continue;
                     }
+                    #endregion
 
                 }
             }
