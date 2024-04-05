@@ -294,11 +294,14 @@ namespace Manage.Repository
                         continue;
                     }
                     #endregion
+
+                    #region Setting data & end of loop
                     ConfigSetter.SetConfigToService.StartTimeOfDay(startTimeOfDay);
                     ConfigSetter.SetConfigToService.EndTimeOfDay(endTimeOfDay);
 
                     Exit(Messages.FinishedSettingConfig("Allowed time of day", IsNew));
                     loopFlag = false;
+                    #endregion
                 }
             }
             #endregion
