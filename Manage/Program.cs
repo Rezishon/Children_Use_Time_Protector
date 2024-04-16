@@ -1,10 +1,8 @@
 ﻿#define IsTesting
-
-using System.Text.RegularExpressions;
-using CommandHandling;
-using ConfigHandling;
-using Hashing;
-using Manage.Repository;
+using Children_Use_Time_Protector.Repository.ConfigHandling;
+using Children_Use_Time_Protector.Repository.PromptHandling;
+using Children_Use_Time_Protector.Repository.CommandHandling;
+using Children_Use_Time_Protector.Repository.Hashing;
 using Spectre.Console;
 
 namespace Children_Use_Time_Protector.Manager;

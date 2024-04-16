@@ -1,5 +1,5 @@
 using System.Text.RegularExpressions;
-using CommandHandling;
+using Children_Use_Time_Protector.Repository.CommandHandling;
 
 namespace Children_Use_Time_Protector.Repository.ConfigHandling
 {

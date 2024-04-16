@@ -1,7 +1,6 @@
 using System.Text.RegularExpressions;
-using CommandHandling;
-using ConfigHandling;
-using LogHandling;
+using Children_Use_Time_Protector.Repository.LogHandling;
+using Children_Use_Time_Protector.Repository.TimeHandling;
 using NodaTime;
 using Timer = System.Timers.Timer;
 
