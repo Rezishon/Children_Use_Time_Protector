@@ -5,7 +5,7 @@ using LogHandling;
 using NodaTime;
 using Timer = System.Timers.Timer;
 
-namespace Services
+namespace Children_Use_Time_Protector.Service
 {
     public class CUTP
     {

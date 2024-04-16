@@ -1,7 +1,7 @@
 using System.Text.RegularExpressions;
 using CommandHandling;
 
-namespace LogHandling
+namespace Children_Use_Time_Protector.Repository.LogHandling
 {
     public class LogFile
     {

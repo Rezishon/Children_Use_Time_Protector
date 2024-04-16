@@ -7,7 +7,7 @@ using Hashing;
 using Manage.Repository;
 using Spectre.Console;
 
-namespace Children_Use_Time_Protector;
+namespace Children_Use_Time_Protector.Manager;
 
 class Program
 {

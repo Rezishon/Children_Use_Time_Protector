@@ -1,6 +1,6 @@
 ﻿using Topshelf;
 
-namespace Services;
+namespace Children_Use_Time_Protector.Service;
 
 class Program
 {

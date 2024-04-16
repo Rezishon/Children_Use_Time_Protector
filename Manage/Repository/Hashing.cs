@@ -1,7 +1,7 @@
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Hashing
+namespace Children_Use_Time_Protector.Repository.Hashing
 {
     #region Hash class
     /// <summary>

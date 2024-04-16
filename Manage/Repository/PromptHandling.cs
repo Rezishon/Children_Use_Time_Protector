@@ -4,7 +4,7 @@ using ConfigHandling;
 using Hashing;
 using Spectre.Console;
 
-namespace Manage.Repository
+namespace Children_Use_Time_Protector.Repository.PromptHandling
 {
     public class PromptHandler
     {

@@ -1,6 +1,6 @@
 using System.Diagnostics;
 
-namespace CommandHandling
+namespace Children_Use_Time_Protector.Repository.CommandHandling
 {
     /// <summary>
     /// Class will handle commands which should be run in powershell

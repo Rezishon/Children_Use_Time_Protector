@@ -1,7 +1,7 @@
 using System.Text.RegularExpressions;
 using CommandHandling;
 
-namespace ConfigHandling
+namespace Children_Use_Time_Protector.Repository.ConfigHandling
 {
     #region Config file class
     /// <summary>

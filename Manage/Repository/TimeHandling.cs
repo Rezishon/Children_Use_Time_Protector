@@ -1,4 +1,4 @@
-namespace TimeHandling
+namespace Children_Use_Time_Protector.Repository.TimeHandling
 {
     public static class Time
     {
