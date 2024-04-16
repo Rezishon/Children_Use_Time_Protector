@@ -28,12 +28,12 @@ namespace Children_Use_Time_Protector.Service
                         .ToString()
                 };
                 File.AppendAllLines(LogFile.LogFilePath, lines);
-                if (TimeHandling.Time.Allowed() == false)
+                if (Time.Allowed() == false)
                 {
                     Console.WriteLine("Time has ended");
                     Stop();
                 }
-                else if (TimeHandling.Time.Allowed() == null)
+                else if (Time.Allowed() == null)
                 {
                     Console.WriteLine("10 minute remained");
                 }
