@@ -72,6 +72,18 @@ namespace Children_Use_Time_Protector.Service
         public void Stop()
         {
             _timer.Stop();
+            var processInfo = new ProcessStartInfo
+            {
+                Verb = "runas", // Run as administrator
+                // LoadUserProfile = true,
+                FileName = "powershell.exe",
+                Arguments = @"S:\Projects\Children_Use_Time_Protector\FinalConsole\bin\Debug\net8.0-windows10.0.17763.0\FinalConsole.exe",
+                RedirectStandardOutput = true,
+                UseShellExecute = false,
+                CreateNoWindow = true
+            };
+           Process.Start(processInfo);
+
         }
     }
 }
