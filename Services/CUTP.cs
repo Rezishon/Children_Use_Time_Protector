@@ -12,7 +12,7 @@ namespace Children_Use_Time_Protector.Service
 
         public CUTP()
         {
-            _timer = new Timer(2000) { AutoReset = true };
+            _timer = new Timer(1000) { AutoReset = true };
             _timer.Elapsed += Timer_Elapsed;
         }
 
