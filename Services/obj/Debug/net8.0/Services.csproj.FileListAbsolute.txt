@@ -34,3 +34,4 @@ s:\Projects\Children_Use_Time_Protector\Services\bin\Debug\net8.0\de\Spectre.Con
 s:\Projects\Children_Use_Time_Protector\Services\bin\Debug\net8.0\fr\Spectre.Console.Cli.resources.dll
 s:\Projects\Children_Use_Time_Protector\Services\bin\Debug\net8.0\sv\Spectre.Console.Cli.resources.dll
 S:\Projects\Children_Use_Time_Protector\Services\bin\Debug\net8.0\NodaTime.dll
+S:\Projects\Children_Use_Time_Protector\Services\bin\Debug\net8.0\Microsoft.Toolkit.Uwp.Notifications.dll
