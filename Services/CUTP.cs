@@ -1,6 +1,9 @@
+using System.Diagnostics;
 using System.Text.RegularExpressions;
+using Children_Use_Time_Protector.Repository.ConfigHandling;
 using Children_Use_Time_Protector.Repository.LogHandling;
 using Children_Use_Time_Protector.Repository.TimeHandling;
+using Microsoft.Toolkit.Uwp.Notifications;
 using NodaTime;
 using Timer = System.Timers.Timer;
 
